@@ -11,6 +11,8 @@
 /[Mm]emoryCaptures/
 /Assets/Cinemachine
 /Assets/EffectExamples
+/Assets/PostProcessing
+/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
