@@ -9,24 +9,24 @@ public class SoundManager : MonoBehaviour {
     //Static & system
     private static string nowPlayingMisicName;
     public static SoundManager instance;
-   
+   //this to scriptable object!!!
     #region Sound
     public SoundSettings[] soundSettings;
     public float soundVolume;
-    public float pitchMin = 0.1f;
-    public float pitchMax = 3f;
+    //public float pitchMin = 0.1f;
+    //public float pitchMax = 3f;
     #endregion
     #region Music
     public SoundSettings[] musicSettings;
     public float MusicChangeSpeed;
     public float musicVolume;
-    private bool canCangeMusicNow;
+    private bool canChangeMusicNow;
     #endregion
     public int allMuted;
   //  public bool muted { get { return allMuted <= 0;  } set { } }
     private void Awake()
     {
-        canCangeMusicNow = true;
+        canChangeMusicNow = true;
         instance = instance ?? this;
         DontDestroyOnLoad(gameObject);
         soundVolume = PlayerPrefs.GetFloat("soundVolume", 1);
@@ -94,7 +94,7 @@ public class SoundManager : MonoBehaviour {
         }
         if (s.toPitch)
         {
-            s.source.pitch= UnityEngine.Random.Range(pitchMin,pitchMax);
+            s.source.pitch= UnityEngine.Random.Range(s.pitchMin, s.pitchMax);
         }
         s.source.Play();
        
@@ -105,11 +105,11 @@ public class SoundManager : MonoBehaviour {
         {
             return;
         }
-        if (!canCangeMusicNow)
+        if (!canChangeMusicNow)
         {
             return;
         }
-        canCangeMusicNow = false;
+        canChangeMusicNow = false;
         var s = Array.Find(musicSettings, musicSettings => musicSettings.sourseName == musicName);
         if (s == null)
         {
@@ -171,7 +171,7 @@ public class SoundManager : MonoBehaviour {
             yield return null;
         }
         nowPlayingMisicName = musicName;
-        canCangeMusicNow = true;
+        canChangeMusicNow = true;
         yield break;
     }
 

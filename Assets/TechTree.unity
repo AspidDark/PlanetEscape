@@ -2331,7 +2331,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989696332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.556845, y: 3.6000009, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1644138859}
@@ -3232,150 +3232,184 @@ MonoBehaviour:
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: b5995f8f0c2b20f43a906986c8c3c8ea, type: 3}
     sourseName: Achivement
-    priority: 0
+    priority: 4
     loop: 0
     volume: 0.3
     pausable: 0
     toPitch: 0
+    pitchMin: 0.8
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 4f571809cf3060145b06c48026e556e0, type: 3}
     sourseName: gotItem
-    priority: 0
+    priority: 5
     loop: 0
     volume: 0.3
     pausable: 1
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 31871c3493351874789380b3a90afd34, type: 3}
     sourseName: meo
-    priority: 0
+    priority: 5
     loop: 0
     volume: 0.3
     pausable: 1
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 63463e1cfcd809944afe670823ba3d38, type: 3}
     sourseName: SheepExplosion
-    priority: 0
+    priority: 30
     loop: 0
     volume: 0.3
     pausable: 0
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: f7a5e1766650ed54c931750f2065661d, type: 3}
     sourseName: SmallExplosion1
-    priority: 0
+    priority: 30
     loop: 0
     volume: 0.3
     pausable: 1
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 7bfba332939b7cc49bdbbf052d91d795, type: 3}
     sourseName: SmallExplosion2
-    priority: 0
+    priority: 30
     loop: 0
     volume: 0.3
     pausable: 1
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: e361e5d3ccfcd794a9d5d66367f22e2c, type: 3}
     sourseName: SmallExplosion3
-    priority: 0
+    priority: 30
     loop: 0
     volume: 0.3
     pausable: 1
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 0e527a36e97bfbd40b62894d8dbbd807, type: 3}
     sourseName: successful
-    priority: 0
+    priority: 5
     loop: 0
     volume: 0.3
     pausable: 1
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: b69e6003035b0d74f8b629875176e5f2, type: 3}
     sourseName: trash1
-    priority: 0
+    priority: 20
     loop: 0
     volume: 0.3
     pausable: 1
-    toPitch: 0
+    toPitch: 1
+    pitchMin: 0.75
+    pitchMax: 1.25
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: fae25ca471655524e9bf5ce9121be667, type: 3}
     sourseName: trash2
     priority: 0
     loop: 0
-    volume: 0.3
+    volume: 1
     pausable: 1
-    toPitch: 0
+    toPitch: 1
+    pitchMin: 0.75
+    pitchMax: 1.25
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: af01b8f89c1aed74dbcd7fff4d600e88, type: 3}
     sourseName: trash3
-    priority: 0
+    priority: 20
     loop: 0
     volume: 0.3
     pausable: 1
-    toPitch: 0
+    toPitch: 1
+    pitchMin: 0.75
+    pitchMax: 1.25
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 074a6c8f76862964893610dee6f57be5, type: 3}
     sourseName: trash4
-    priority: 0
+    priority: 20
     loop: 0
     volume: 0.3
     pausable: 1
     toPitch: 0
+    pitchMin: 0.75
+    pitchMax: 1.25
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 5f630bdba3d96a941923ca8392886e39, type: 3}
     sourseName: trash5
-    priority: 0
+    priority: 20
     loop: 0
     volume: 0.3
     pausable: 1
-    toPitch: 0
+    toPitch: 1
+    pitchMin: 0.75
+    pitchMax: 1.25
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 10b5e4344a52d6f4887d07688d31c251, type: 3}
     sourseName: SmallExplosion4
-    priority: 0
+    priority: 30
     loop: 0
     volume: 0.3
     pausable: 1
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: f1f29fbda28566a4c95d2988dea9b1ed, type: 3}
     sourseName: Scream
-    priority: 0
+    priority: 10
     loop: 0
     volume: 0.3
     pausable: 1
-    toPitch: 0
+    toPitch: 1
+    pitchMin: 0.75
+    pitchMax: 1.25
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: a59672ece84de2c4e9334e20ca442bdf, type: 3}
     sourseName: Scream2
-    priority: 0
+    priority: 10
     loop: 0
     volume: 0.3
     pausable: 1
-    toPitch: 0
+    toPitch: 1
+    pitchMin: 0.75
+    pitchMax: 1.25
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 35806c43109ed83409ce57c331365064, type: 3}
     sourseName: Scream3
-    priority: 0
+    priority: 10
     loop: 0
     volume: 0.3
     pausable: 1
-    toPitch: 0
+    toPitch: 1
+    pitchMin: 0.75
+    pitchMax: 1.25
   - source: {fileID: 0}
     audioClip: {fileID: 8300000, guid: 89f3ca207fe6bc2448c53ad792bde732, type: 3}
     sourseName: RocketEngine
-    priority: 0
+    priority: 40
     loop: 0
     volume: 1
     pausable: 1
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   soundVolume: 0.5
-  pitchMin: 0.1
-  pitchMax: 3
   musicSettings:
   - source: {fileID: 0}
     audioClip: {fileID: 0}
@@ -3385,6 +3419,8 @@ MonoBehaviour:
     volume: 0
     pausable: 0
     toPitch: 0
+    pitchMin: 0.1
+    pitchMax: 3
   MusicChangeSpeed: 0
   musicVolume: 0
   allMuted: 0
