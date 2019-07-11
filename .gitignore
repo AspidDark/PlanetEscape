@@ -9,6 +9,8 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+/Assets/Cinemachine
+/Assets/EffectExamples
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
@@ -49,6 +51,8 @@ ExportedObj/
 *.bin
 *.mp3
 *.wav
+*.png
+*.tif
 
 # Unity3D generated meta files
 *.pidb.meta
