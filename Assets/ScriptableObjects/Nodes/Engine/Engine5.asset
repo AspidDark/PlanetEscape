@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba79d971dcccde4aa1553e0e2986094, type: 3}
+  m_Name: Engine5
+  m_EditorClassIdentifier: 
+  nodeName: Engine5
+  nodeDisplayName: CPRE
+  nodeDescription: Combined Photonic rocket engines
+  nodeCost: 2000
+  nodeDependsOn:
+  - Engine4
+  iconNodeNotUpgraded: {fileID: 21300000, guid: 42962e3527b865644998d1e56d46b86b,
+    type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: f6cf4288e07401a47878a69ab96c1758, type: 3}
+  nodeStatsDto:
+    weightNodeChange: 0.3
+    fuelNodeChange: 0
+    engineNodeChane: 40
+    rotationNodeValueChange: 0
+    heatNodeChange: -2
+    nodeLine: 4
+    isFinalNode: 0

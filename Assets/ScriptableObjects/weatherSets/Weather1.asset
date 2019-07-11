@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc70a01cfbaf044a95ef7a439894d38, type: 3}
+  m_Name: Weather1
+  m_EditorClassIdentifier: 
+  weatherSetName: w1
+  weatherHardness: 0
+  activatedSimpleWeathers:
+  - weatherName: H0-1
+    heightAndColors:
+      fromHeight: -20
+      fromColor:
+        serializedVersion: 2
+        rgba: 7752753
+      toHeight: 300
+      toColor:
+        serializedVersion: 2
+        rgba: 7267653
+  - weatherName: H0-2
+    heightAndColors:
+      fromHeight: 500
+      fromColor:
+        serializedVersion: 2
+        rgba: 14155783
+      toHeight: 800
+      toColor:
+        serializedVersion: 2
+        rgba: 4580822
+  - weatherName: H0-3
+    heightAndColors:
+      fromHeight: 800
+      fromColor:
+        serializedVersion: 2
+        rgba: 4580822
+      toHeight: 1000
+      toColor:
+        serializedVersion: 2
+        rgba: 4539877
+  - weatherName: H0-4
+    heightAndColors:
+      fromHeight: 1000
+      fromColor:
+        serializedVersion: 2
+        rgba: 4539877
+      toHeight: 2000
+      toColor:
+        serializedVersion: 2
+        rgba: 14607685

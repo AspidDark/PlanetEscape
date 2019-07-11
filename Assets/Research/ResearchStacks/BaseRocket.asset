@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54888ca1e96b1094f9408131a317195e, type: 3}
+  m_Name: BaseRocket
+  m_EditorClassIdentifier: 
+  thisTechQueueNumber: 1
+  stackName: BaseDataElements
+  allThecesInStackLearned: 1
+  techs:
+  - {fileID: 11400000, guid: dd00aea3b8460bf4ba0b1bf5aadbf3bc, type: 2}
+  - {fileID: 11400000, guid: 3157a77c2454a78498089901c869e14e, type: 2}
+  - {fileID: 11400000, guid: 273bcd651fd60db47a48688754f9e59a, type: 2}
+  - {fileID: 11400000, guid: a3670721cda4f3c4b9b7389ade7f4e60, type: 2}
+  - {fileID: 11400000, guid: 6a15d18f3134bb94ab7acdac4ede5d06, type: 2}
+  - {fileID: 11400000, guid: 7e5af70850bd5d44d952a1ec375634bb, type: 2}
+  currentTechInStack: 5

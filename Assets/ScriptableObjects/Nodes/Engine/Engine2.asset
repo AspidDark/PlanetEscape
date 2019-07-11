@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba79d971dcccde4aa1553e0e2986094, type: 3}
+  m_Name: Engine2
+  m_EditorClassIdentifier: 
+  nodeName: Engine2
+  nodeDisplayName: DCRE
+  nodeDescription: Dual chemical rocket engine. Produces more power than CRE, using
+    the same amount of fuel. Slightly increases weight.
+  nodeCost: 200
+  nodeDependsOn:
+  - Engine1
+  iconNodeNotUpgraded: {fileID: 21300000, guid: fca465955a05ca1429a371ff2f83dc37,
+    type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 80d80eee509a1f04e849b6491fabdd15, type: 3}
+  nodeStatsDto:
+    weightNodeChange: 0.6
+    fuelNodeChange: 0
+    engineNodeChane: 20
+    rotationNodeValueChange: 0
+    heatNodeChange: 0.5
+    nodeLine: 1
+    isFinalNode: 0

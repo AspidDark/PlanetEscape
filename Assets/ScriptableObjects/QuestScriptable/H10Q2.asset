@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e0b0312f5a24a4ba35d8725afe56ef, type: 3}
+  m_Name: H10Q2
+  m_EditorClassIdentifier: 
+  questName: H0Q0
+  questDescription: Reach Heigh 6000
+  questType: 0
+  hardness: 10
+  completeMoneyBonusFrom: 350
+  completeMoneyBonusTo: 400
+  costFrom: 75
+  costTo: 85
+  mainValue: 6000
+  secondaryValue: 0
+  thirdValue: 0

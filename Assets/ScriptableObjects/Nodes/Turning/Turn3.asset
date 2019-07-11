@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba79d971dcccde4aa1553e0e2986094, type: 3}
+  m_Name: Turn3
+  m_EditorClassIdentifier: 
+  nodeName: Turn3
+  nodeDisplayName: High Angled rotation Engines
+  nodeDescription: High Angled rotation Engines
+  nodeCost: 500
+  nodeDependsOn:
+  - Turn2
+  iconNodeNotUpgraded: {fileID: 21300000, guid: 1d529be3c58fe704f8d5abb8a320dd18,
+    type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: a04041a0c28885b43be0711b32cec11f, type: 3}
+  nodeStatsDto:
+    weightNodeChange: 0
+    fuelNodeChange: -1
+    engineNodeChane: 0
+    rotationNodeValueChange: 0.2
+    heatNodeChange: 0
+    nodeLine: 2
+    isFinalNode: 0

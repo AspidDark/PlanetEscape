@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54888ca1e96b1094f9408131a317195e, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  thisTechQueueNumber: 4
+  stackName: 4Stack
+  allThecesInStackLearned: 0
+  techs:
+  - {fileID: 11400000, guid: dbb04a1b54555eb469d118db6ec5d99f, type: 2}
+  - {fileID: 11400000, guid: d652447e1f7f68643829f6f717a534b9, type: 2}
+  - {fileID: 11400000, guid: 2c5bb537d08f54945ba68949765b77a0, type: 2}
+  - {fileID: 11400000, guid: 581c07f4d744a444ba187128489281ca, type: 2}
+  - {fileID: 11400000, guid: 452081d737abd6a47867ff0ec2a45b68, type: 2}
+  - {fileID: 11400000, guid: 486522fe9246dc543843ff9b7f752041, type: 2}
+  currentTechInStack: 0

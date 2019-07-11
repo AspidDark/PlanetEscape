@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe416830aedbe044d960fa2c42c2fade, type: 3}
+  m_Name: ThirdTech
+  m_EditorClassIdentifier: 
+  techName: Three
+  description: TechNum3
+  cost: 300
+  Icon: {fileID: 21300000, guid: 9bec1fa530506944a8beced1a8394b78, type: 3}
+  researched: 1
+  numbberInQueue: 2
+  isFinalTechInStack: 0
