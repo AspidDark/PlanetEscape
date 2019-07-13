@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundRandom : MonoBehaviour
 {
     public static SoundRandom instance;
     public string[] smallExposions;
     public string[] trashCrush;
-    public string[] screamFalling; 
+    public string[] screamFalling;
+
+    public string mainEngineSound;
     private void Awake()
     {
         instance = instance ?? this;
@@ -33,5 +33,24 @@ public class SoundRandom : MonoBehaviour
     {
         int fallSoundToExecute = MainCount.instance.IntegerRandom(0, screamFalling.Length);
         SoundManager.instance.PlaySound(screamFalling[fallSoundToExecute]);
+    }
+
+    bool toPlayAgain = true;
+    public void DoEngineSound()
+    {
+        if (toPlayAgain)
+        {
+            SoundManager.instance.PlaySound(mainEngineSound);
+            toPlayAgain = false;
+        }
+    }
+
+    public void ResetEngineSound()
+    {
+        if (!toPlayAgain)
+        {
+        toPlayAgain = true;
+        SoundManager.instance.StopSound(mainEngineSound);
+        }
     }
 }

@@ -2856,7 +2856,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1502609694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 261.3, y: 10.4, z: 0}
+  m_LocalPosition: {x: 299.8, y: 10.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 33865166}
@@ -2864,7 +2864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 261.3, y: 10.4}
+  m_AnchoredPosition: {x: 299.8, y: 10.4}
   m_SizeDelta: {x: 141.92, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502609696
@@ -3228,201 +3228,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef5957181afd9d4fb92d3f73598c66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundSettings:
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: b5995f8f0c2b20f43a906986c8c3c8ea, type: 3}
-    sourseName: Achivement
-    priority: 4
-    loop: 0
-    volume: 0.3
-    pausable: 0
-    toPitch: 0
-    pitchMin: 0.8
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 4f571809cf3060145b06c48026e556e0, type: 3}
-    sourseName: gotItem
-    priority: 5
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 31871c3493351874789380b3a90afd34, type: 3}
-    sourseName: meo
-    priority: 5
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 63463e1cfcd809944afe670823ba3d38, type: 3}
-    sourseName: SheepExplosion
-    priority: 30
-    loop: 0
-    volume: 0.3
-    pausable: 0
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: f7a5e1766650ed54c931750f2065661d, type: 3}
-    sourseName: SmallExplosion1
-    priority: 30
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 7bfba332939b7cc49bdbbf052d91d795, type: 3}
-    sourseName: SmallExplosion2
-    priority: 30
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: e361e5d3ccfcd794a9d5d66367f22e2c, type: 3}
-    sourseName: SmallExplosion3
-    priority: 30
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 0e527a36e97bfbd40b62894d8dbbd807, type: 3}
-    sourseName: successful
-    priority: 5
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: b69e6003035b0d74f8b629875176e5f2, type: 3}
-    sourseName: trash1
-    priority: 20
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 1
-    pitchMin: 0.75
-    pitchMax: 1.25
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: fae25ca471655524e9bf5ce9121be667, type: 3}
-    sourseName: trash2
-    priority: 0
-    loop: 0
-    volume: 1
-    pausable: 1
-    toPitch: 1
-    pitchMin: 0.75
-    pitchMax: 1.25
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: af01b8f89c1aed74dbcd7fff4d600e88, type: 3}
-    sourseName: trash3
-    priority: 20
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 1
-    pitchMin: 0.75
-    pitchMax: 1.25
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 074a6c8f76862964893610dee6f57be5, type: 3}
-    sourseName: trash4
-    priority: 20
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.75
-    pitchMax: 1.25
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 5f630bdba3d96a941923ca8392886e39, type: 3}
-    sourseName: trash5
-    priority: 20
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 1
-    pitchMin: 0.75
-    pitchMax: 1.25
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 10b5e4344a52d6f4887d07688d31c251, type: 3}
-    sourseName: SmallExplosion4
-    priority: 30
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: f1f29fbda28566a4c95d2988dea9b1ed, type: 3}
-    sourseName: Scream
-    priority: 10
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 1
-    pitchMin: 0.75
-    pitchMax: 1.25
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: a59672ece84de2c4e9334e20ca442bdf, type: 3}
-    sourseName: Scream2
-    priority: 10
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 1
-    pitchMin: 0.75
-    pitchMax: 1.25
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 35806c43109ed83409ce57c331365064, type: 3}
-    sourseName: Scream3
-    priority: 10
-    loop: 0
-    volume: 0.3
-    pausable: 1
-    toPitch: 1
-    pitchMin: 0.75
-    pitchMax: 1.25
-  - source: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 89f3ca207fe6bc2448c53ad792bde732, type: 3}
-    sourseName: RocketEngine
-    priority: 40
-    loop: 0
-    volume: 1
-    pausable: 1
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
   soundVolume: 0.5
-  musicSettings:
-  - source: {fileID: 0}
-    audioClip: {fileID: 0}
-    sourseName: MainTheme
-    priority: 0
-    loop: 1
-    volume: 0
-    pausable: 0
-    toPitch: 0
-    pitchMin: 0.1
-    pitchMax: 3
+  soundSettings:
+  - {fileID: 11400000, guid: 5c00fa278cc66f742a996737705c24ea, type: 2}
+  - {fileID: 11400000, guid: 39a2fef996105234fbb6799dce651983, type: 2}
+  - {fileID: 11400000, guid: 355350bf88f48fc459b7acc9d4ad1e91, type: 2}
+  - {fileID: 11400000, guid: 2ba581fc8b3c06445901cbf27f357a41, type: 2}
+  - {fileID: 11400000, guid: 1f0ac49e6970ef94bb53efc8b4e3200d, type: 2}
+  - {fileID: 11400000, guid: 3b00c14b728c4d045a67642ac9d4bc5b, type: 2}
+  - {fileID: 11400000, guid: c007155776e9fc347a8f94ec3067f675, type: 2}
+  - {fileID: 11400000, guid: 0b54c50bf20df564c9c73a1bc4b4d80f, type: 2}
+  - {fileID: 11400000, guid: a4f16eeaa147333429135c0a52882357, type: 2}
+  - {fileID: 11400000, guid: cd82c08b1c8fcee4abee31cea8cdd2ed, type: 2}
+  - {fileID: 11400000, guid: aab74e2acfff365449891163bfcdae1e, type: 2}
+  - {fileID: 11400000, guid: b4cf98c23774d33438aad055050eefef, type: 2}
+  - {fileID: 11400000, guid: 9085db0586c81454d977f310ae1ba9f1, type: 2}
+  - {fileID: 11400000, guid: a58bb4e910a1e8143802d1c2efbbb661, type: 2}
+  - {fileID: 11400000, guid: 3a5afcec166ad9f40a98078dff347b68, type: 2}
+  - {fileID: 11400000, guid: e08eb8b4656805d43b3f3103139c438e, type: 2}
+  - {fileID: 11400000, guid: 18eb433a2b878b04da0c245becc73119, type: 2}
+  - {fileID: 11400000, guid: 69c273fc1498fd74b9edff9d4c43d0a9, type: 2}
   MusicChangeSpeed: 0
   musicVolume: 0
+  musicSettings:
+  - {fileID: 11400000, guid: bb3258efd3425c949a85cf3019a0ddca, type: 2}
   allMuted: 0
 --- !u!114 &1791969984
 MonoBehaviour:
@@ -3450,6 +3279,7 @@ MonoBehaviour:
   - Scream
   - Scream2
   - Scream3
+  mainEngineSound: RocketEngine
 --- !u!1 &1794837025
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,37 +3969,77 @@ Prefab:
     - target: {fileID: 224659447108669634, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 262.5
+      value: 222.5
       objectReference: {fileID: 0}
     - target: {fileID: 114243036439048440, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114243036439048440, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114150768971607054, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114150768971607054, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114918735128489274, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114918735128489274, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224659447108669634, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -128.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224659447108669634, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -128.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -889.99994
+      objectReference: {fileID: 0}
+    - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -840
+      objectReference: {fileID: 0}
+    - target: {fileID: 114481658804768418, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114481658804768418, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_fontSizeBase
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e0f981d9c55f54d828cbe19bceb414, type: 2}

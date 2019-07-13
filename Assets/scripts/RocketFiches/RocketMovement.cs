@@ -213,11 +213,13 @@ public class RocketMovement : MonoBehaviour
             engineFlameSize += MainCount.instance.deltaTime; //visual
 
             //Sound
-         //   DoSound();
+             EngineSoundOn();
         }
         else
         {
             engineFlameSize = 0;//visual
+            //Sound
+            EngineSoundOff();
         }
         //disable event
         if (disableTimer > 0)
@@ -453,9 +455,13 @@ public class RocketMovement : MonoBehaviour
     }
 
 
-    private void DoSound()
+    private void EngineSoundOn()
     {
-        SoundManager.instance.PlayOneATime("RocketEngine", 5);
-            
+        SoundRandom.instance.DoEngineSound();
+    }
+
+    private void EngineSoundOff()
+    {
+        SoundRandom.instance.ResetEngineSound();
     }
 }

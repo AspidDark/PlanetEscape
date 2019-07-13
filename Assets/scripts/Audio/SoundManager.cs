@@ -9,17 +9,18 @@ public class SoundManager : MonoBehaviour {
     //Static & system
     private static string nowPlayingMisicName;
     public static SoundManager instance;
-   //this to scriptable object!!!
     #region Sound
-    public SoundSettings[] soundSettings;
     public float soundVolume;
+    public SoundScriptable[] soundSettings;
+
     //public float pitchMin = 0.1f;
     //public float pitchMax = 3f;
     #endregion
     #region Music
-    public SoundSettings[] musicSettings;
     public float MusicChangeSpeed;
     public float musicVolume;
+    public SoundScriptable[] musicSettings;
+
     private bool canChangeMusicNow;
     #endregion
     public int allMuted;
@@ -46,7 +47,7 @@ public class SoundManager : MonoBehaviour {
         foreach (var item in musicSettings)
         {
             item.source = gameObject.AddComponent<AudioSource>();
-            item.source.volume = musicVolume;
+            item.source.volume = 0.1f;//musicVolume;
             item.source.clip = item.audioClip;
             item.source.priority = item.priority;
             item.source.loop = item.loop;
@@ -99,6 +100,18 @@ public class SoundManager : MonoBehaviour {
         s.source.Play();
        
     }
+
+    public void StopSound(string soundName)
+    {
+        var s = Array.Find(soundSettings, soundSettings => soundSettings.sourseName == soundName);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound" + soundName + "Not found");
+            return;
+        }
+        s.source.Stop();
+    }
+
     public void PlayMusic(string musicName)
     {
         if (nowPlayingMisicName == musicName)
