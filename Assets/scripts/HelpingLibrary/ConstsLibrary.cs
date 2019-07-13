@@ -59,13 +59,25 @@ public static class ConstsLibrary
 
     public const float maxObjectDistance = 120f;
 
-    public const int maxAngleSuuarre = 90000;
+    public const int maxAngleSquare = 90000;
     public const int fullAngle = 360;
 
 
     public const float halfOfSecondTimer = 0.5f;
     public const float oneSecondTimer = 1f;
     public const float twoSecondTimer = 2f;
+
+
+    #region Save Load Pefs Names
+    public const string openNodesCount = "OpenNodesCount";
+    public const string iteration = "iteration";
+    public const string day = "day";
+    public const string playerCash = "playerCash";
+    public const string cashPerSecond = "cashPerSecond";
+    public const string cashPerStart = "cashPerStart";
+    public const string cashPerMission = "cashPerMission";
+    public const string rocketCrashCost = "rocketCrashCost";
+    #endregion
 }
 
 [System.Serializable]

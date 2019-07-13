@@ -839,6 +839,7 @@ GameObject:
   - component: {fileID: 511021379}
   - component: {fileID: 511021378}
   - component: {fileID: 511021382}
+  - component: {fileID: 511021377}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -897,6 +898,17 @@ MonoBehaviour:
   iteration: 0
   day: 0
   clicked: 0
+--- !u!114 &511021377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 511021373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae475497468e8df43a2fabd303ba7b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &511021378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,7 +945,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1cdfd2a9d019ba146b57aa509c533711, type: 2}
     - {fileID: 11400000, guid: 8a7af5f25ad5cf14e9e7b3520ed8f28b, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.5
+    timeBetweenHeightChecks: 0.4
     hardness: 0
   - poolName: Hardness 1
     airObjectList:
@@ -950,7 +962,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f803db3b32e98a442afff8d22d26cd3d, type: 2}
     - {fileID: 11400000, guid: 8656adac88f33064a945f30d1d10b73f, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.4
+    timeBetweenHeightChecks: 0.3
     hardness: 1
   - poolName: Hardness 2
     airObjectList:
@@ -967,7 +979,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b672c54eee2f05643bc007fcf6f65f31, type: 2}
     - {fileID: 11400000, guid: f803db3b32e98a442afff8d22d26cd3d, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.3
+    timeBetweenHeightChecks: 0.25
     hardness: 2
   - poolName: Hardness 3
     airObjectList:
@@ -984,7 +996,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8ddbc85453ab9df419aca6ce04c5881b, type: 2}
     - {fileID: 11400000, guid: b672c54eee2f05643bc007fcf6f65f31, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.3
+    timeBetweenHeightChecks: 0.2
     hardness: 3
   - poolName: Hardness 4
     airObjectList:
@@ -1001,7 +1013,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b672c54eee2f05643bc007fcf6f65f31, type: 2}
     - {fileID: 11400000, guid: 27672c7163a30a74eb6a2811de20ee28, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.3
+    timeBetweenHeightChecks: 0.2
     hardness: 4
   - poolName: Hardness 5
     airObjectList:
@@ -1018,7 +1030,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 811c7f40a0d0ba24db0eedd00e7f5ed0, type: 2}
     - {fileID: 11400000, guid: 27672c7163a30a74eb6a2811de20ee28, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.2
+    timeBetweenHeightChecks: 0.15
     hardness: 5
   - poolName: Hardness 6
     airObjectList:
@@ -1035,7 +1047,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f10104514f9c8ae4a82385bfb8497779, type: 2}
     - {fileID: 11400000, guid: 811c7f40a0d0ba24db0eedd00e7f5ed0, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.18
+    timeBetweenHeightChecks: 0.13
     hardness: 6
   - poolName: Hardness 7
     airObjectList:
@@ -1052,7 +1064,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 49156612f0d16a14682e25edf47c0286, type: 2}
     - {fileID: 11400000, guid: f10104514f9c8ae4a82385bfb8497779, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.16
+    timeBetweenHeightChecks: 0.11
     hardness: 7
   - poolName: Hardness 8
     airObjectList:
@@ -1069,7 +1081,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e71d8052e494c2445b8e61cb7afce669, type: 2}
     - {fileID: 11400000, guid: 96468c8027201bd41970165d6bcadeea, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.14
+    timeBetweenHeightChecks: 0.09
     hardness: 8
   - poolName: Hardness 9
     airObjectList:
@@ -1086,7 +1098,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 29c02b973ee7b5548be5e31507d8c3f3, type: 2}
     - {fileID: 11400000, guid: c4e15791638eaf44fab38eda6e0d7f91, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.12
+    timeBetweenHeightChecks: 0.08
     hardness: 9
   - poolName: Hardness 10
     airObjectList:
@@ -1105,7 +1117,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 38afc0b84ee92574a87dd93534bf6308, type: 2}
     - {fileID: 11400000, guid: 29c02b973ee7b5548be5e31507d8c3f3, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.1
+    timeBetweenHeightChecks: 0.06
     hardness: 10
 --- !u!114 &511021380
 MonoBehaviour:
@@ -1175,10 +1187,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questScriptableList:
-  - {fileID: 11400000, guid: 66b08cc0eb4fcf145bf794950486894a, type: 2}
-  - {fileID: 11400000, guid: e89e042b0b5f6a04eae3c726f5b85216, type: 2}
-  - {fileID: 11400000, guid: 66b08cc0eb4fcf145bf794950486894a, type: 2}
-  - {fileID: 11400000, guid: e89e042b0b5f6a04eae3c726f5b85216, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4f0db74a1d8fb634799d422f2fb7043e, type: 2}
   - {fileID: 11400000, guid: d726a8598d9d1f746844387e82517c3c, type: 2}
   - {fileID: 11400000, guid: eb7ba8fbc11db14439468d93ce0b5dba, type: 2}
@@ -2331,7 +2343,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989696332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.556845, y: 3.6000009, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1644138859}

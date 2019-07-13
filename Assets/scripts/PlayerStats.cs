@@ -133,7 +133,7 @@ public class PlayerStats : MonoBehaviour
         //{
         //    playerCash = 0;
         //}
-        HelpSaveLoad.SetValue("playerCash", playerCash);
+        HelpSaveLoad.SetValue(ConstsLibrary.playerCash, playerCash);
     }
 
 
@@ -141,44 +141,44 @@ public class PlayerStats : MonoBehaviour
     public void ChangeCashPerSecond(float cash)
     {
         cashPerSecond += cash;
-        HelpSaveLoad.SetValue("cashPerSecond", cashPerSecond);
+        HelpSaveLoad.SetValue(ConstsLibrary.cashPerSecond, cashPerSecond);
     }
 
     public void ChangeCashPerStart(float cash)
     {
         cashPerStart += cash;
-        HelpSaveLoad.SetValue("cashPerStart", cashPerStart);
+        HelpSaveLoad.SetValue(ConstsLibrary.cashPerStart, cashPerStart);
     }
 
     public void ChangeCashPerMission(float cash)
     {
         cashPerMission += cash;
-        HelpSaveLoad.SetValue("cashPerMission", cashPerMission);
+        HelpSaveLoad.SetValue(ConstsLibrary.cashPerMission, cashPerMission);
     }
 
     public void ChangeRocketCrashCost(float cash)
     {
         rocketCrashCost += cash;
-        HelpSaveLoad.SetValue("rocketCrashCost", rocketCrashCost);
+        HelpSaveLoad.SetValue(ConstsLibrary.rocketCrashCost, rocketCrashCost);
     }
 
 
     public void SaveCurrentAll()
     {
-        HelpSaveLoad.SetValue("playerCash", playerCash);
-        HelpSaveLoad.SetValue("cashPerSecond", cashPerSecond);
-        HelpSaveLoad.SetValue("cashPerStart", cashPerStart);
-        HelpSaveLoad.SetValue("cashPerMission", cashPerMission);
-        HelpSaveLoad.SetValue("rocketCrashCost", rocketCrashCost);
+        HelpSaveLoad.SetValue(ConstsLibrary.playerCash, playerCash);
+        HelpSaveLoad.SetValue(ConstsLibrary.cashPerSecond, cashPerSecond);
+        HelpSaveLoad.SetValue(ConstsLibrary.cashPerStart, cashPerStart);
+        HelpSaveLoad.SetValue(ConstsLibrary.cashPerMission, cashPerMission);
+        HelpSaveLoad.SetValue(ConstsLibrary.rocketCrashCost, rocketCrashCost);
     }
 
     public void LoadCurrent()
     {
-        playerCash = HelpSaveLoad.GetValue("playerCash", 0f);
-        cashPerSecond= HelpSaveLoad.GetValue("cashPerSecond", startingCashPerSecond);
-        cashPerStart = HelpSaveLoad.GetValue("cashPerStart", startingCashPerStart);
-        cashPerMission = HelpSaveLoad.GetValue("cashPerMission", startingCashPerMission);
-        rocketCrashCost = HelpSaveLoad.GetValue("rocketCrashCost", startingRocketCrashCost);
+        playerCash = HelpSaveLoad.GetValue(ConstsLibrary.playerCash, 0f);
+        cashPerSecond= HelpSaveLoad.GetValue(ConstsLibrary.cashPerSecond, startingCashPerSecond);
+        cashPerStart = HelpSaveLoad.GetValue(ConstsLibrary.cashPerStart, startingCashPerStart);
+        cashPerMission = HelpSaveLoad.GetValue(ConstsLibrary.cashPerMission, startingCashPerMission);
+        rocketCrashCost = HelpSaveLoad.GetValue(ConstsLibrary.rocketCrashCost, startingRocketCrashCost);
     }
 
 
@@ -199,11 +199,16 @@ public class PlayerStats : MonoBehaviour
     }
 
 
-    private void OpenTechNodesCount(int count)
+    public void OpenTechNodesCount(int count)
     {
+        HelpSaveLoad.SetValue(ConstsLibrary.openNodesCount, count);
         MaxSpeedSetuper(count);
         MaxHealthSetuper(count);
         EngineColorSetuper(count);
+        if (count == 0)
+        {
+            return;
+        }
         if (count >= 3)
         {
             InGameWiever.instance.EventInformerActivator();

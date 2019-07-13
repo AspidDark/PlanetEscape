@@ -41,14 +41,21 @@ public class InGameWiever : MonoBehaviour {
 
     public GameObject eventDescriptionGameObject;
     public TextMeshProUGUI eventDescription;
+
+    private void Awake()
+    {
+        instance = instance ?? this;
+        dayTextMeshProGui = dayText.GetComponent<TextMeshProUGUI>();
+        moneyTextMeshProGui = moneyText.GetComponent<TextMeshProUGUI>();
+        timerTextMeshProGui = timer.GetComponent<TextMeshProUGUI>();
+
+    }
     private void Start()
     {
         instance = instance ?? this;
         //fuel
         uIFuelCounter.fuelMaxSize= RocketStats.instance.MaxFuelCapacity;
-        dayTextMeshProGui = dayText.GetComponent<TextMeshProUGUI>();
-        moneyTextMeshProGui = moneyText.GetComponent<TextMeshProUGUI>();
-        timerTextMeshProGui = timer.GetComponent<TextMeshProUGUI>();
+
     }
     public void SetTimerText(string timerText)
     {

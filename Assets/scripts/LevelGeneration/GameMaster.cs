@@ -109,19 +109,19 @@ public class GameMaster : MonoBehaviour
     public void AddIteration()
     {
         iteration++;
-        HelpSaveLoad.SetValue("iteration", iteration);
+        HelpSaveLoad.SetValue(ConstsLibrary.iteration, iteration);
     }
     public void AddDay()
     {
         day++;
-        HelpSaveLoad.SetValue("day", day);
+        HelpSaveLoad.SetValue(ConstsLibrary.day, day);
         InGameWiever.instance.SetDayText(day);
     }
 
     private void SetStartingValues()
     {
-        iteration = HelpSaveLoad.GetValue("iteration", 0);
-        day= HelpSaveLoad.GetValue("day", 0);
+        iteration = HelpSaveLoad.GetValue(ConstsLibrary.iteration, 0);
+        day= HelpSaveLoad.GetValue(ConstsLibrary.day, 0);
     }
 }
 

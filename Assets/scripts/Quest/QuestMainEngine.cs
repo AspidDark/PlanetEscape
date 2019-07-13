@@ -110,7 +110,7 @@ public class QuestMainEngine : MonoBehaviour
     {
         print("Checking  ____");
         float angle;
-        if (AllObjectData.instance.angleZ * AllObjectData.instance.angleZ > ConstsLibrary.maxAngleSuuarre)
+        if (AllObjectData.instance.angleZ * AllObjectData.instance.angleZ > ConstsLibrary.maxAngleSquare)
         {
             angle = AllObjectData.instance.angleZ - ConstsLibrary.fullAngle;
         }
