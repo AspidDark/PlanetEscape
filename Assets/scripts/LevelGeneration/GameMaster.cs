@@ -110,6 +110,7 @@ public class GameMaster : MonoBehaviour
     {
         iteration++;
         HelpSaveLoad.SetValue(ConstsLibrary.iteration, iteration);
+        HelpSaveLoad.SetValue(ConstsLibrary.hardnessPrefs, hardness);
     }
     public void AddDay()
     {
@@ -123,5 +124,40 @@ public class GameMaster : MonoBehaviour
         iteration = HelpSaveLoad.GetValue(ConstsLibrary.iteration, 0);
         day= HelpSaveLoad.GetValue(ConstsLibrary.day, 0);
     }
+
+
+    public void ResetAll()
+    {
+        SetStartingPosition(AllObjectData.instance.go);
+        RocketMovement.instance.ResetVaues();
+
+        AllObjectData.instance.go.SetActive(true);
+        //Paint o white
+        GameMaterReset();
+        RocketMovement.instance.PostResetValues();
+        GameMaster.instance.ActivationClick();///Сюда цифры передавать
+        PlayerStats.instance.SetDefaults();
+
+        QuestMainEngine.instance.ResetQuest();
+        AllObjectData.instance.SetStartingValues();
+
+        NodeInformer.instance.StartingSetup();
+        InGameTimer.instance.ResetValues();
+        WeatherEngine.instance.StartingInitiation();
+        VisualEffectHelper.instance.SetBackGroundColor(ConstsLibrary.baseRed, ConstsLibrary.baseGreen, ConstsLibrary.baseBlue, ConstsLibrary.baseAlpha);
+    }
+
+    private void SetStartingPosition(GameObject go)
+    {
+        go.transform.position = new Vector3(0.01f, ConstsLibrary.startingPositionY, 0);
+        go.transform.rotation = Quaternion.identity;
+        Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = 0;
+        }
+    }
+
 }
 

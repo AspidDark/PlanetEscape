@@ -7,7 +7,6 @@ public static class ConstsLibrary
     public const float groundSpawnBorder = 50;
     public static readonly Color32 proColor = new Color32(255, 255, 255, 255);//Base color
     public static readonly Color32 redFlashColor = new Color32(227, 15, 15, 255);//Red Flash Color
-    public const int heightMoneyCountFrom = 10;
     public const int heightStartedFrom = 10;
     public const float waitForSecondAfterEnd = 1.5f;
     public const float normalGravityScale = 1;
@@ -77,6 +76,7 @@ public static class ConstsLibrary
     public const string cashPerStart = "cashPerStart";
     public const string cashPerMission = "cashPerMission";
     public const string rocketCrashCost = "rocketCrashCost";
+    public const string hardnessPrefs = "hardness";
     #endregion
 }
 

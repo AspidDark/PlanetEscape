@@ -15,4 +15,6 @@ public class SoundScriptable : ScriptableObject {
     public bool toPitch;
     public float pitchMin = 0.1f;
     public float pitchMax = 3f;
+    [Range(0, 1f)]
+    public float volumeDecreaser = 1;
 }

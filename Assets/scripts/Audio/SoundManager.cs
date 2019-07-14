@@ -38,7 +38,7 @@ public class SoundManager : MonoBehaviour {
         foreach (var item in soundSettings)
         {
             item.source = gameObject.AddComponent<AudioSource>();
-            item.source.volume = soundVolume;
+            item.source.volume = soundVolume* item.volumeDecreaser;
             item.source.clip = item.audioClip;
             item.source.priority = item.priority;
             item.source.loop = item.loop;
@@ -47,7 +47,7 @@ public class SoundManager : MonoBehaviour {
         foreach (var item in musicSettings)
         {
             item.source = gameObject.AddComponent<AudioSource>();
-            item.source.volume = 0.1f;//musicVolume;
+            item.source.volume = musicVolume*item.volumeDecreaser;
             item.source.clip = item.audioClip;
             item.source.priority = item.priority;
             item.source.loop = item.loop;
@@ -135,7 +135,7 @@ public class SoundManager : MonoBehaviour {
     {
         foreach (var item in soundSettings)
         {
-            item.source.volume = volume;
+            item.source.volume = volume * item.volumeDecreaser;
         }
         PlayerPrefs.SetFloat("soundVolume", volume);
     }
@@ -146,7 +146,7 @@ public class SoundManager : MonoBehaviour {
             item.source.volume = volume; 
         }
         var s = Array.Find(musicSettings, musicSettings => musicSettings.sourseName == nowPlayingMisicName);
-        s.volume = volume;
+        s.volume = volume*s.volumeDecreaser;
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
     public void AllAudioOnOff(bool audioSwitcher)

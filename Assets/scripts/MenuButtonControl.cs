@@ -70,7 +70,7 @@ public class MenuButtonControl : MonoBehaviour
             return;
         }
         #region reseting for new level
-        ResetAll();
+        GameMaster.instance.ResetAll();
         #endregion
         inMenusPanel.SetActive(false);
         inGamePannel.SetActive(true);
@@ -114,26 +114,26 @@ public class MenuButtonControl : MonoBehaviour
     }
 
 
-    public void ResetAll()
-    {
-        SetStartingPosition(AllObjectData.instance.go);
-        RocketMovement.instance.ResetVaues();
+    //public void ResetAll()
+    //{
+    //    SetStartingPosition(AllObjectData.instance.go);
+    //    RocketMovement.instance.ResetVaues();
 
-        AllObjectData.instance.go.SetActive(true);
-        //Paint o white
-        GameMaster.instance.GameMaterReset();
-        RocketMovement.instance.PostResetValues();
-        GameMaster.instance.ActivationClick();///Сюда цифры передавать
-        PlayerStats.instance.SetDefaults();
+    //    AllObjectData.instance.go.SetActive(true);
+    //    //Paint o white
+    //    GameMaster.instance.GameMaterReset();
+    //    RocketMovement.instance.PostResetValues();
+    //    GameMaster.instance.ActivationClick();///Сюда цифры передавать
+    //    PlayerStats.instance.SetDefaults();
 
-        QuestMainEngine.instance.ResetQuest();
-        AllObjectData.instance.SetStartingValues();
+    //    QuestMainEngine.instance.ResetQuest();
+    //    AllObjectData.instance.SetStartingValues();
 
-        NodeInformer.instance.StartingSetup();
-        InGameTimer.instance.ResetValues();
-        WeatherEngine.instance.StartingInitiation();
-        VisualEffectHelper.instance.SetBackGroundColor(ConstsLibrary.baseRed, ConstsLibrary.baseGreen, ConstsLibrary.baseBlue, ConstsLibrary.baseAlpha);
-    }
+    //    NodeInformer.instance.StartingSetup();
+    //    InGameTimer.instance.ResetValues();
+    //    WeatherEngine.instance.StartingInitiation();
+    //    VisualEffectHelper.instance.SetBackGroundColor(ConstsLibrary.baseRed, ConstsLibrary.baseGreen, ConstsLibrary.baseBlue, ConstsLibrary.baseAlpha);
+    //}
 
 
     private void SetStartingPosition(GameObject go)

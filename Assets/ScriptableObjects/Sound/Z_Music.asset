@@ -21,3 +21,4 @@ MonoBehaviour:
   toPitch: 0
   pitchMin: 1
   pitchMax: 1
+  volumeDecreaser: 0.1
