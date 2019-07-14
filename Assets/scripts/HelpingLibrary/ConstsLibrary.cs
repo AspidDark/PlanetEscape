@@ -77,6 +77,9 @@ public static class ConstsLibrary
     public const string cashPerMission = "cashPerMission";
     public const string rocketCrashCost = "rocketCrashCost";
     public const string hardnessPrefs = "hardness";
+    public const string soundEffectVolumePrefs = "soundEffectVolume";
+    public const string musicVolumePrefs = "musicVolume";
+    public const string mutedPrefs = "muted";
     #endregion
 }
 

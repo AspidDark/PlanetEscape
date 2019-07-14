@@ -30,10 +30,9 @@ public class SoundManager : MonoBehaviour {
         canChangeMusicNow = true;
         instance = instance ?? this;
         DontDestroyOnLoad(gameObject);
-        soundVolume = PlayerPrefs.GetFloat("soundVolume", 1);
-        musicVolume = PlayerPrefs.GetFloat("musicVolume", 1);
-        allMuted = PlayerPrefs.GetInt("Muted", 0);
-
+        soundVolume = PlayerPrefs.GetFloat(ConstsLibrary.soundEffectVolumePrefs, 1);
+        musicVolume = PlayerPrefs.GetFloat(ConstsLibrary.musicVolumePrefs, 1);
+        allMuted = PlayerPrefs.GetInt(ConstsLibrary.mutedPrefs, 0);
 
         foreach (var item in soundSettings)
         {
@@ -79,9 +78,9 @@ public class SoundManager : MonoBehaviour {
               item.source.mute = muted;
         }
         if (muted)
-            PlayerPrefs.SetInt("Muted", 1);
+            PlayerPrefs.SetInt(ConstsLibrary.mutedPrefs, 1);
         else
-            PlayerPrefs.SetInt("Muted", 0);
+            PlayerPrefs.SetInt(ConstsLibrary.mutedPrefs, 0);
     }
 
 
@@ -90,7 +89,7 @@ public class SoundManager : MonoBehaviour {
         var s = Array.Find(soundSettings, soundSettings => soundSettings.sourseName == soundName);
         if (s == null)
         {
-            Debug.LogWarning("Sound" + soundName + "Not found");
+            print("Sound" + soundName + "Not found");
             return;
         }
         if (s.toPitch)
@@ -106,7 +105,7 @@ public class SoundManager : MonoBehaviour {
         var s = Array.Find(soundSettings, soundSettings => soundSettings.sourseName == soundName);
         if (s == null)
         {
-            Debug.LogWarning("Sound" + soundName + "Not found");
+            print("Sound" + soundName + "Not found");
             return;
         }
         s.source.Stop();
@@ -126,7 +125,7 @@ public class SoundManager : MonoBehaviour {
         var s = Array.Find(musicSettings, musicSettings => musicSettings.sourseName == musicName);
         if (s == null)
         {
-            Debug.Log("No music with name" + musicName);
+            print("No music with name" + musicName);
             return;
         }
         StartCoroutine(CChangeMusic(musicName));
@@ -137,17 +136,17 @@ public class SoundManager : MonoBehaviour {
         {
             item.source.volume = volume * item.volumeDecreaser;
         }
-        PlayerPrefs.SetFloat("soundVolume", volume);
+        PlayerPrefs.SetFloat(ConstsLibrary.soundEffectVolumePrefs, volume);
     }
     public void SetMisicVolume(float volume)
     {
         foreach (var item in musicSettings)
         {
-            item.source.volume = volume; 
+            item.source.volume = volume * item.volumeDecreaser; 
         }
         var s = Array.Find(musicSettings, musicSettings => musicSettings.sourseName == nowPlayingMisicName);
-        s.volume = volume*s.volumeDecreaser;
-        PlayerPrefs.SetFloat("musicVolume", volume);
+        s.volume = volume;
+        PlayerPrefs.SetFloat(ConstsLibrary.musicVolumePrefs, volume);
     }
     public void AllAudioOnOff(bool audioSwitcher)
     {

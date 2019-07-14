@@ -546,7 +546,7 @@ GameObject:
   - component: {fileID: 394932113}
   - component: {fileID: 394932112}
   m_Layer: 0
-  m_Name: Menu Button
+  m_Name: SoundButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +559,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394932110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -597.1, y: 231.2, z: 0}
+  m_LocalPosition: {x: -484.5, y: 227.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1794837026}
@@ -568,7 +568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 65.4, y: -30.3}
+  m_AnchoredPosition: {x: 178, y: -34}
   m_SizeDelta: {x: 108.9, y: 46.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &394932112
@@ -3303,7 +3303,7 @@ GameObject:
   - component: {fileID: 1794837028}
   - component: {fileID: 1794837027}
   m_Layer: 0
-  m_Name: Text
+  m_Name: SondText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3359,7 +3359,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: SOUND
 --- !u!222 &1794837028
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3899,6 +3899,10 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1567402553870718, guid: fa55d8e3133a27d43a9805704e4e6708, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa55d8e3133a27d43a9805704e4e6708, type: 2}
   m_IsPrefabParent: 0
@@ -4042,32 +4046,32 @@ Prefab:
     - target: {fileID: 224659447108669634, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: -128.3
+      value: -93
       objectReference: {fileID: 0}
     - target: {fileID: 224659447108669634, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -128.3
+      value: -93
       objectReference: {fileID: 0}
     - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 220
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 170
+      value: 171
       objectReference: {fileID: 0}
     - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: -889.99994
+      value: -823
       objectReference: {fileID: 0}
     - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -840
+      value: -773
       objectReference: {fileID: 0}
     - target: {fileID: 114481658804768418, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
@@ -4078,6 +4082,11 @@ Prefab:
         type: 2}
       propertyPath: m_fontSizeBase
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 224221728713026152, guid: 61e0f981d9c55f54d828cbe19bceb414,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 364.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61e0f981d9c55f54d828cbe19bceb414, type: 2}
