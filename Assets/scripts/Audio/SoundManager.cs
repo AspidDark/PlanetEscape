@@ -140,12 +140,14 @@ public class SoundManager : MonoBehaviour {
     }
     public void SetMisicVolume(float volume)
     {
+
         foreach (var item in musicSettings)
         {
             item.source.volume = volume * item.volumeDecreaser; 
         }
         var s = Array.Find(musicSettings, musicSettings => musicSettings.sourseName == nowPlayingMisicName);
-        s.volume = volume;
+        if(s!=null)
+        s.volume = volume* s.volumeDecreaser;
         PlayerPrefs.SetFloat(ConstsLibrary.musicVolumePrefs, volume);
     }
     public void AllAudioOnOff(bool audioSwitcher)

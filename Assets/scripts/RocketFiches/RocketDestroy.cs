@@ -24,7 +24,9 @@ public class RocketDestroy : MonoBehaviour {
     public void Destroy(bool destroyed=true)
     {
         RocketMovement.instance.diasbleAll = true;
-       
+        //sound
+        SoundRandom.instance.ResetEngineSound();
+
         if ((AllObjectData.instance.speed > maxSpeed)||destroyed)
         {
             ObjectPoolList.instance.GetPooledObject(replacedObjectName, gameObject.transform.position, gameObject.transform.rotation);
