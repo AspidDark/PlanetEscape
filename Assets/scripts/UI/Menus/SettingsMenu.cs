@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
+    public SoundScriptable menuTheme;
+
+    private AudioSource mainTheme;
 
     public GameObject mainMenu;
     public GameObject settingsMenu;
@@ -36,7 +39,7 @@ public class SettingsMenu : MonoBehaviour
             options.Add(option);
             //   options.Add(resolutions[i].width + "x" + resolutions[i].height);
 
-            if ((resolutions[i].width == Screen.currentResolution.width) && 
+            if ((resolutions[i].width == Screen.currentResolution.width) &&
                 (resolutions[i].height == Screen.currentResolution.height))
             {
                 currentResolutionIndex = i;
@@ -47,19 +50,24 @@ public class SettingsMenu : MonoBehaviour
         resolutionsDropdown.AddOptions(options);
         resolutionsDropdown.value = currentResolutionIndex;
         resolutionsDropdown.RefreshShownValue();
+
+        //music in Menu
+        mainTheme = gameObject.AddComponent<AudioSource>();
+        mainTheme.clip = menuTheme.audioClip;
+        mainTheme.volume= PlayerPrefs.GetFloat(ConstsLibrary.musicVolumePrefs, 1)* menuTheme.volumeDecreaser;
+        mainTheme.loop = true;
+        mainTheme.mute = PlayerPrefs.GetInt(ConstsLibrary.mutedPrefs, 0) == 1;
+
+
+
+        PlayFirstMusic();
+
     }
 
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-
-    }
-
-
-    public void SetVolume(float volume)
-    {
-        audioMixer.SetFloat("volume", volume);
 
     }
 
@@ -77,5 +85,33 @@ public class SettingsMenu : MonoBehaviour
     {
         mainMenu.SetActive(true);
         settingsMenu.SetActive(false);
+    }
+
+    public void SetSoundVolume(float volume)
+    {
+        PlayerPrefs.SetFloat(ConstsLibrary.soundEffectVolumePrefs, volume);
+    }
+
+
+    public void SetMisicVolume(float volume)
+    {
+        if(mainTheme!=null)
+        mainTheme.volume = volume * menuTheme.volumeDecreaser;
+        PlayerPrefs.SetFloat(ConstsLibrary.musicVolumePrefs, volume);
+
+    }
+
+    public void MuteAll(bool muted)
+    {
+        mainTheme.mute = muted;
+        if (muted)
+            PlayerPrefs.SetInt(ConstsLibrary.mutedPrefs, 1);
+        else
+            PlayerPrefs.SetInt(ConstsLibrary.mutedPrefs, 0);
+    }
+
+    private void PlayFirstMusic()
+    {
+        mainTheme.Play();
     }
 }
