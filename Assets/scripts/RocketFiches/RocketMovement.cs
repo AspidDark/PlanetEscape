@@ -171,6 +171,8 @@ public class RocketMovement : MonoBehaviour
         {
             canTakeDamage = -1;
         }
+        CheckDestroy();
+
     }
 
     void FixedUpdate()
@@ -213,7 +215,7 @@ public class RocketMovement : MonoBehaviour
             engineFlameSize += MainCount.instance.deltaTime; //visual
 
             //Sound
-             EngineSoundOn();
+            EngineSoundOn();
         }
         else
         {
@@ -268,7 +270,7 @@ public class RocketMovement : MonoBehaviour
         }
         else
         {
-            fuel -= MainCount.instance.deltaTime/ConstsLibrary.mainEngineUseLessFuelDelimeter;
+            fuel -= MainCount.instance.deltaTime / ConstsLibrary.mainEngineUseLessFuelDelimeter;
             rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate) / ConstsLibrary.mainEngineUseLessFuelDelimeter;
         }
 
@@ -369,10 +371,10 @@ public class RocketMovement : MonoBehaviour
             else
             {
 
-                InGameWiever.instance.DamageViewer(healthCounter- maxRocketHealth, maxRocketHealth);
+                InGameWiever.instance.DamageViewer(healthCounter - maxRocketHealth, maxRocketHealth);
                 healthCounter = maxRocketHealth;
             }
-            
+
         }
     }
     /// <summary>
@@ -463,5 +465,23 @@ public class RocketMovement : MonoBehaviour
     private void EngineSoundOff()
     {
         SoundRandom.instance.ResetEngineSound();
+    }
+
+    /// <summary>
+    /// If Height is less than started and rocket is not destroyed
+    /// </summary>
+    private void CheckDestroy()
+    {
+        if (!AllObjectData.instance.rocketDestroyed)
+        {
+            if (!AllObjectData.instance.isStarted &&
+                (gameObject.transform.position.y < ConstsLibrary.heightToDestroyIfNotStarted
+                || fuel <= 0
+                || InGameTimer.instance.minutCount > ConstsLibrary.timeInMinutesToDestroyAfterIfNotstrarted))
+            {
+                RocketDestroy.instance.Destroy();
+            }
+        }
+
     }
 }

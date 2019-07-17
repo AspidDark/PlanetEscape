@@ -67,6 +67,10 @@ public static class ConstsLibrary
     public const float twoSecondTimer = 2f;
 
 
+    public const float heightToDestroyIfNotStarted = -3f;
+    public const float timeInMinutesToDestroyAfterIfNotstrarted = 3f;
+
+
     #region Save Load Pefs Names
     public const string openNodesCount = "OpenNodesCount";
     public const string iteration = "iteration";
@@ -81,6 +85,10 @@ public static class ConstsLibrary
     public const string musicVolumePrefs = "musicVolume";
     public const string mutedPrefs = "muted";
     #endregion
+
+
+
+
 }
 
 [System.Serializable]

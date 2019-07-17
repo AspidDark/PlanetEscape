@@ -10,6 +10,7 @@ public class InGameTimer : MonoBehaviour {
     float timerCounter;
     bool timerGo;
     string timetoShow;
+    public float minutCount;
 
     private bool timerStarted;
 
@@ -28,6 +29,7 @@ public class InGameTimer : MonoBehaviour {
         if (timerGo)
         {
             timerCounter += MainCount.instance.deltaTime;
+            minutCount = (int)(timerCounter / 60);
             minutes = ((int)(timerCounter / 60)).ToString();
             seconds = (timerCounter % 60).ToString("f1");
         }
