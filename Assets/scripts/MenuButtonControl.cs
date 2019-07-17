@@ -23,6 +23,8 @@ public class MenuButtonControl : MonoBehaviour
     public GameObject mainCanvas;
 
     public GameObject optionsMenu;
+    public GameObject soundOptionsMenu;
+    public GameObject pannel;
   
     private void Awake()
     {
@@ -100,18 +102,52 @@ public class MenuButtonControl : MonoBehaviour
     {
         Time.timeScale = 1;
     }
-
+    /// <summary>
+    /// Options Button
+    /// </summary>
     public void OnOptionsButtonClick()
     {
         Pause();
+        pannel.SetActive(true);
         optionsMenu.SetActive(true);
 
     }
-    public void OnOptionsBackButtonClick()
+
+    #region Options Menu
+    public void OnOptionsSoundOptionsMenuButtonClick()
     {
-        Resume();
         optionsMenu.SetActive(false);
+        soundOptionsMenu.SetActive(true);
     }
+    public void OnOptionsResumeButtonClick()
+    {
+        pannel.SetActive(false);
+        optionsMenu.SetActive(false);
+        if (techPannel.active || economicPanel.active)
+        {
+            return;
+        }
+        Resume();
+
+    }
+
+    public void OnOptionsMenuQuitButtonClick()
+    {
+        print("Quit");
+    }
+    #endregion
+
+    /// <summary>
+    /// Sound Options Menu
+    /// </summary>
+    public void OnSoundOptionsMenuBackButtonClick()
+    {
+        soundOptionsMenu.SetActive(false);
+        optionsMenu.SetActive(true);
+    }
+
+   // public void 
+
 
 
     //public void ResetAll()
