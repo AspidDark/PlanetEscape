@@ -9,7 +9,7 @@ public class MenuButtonControl : MonoBehaviour
     public GameObject inGamePannel;
     #endregion
 
-
+    public UnityEngine.UI.Button optionsButton;
 #region //In Menu Pannel
     public GameObject inMenusPanel;
 
@@ -108,6 +108,7 @@ public class MenuButtonControl : MonoBehaviour
     public void OnOptionsButtonClick()
     {
         Pause();
+        optionsButton.gameObject.SetActive(false);
         pannel.SetActive(true);
         optionsMenu.SetActive(true);
 
@@ -121,8 +122,10 @@ public class MenuButtonControl : MonoBehaviour
     }
     public void OnOptionsResumeButtonClick()
     {
+        optionsButton.gameObject.SetActive(true);
         pannel.SetActive(false);
         optionsMenu.SetActive(false);
+        
         if (techPannel.active || economicPanel.active)
         {
             return;
@@ -145,32 +148,6 @@ public class MenuButtonControl : MonoBehaviour
         soundOptionsMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
-
-   // public void 
-
-
-
-    //public void ResetAll()
-    //{
-    //    SetStartingPosition(AllObjectData.instance.go);
-    //    RocketMovement.instance.ResetVaues();
-
-    //    AllObjectData.instance.go.SetActive(true);
-    //    //Paint o white
-    //    GameMaster.instance.GameMaterReset();
-    //    RocketMovement.instance.PostResetValues();
-    //    GameMaster.instance.ActivationClick();///Сюда цифры передавать
-    //    PlayerStats.instance.SetDefaults();
-
-    //    QuestMainEngine.instance.ResetQuest();
-    //    AllObjectData.instance.SetStartingValues();
-
-    //    NodeInformer.instance.StartingSetup();
-    //    InGameTimer.instance.ResetValues();
-    //    WeatherEngine.instance.StartingInitiation();
-    //    VisualEffectHelper.instance.SetBackGroundColor(ConstsLibrary.baseRed, ConstsLibrary.baseGreen, ConstsLibrary.baseBlue, ConstsLibrary.baseAlpha);
-    //}
-
 
     private void SetStartingPosition(GameObject go)
     {
