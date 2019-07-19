@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114460757326700920}
   - component: {fileID: 58966383263922490}
   m_Layer: 0
-  m_Name: Coin4
+  m_Name: Coin6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 212370010553482086}
   - component: {fileID: 114924276928886504}
   m_Layer: 0
-  m_Name: Coin4
+  m_Name: Coin6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e41dce7decb3a4887a154f0c3a88b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airObjectScriptable: {fileID: 11400000, guid: 587724c6257f0ba4cbedbd3597919dc5,
+  airObjectScriptable: {fileID: 11400000, guid: a7683c382f45fa94ca34867fffab72f9,
     type: 2}
   xSpeed: 0
   ySpeed: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e65a3bdb4f74d47b25af03a476ed15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 45
+  amount: 75
   destroyableOnHit: 1
   airObjectType: 6
   airObjectClass: 3

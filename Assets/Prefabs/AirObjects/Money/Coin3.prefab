@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e65a3bdb4f74d47b25af03a476ed15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 15
+  amount: 35
   destroyableOnHit: 1
   airObjectType: 6
   airObjectClass: 3

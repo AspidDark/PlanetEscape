@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98df488197904c2419ed0edb44d2a5d8, type: 3}
-  m_Name: Coin1
+  m_Name: Coin6
   m_EditorClassIdentifier: 
-  objectName: Coin1
+  objectName: Coin6
   minHeight: 20
   maxHeight: 3000
-  maxSpeed: 4
-  minSpeed: 2
+  maxSpeed: 6
+  minSpeed: 3
   maxYSpeed: 1
   minYSpeed: -1
   spawnChance: 25
