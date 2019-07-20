@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0057368fd74994a4abe1823abbdb9cc6, type: 3}
+  m_Name: FarestBackGroundInitiation
+  m_EditorClassIdentifier: 
+  backGroundToFindTag: FarestBackGround
+  backGroundSize: 200
+  parallaxSpeedX: 0.95
+  parallaxSpeedY: 0.95
+  leftIndex: 0
+  rightIndex: 2
+  layers:
+  - {fileID: 4061861608715166, guid: 15c99f3ecb72cad42a44102bc5f5182c, type: 2}
+  - {fileID: 4890338610203068, guid: 15c99f3ecb72cad42a44102bc5f5182c, type: 2}
+  - {fileID: 4182628704915104, guid: 15c99f3ecb72cad42a44102bc5f5182c, type: 2}
