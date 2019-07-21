@@ -9,6 +9,7 @@ TagManager:
   - StartGround
   - Ground
   - FarestBackGround
+  - MiddleBackGround
   layers:
   - Default
   - TransparentFX
@@ -45,6 +46,15 @@ TagManager:
   m_SortingLayers:
   - name: Backest
     uniqueID: 3076356245
+    locked: 0
+  - name: BackGroundFarest
+    uniqueID: 1636558523
+    locked: 0
+  - name: BackGroundMiddle
+    uniqueID: 1461887227
+    locked: 0
+  - name: BackGroundCouthest
+    uniqueID: 3943248587
     locked: 0
   - name: Default
     uniqueID: 0

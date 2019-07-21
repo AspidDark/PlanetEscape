@@ -5,7 +5,7 @@ public class BackGroundScriptable : ScriptableObject
 {
     public string backGroundToFindTag;
     public float backGroundSize;
-   // public GameObject go;
+    // public GameObject go;
     [Space]
     public float parallaxSpeedX;
     public float parallaxSpeedY;
@@ -16,9 +16,11 @@ public class BackGroundScriptable : ScriptableObject
     public int rightIndex;
     [HideInInspector]
     public Transform[] layers;
+    [HideInInspector]
+    public GameObject go;
     public void InitiateObject()
     {
-        GameObject go = GameObject.FindGameObjectWithTag(backGroundToFindTag);
+        go = GameObject.FindGameObjectWithTag(backGroundToFindTag);
         if (go == null)
         {
             return;

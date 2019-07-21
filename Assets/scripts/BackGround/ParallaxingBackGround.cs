@@ -1,20 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ParallaxingBackGround : MonoBehaviour {
+public class ParallaxingBackGround : MonoBehaviour
+{
 
-    public bool scrolling, parallax;
-
+    public bool scrolling;
+    public bool parallax;
     //scrolling background
-    public BackGroundScriptable[] backGrounds;
+    public float backGroundSize;
 
     public Transform playerTransform;
+    private Transform[] layers;
     private float viewZone = 10;
+    private int leftIndex;
+    private int rightIndex;
 
     //parallax
+    public float parallaxSpeedX;
     private float lastcameraX;
     [Space]
+    public float parallaxSpeedY;
     private float lastcameraY;
     // Use this for initialization
     void Start()
@@ -25,11 +29,13 @@ public class ParallaxingBackGround : MonoBehaviour {
         {
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         }
-
-        foreach (var item in backGrounds)
+        layers = new Transform[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
         {
-            item.InitiateObject();
-        }      
+            layers[i] = transform.GetChild(i);
+        }
+        leftIndex = 0;
+        rightIndex = layers.Length - 1;
 
         //parallax
         lastcameraX = playerTransform.position.x;
@@ -43,16 +49,12 @@ public class ParallaxingBackGround : MonoBehaviour {
         //parallax
         if (parallax)
         {
-            foreach (var item in backGrounds)
-            {
             float deltaX = playerTransform.position.x - lastcameraX;
-            transform.position += Vector3.right * (deltaX * item.parallaxSpeedX);
+            transform.position += Vector3.right * (deltaX * parallaxSpeedX);
 
             float deltaY = playerTransform.position.y - lastcameraY;
-            transform.position += Vector3.up * (deltaY * item.parallaxSpeedY);
-            }
+            transform.position += Vector3.up * (deltaY * parallaxSpeedY);
         }
-
         lastcameraX = playerTransform.position.x;
 
         lastcameraY = playerTransform.position.y;
@@ -60,39 +62,32 @@ public class ParallaxingBackGround : MonoBehaviour {
         //scrolling background
         if (scrolling)
         {
-            for (int i = 0; i < backGrounds.Length; i++)
-            {
-            if (playerTransform.position.x < (backGrounds[i].layers[backGrounds[i].leftIndex].transform.position.x + viewZone))
-                ScrollLeft(i);
-            if (playerTransform.position.x > (backGrounds[i].layers[backGrounds[i].rightIndex].transform.position.x - viewZone))
-                ScrollRight(i);
-            }
+            if (playerTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
+                ScrollLeft();
+            if (playerTransform.position.x > (layers[rightIndex].transform.position.x - viewZone))
+                ScrollRight();
         }
     }
     //scrolling background
-    private void ScrollLeft(int numberToScroll)
+    private void ScrollLeft()
     {
-        backGrounds[numberToScroll].layers[backGrounds[numberToScroll].rightIndex].position 
-            = new Vector3(backGrounds[numberToScroll].layers[backGrounds[numberToScroll].leftIndex].position.x 
-            - backGrounds[numberToScroll].backGroundSize, backGrounds[numberToScroll].layers[backGrounds[numberToScroll].rightIndex].position.y, 0);
-        backGrounds[numberToScroll].leftIndex = backGrounds[numberToScroll].rightIndex;
-        backGrounds[numberToScroll].rightIndex--;
-        if (backGrounds[numberToScroll].rightIndex < 0)
+        layers[rightIndex].position = new Vector3(layers[leftIndex].position.x - backGroundSize, layers[rightIndex].position.y, 0);
+        leftIndex = rightIndex;
+        rightIndex--;
+        if (rightIndex < 0)
         {
-            backGrounds[numberToScroll].rightIndex = backGrounds[numberToScroll].layers.Length - 1;
+            rightIndex = layers.Length - 1;
         }
     }
     //scrolling background
-    private void ScrollRight(int numberToScroll)
+    private void ScrollRight()
     {
-        backGrounds[numberToScroll].layers[backGrounds[numberToScroll].leftIndex].position 
-            = new Vector3(backGrounds[numberToScroll].layers[backGrounds[numberToScroll].rightIndex].position.x 
-            + backGrounds[numberToScroll].backGroundSize, backGrounds[numberToScroll].layers[backGrounds[numberToScroll].rightIndex].position.y, 0);
-        backGrounds[numberToScroll].rightIndex = backGrounds[numberToScroll].leftIndex;
-        backGrounds[numberToScroll].leftIndex++;
-        if (backGrounds[numberToScroll].leftIndex == backGrounds[numberToScroll].layers.Length)
+        layers[leftIndex].position = new Vector3(layers[rightIndex].position.x + backGroundSize, layers[rightIndex].position.y, 0);
+        rightIndex = leftIndex;
+        leftIndex++;
+        if (leftIndex == layers.Length)
         {
-            backGrounds[numberToScroll].leftIndex = 0;
+            leftIndex = 0;
         }
     }
 }
