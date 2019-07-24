@@ -227,6 +227,50 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 631577668}
   m_Script: {fileID: 11500000, guid: cd00aa3a109cc934e819a70406382b87, type: 3}
+--- !u!1 &101935552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 101935553}
+  - component: {fileID: 101935554}
+  m_Layer: 0
+  m_Name: TempBackGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &101935553
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101935552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1327750989}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &101935554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101935552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a39ee0af231944eb3b7c0e1bda10ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backGroundScriptable:
+  - {fileID: 11400000, guid: 7c6f2e2d65be76247bd02da81e6629b1, type: 2}
+  playerTransform: {fileID: 616574083}
+  backGroundToSpawn: 0
 --- !u!114 &108360359 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114040605434808196, guid: 547527b0ebba3f3408b8837e5462a105,
@@ -2381,7 +2425,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989696332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2467413, y: 3.6000009, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1644138859}
@@ -2468,12 +2512,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1758fa41a782340807641a30c8a2c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrolling: 1
-  parallax: 1
-  backGroundSize: 200
-  playerTransform: {fileID: 616574083}
-  parallaxSpeedX: 0.9
-  parallaxSpeedY: 0.9
+  scrolling: 0
+  parallax: 0
+  backGroundSize: 0
+  playerTransform: {fileID: 0}
+  parallaxSpeedX: 0
+  parallaxSpeedY: 0
 --- !u!114 &1072105572 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114926841883471832, guid: 547527b0ebba3f3408b8837e5462a105,
@@ -2742,6 +2786,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4717123326323232, guid: 15c99f3ecb72cad42a44102bc5f5182c, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904627042680530, guid: 15c99f3ecb72cad42a44102bc5f5182c, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2874,6 +2922,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 101935553}
   - {fileID: 2052339240}
   - {fileID: 272485463}
   m_Father: {fileID: 0}
@@ -3497,7 +3546,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4396772182115604, guid: fb937c8e95e20324ba6ef6aa620b01b3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114640658798693746, guid: fb937c8e95e20324ba6ef6aa620b01b3,
         type: 2}
@@ -3513,6 +3562,10 @@ Prefab:
         type: 2}
       propertyPath: parallaxSpeedY
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481861156464754, guid: fb937c8e95e20324ba6ef6aa620b01b3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb937c8e95e20324ba6ef6aa620b01b3, type: 2}
