@@ -11,14 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0057368fd74994a4abe1823abbdb9cc6, type: 3}
   m_Name: MiddleBackGround
   m_EditorClassIdentifier: 
-  backGroundToFindTag: MiddleBackGround
-  backGroundSize: 160
+  isScrolling: 0
+  isParralax: 0
   parallaxSpeedX: 0.8
   parallaxSpeedY: 0.8
-  leftIndex: 2
-  rightIndex: 1
-  layers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  go: {fileID: 0}
+  spriteXSize: 160
+  sortingLayerName: BackGroundMiddle
+  sprites:
+  - {fileID: 21300000, guid: dee1b5729b628334387da2a69ec8db5f, type: 3}
+  - {fileID: 21300000, guid: dee1b5729b628334387da2a69ec8db5f, type: 3}
+  - {fileID: 21300000, guid: dee1b5729b628334387da2a69ec8db5f, type: 3}

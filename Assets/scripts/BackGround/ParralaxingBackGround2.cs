@@ -1,20 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ParralaxingBackGround2 : MonoBehaviour {
 
     public BackGroundScriptable[] backGroundScriptable;
     private GameObject[] childObjects;
     private Transform[] layers;
-    //scrolling background
-    //public float backGroundSize;
     public Transform playerTransform;
 
     private float viewZone = 10;
     private int leftIndex;
     private int rightIndex;
 
+    public float tempValue;
 
     private float lastcameraX;
 
@@ -38,7 +35,8 @@ public class ParralaxingBackGround2 : MonoBehaviour {
             childObjects[i].transform.position = new Vector3(backGroundScriptable[backGroundToSpawn].spriteXSize*i, 0, 0);
             var spriteRenderer =  childObjects[i].AddComponent<SpriteRenderer>();
             spriteRenderer.sprite = backGroundScriptable[backGroundToSpawn].sprites[i];
-            spriteRenderer.sortingLayerID = backGroundScriptable[backGroundToSpawn].sortingLayerId;
+            spriteRenderer.sortingLayerName= backGroundScriptable[backGroundToSpawn].sortingLayerName;
+            // spriteRenderer.sortingLayerID = backGroundScriptable[backGroundToSpawn].sortingLayerId;
             layers[i] = childObjects[i].transform;
         }
 
@@ -51,7 +49,6 @@ public class ParralaxingBackGround2 : MonoBehaviour {
         lastcameraY = playerTransform.position.y;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         //parallax

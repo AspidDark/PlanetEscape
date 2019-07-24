@@ -9,7 +9,7 @@ public class BackGroundScriptable : ScriptableObject
     public float parallaxSpeedX;
     public float parallaxSpeedY;
     public float spriteXSize;
-    public int sortingLayerId;
+    public string sortingLayerName;
     [Space]
     public Sprite[] sprites= new Sprite[3];
 
