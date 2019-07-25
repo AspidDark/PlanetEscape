@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour {
     public GameObject mainMenu;
     public GameObject creditsPanel;
     public GameObject headText;
+    public GameObject playPressedMenu;
+    public GameObject loadGameButton;
     [Space]
     public GameObject loadingScreen;
     public Slider loadingBar;
@@ -21,18 +23,23 @@ public class MainMenu : MonoBehaviour {
     private void Start()
     {
         loadingTextTextMeshProGui = loadingText.GetComponent<TextMeshProUGUI>();
+        if (HelpSaveLoad.GetValue(ConstsLibrary.newGameStarted, 0) == 0)
+        {
+            loadGameButton.SetActive(false);
+        }
     }
 
     ///Дорабоать бегунок звука
     public void PlayGame()
     {
-        //Picture Set Active
-        //Loading bar SetActive
-        //Main Menu disable
         mainMenu.SetActive(false);
-        headText.SetActive(false);
-        loadingScreen.SetActive(true);
-        StartCoroutine(LoadLevelAsync(whatLevelToLoad));
+        playPressedMenu.SetActive(true);
+    }
+
+    public void OnBackFromPlayMenuButtonClocked()
+    {
+        playPressedMenu.SetActive(false);
+        mainMenu.SetActive(true);
         
     }
 
@@ -71,4 +78,27 @@ public class MainMenu : MonoBehaviour {
             yield return null;
         }
     }
+
+    public void OnNewGameButtonClicked()
+    {
+        PlayerPrefs.DeleteAll();
+        HelpSaveLoad.SetValue(ConstsLibrary.newGameStarted, 1);
+        StartLevelOading();
+
+
+    }
+
+    public void OnLoadGameButtonClicked()
+    {
+        StartLevelOading();
+    }
+
+    private void StartLevelOading()
+    {
+        playPressedMenu.SetActive(false);
+        headText.SetActive(false);
+        loadingScreen.SetActive(true);
+        StartCoroutine(LoadLevelAsync(whatLevelToLoad));
+    }
+
 }

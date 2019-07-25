@@ -136,7 +136,7 @@ public class MenuButtonControl : MonoBehaviour
 
     public void OnOptionsMenuQuitButtonClick()
     {
-        print("Quit");
+        Application.Quit();
     }
     #endregion
 

@@ -42,7 +42,7 @@ public class RocketStats : MonoBehaviour
     {
         if (nodeStatsDto.isFinalNode)
         {
-            print("Final tech Researched!!!!");
+            GameMaster.instance.WonGame();
             return;
         }
         PlayerStats.instance.AddTechNode();

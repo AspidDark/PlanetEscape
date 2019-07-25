@@ -109,6 +109,7 @@ public class GameMaster : MonoBehaviour
     public void AddIteration()
     {
         iteration++;
+        CheckIteration();
         HelpSaveLoad.SetValue(ConstsLibrary.iteration, iteration);
         HelpSaveLoad.SetValue(ConstsLibrary.hardnessPrefs, hardness);
     }
@@ -158,6 +159,26 @@ public class GameMaster : MonoBehaviour
             rb.angularVelocity = 0;
         }
     }
+
+    private void CheckIteration()
+    {
+        if (iteration > ConstsLibrary.maxIterations)
+        {
+            //Lost Game
+            LoadLevelSyanc(4);
+        }
+    }
+
+    public void WonGame()
+    {
+        LoadLevelSyanc(3);
+    }
+
+    private void LoadLevelSyanc(int levelIndex)
+    {
+        print("Loading Lvel" + levelIndex);
+    }
+
 
 }
 

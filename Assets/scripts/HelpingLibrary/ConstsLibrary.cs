@@ -86,8 +86,9 @@ public static class ConstsLibrary
     public const string mutedPrefs = "muted";
     #endregion
 
-
-
+    public const int maxIterations=100;
+    public const float heightToreachToWin = 3000f;
+    public const string newGameStarted = "NewGameStarted";
 
 }
 

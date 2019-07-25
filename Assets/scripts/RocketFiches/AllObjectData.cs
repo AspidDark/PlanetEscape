@@ -45,6 +45,10 @@ public class AllObjectData : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (posY > ConstsLibrary.heightToreachToWin)
+        {
+            GameMaster.instance.WonGame();
+        }
         if (!startedRunOnceSent && isStarted)
         {
             startedRunOnceSent = true;

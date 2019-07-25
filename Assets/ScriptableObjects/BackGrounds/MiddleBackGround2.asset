@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0057368fd74994a4abe1823abbdb9cc6, type: 3}
+  m_Name: MiddleBackGround2
+  m_EditorClassIdentifier: 
+  isScrolling: 1
+  isParralax: 1
+  parallaxSpeedX: 0.8
+  parallaxSpeedY: 0.8
+  spriteXSize: 60
+  sortingLayerName: BackGroundMiddle
+  sprites:
+  - {fileID: 21300000, guid: f9244bb722d45d04a9e2c9cd50303631, type: 3}
+  - {fileID: 21300000, guid: f9244bb722d45d04a9e2c9cd50303631, type: 3}
+  - {fileID: 21300000, guid: f9244bb722d45d04a9e2c9cd50303631, type: 3}
