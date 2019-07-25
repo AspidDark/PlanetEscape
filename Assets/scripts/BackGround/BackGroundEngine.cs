@@ -18,7 +18,7 @@ public class BackGroundEngine : MonoBehaviour {
     {
         foreach (var item in parralaxingBackGround)
         {
-            item.tempValue = number;
+            item.backGroundToSpawn = number;
         }
     }
 }

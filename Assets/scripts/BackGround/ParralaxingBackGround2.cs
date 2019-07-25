@@ -11,8 +11,6 @@ public class ParralaxingBackGround2 : MonoBehaviour {
     private int leftIndex;
     private int rightIndex;
 
-    public float tempValue;
-
     private float lastcameraX;
 
     private float lastcameraY;
