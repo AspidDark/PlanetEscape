@@ -100,5 +100,4 @@ public class MainMenu : MonoBehaviour {
         loadingScreen.SetActive(true);
         StartCoroutine(LoadLevelAsync(whatLevelToLoad));
     }
-
 }

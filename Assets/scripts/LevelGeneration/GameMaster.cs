@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
@@ -165,20 +167,35 @@ public class GameMaster : MonoBehaviour
         if (iteration > ConstsLibrary.maxIterations)
         {
             //Lost Game
-            LoadLevelSyanc(4);
+            LoadLevelSyanc(2);
         }
     }
 
     public void WonGame()
     {
+        //Win
         LoadLevelSyanc(3);
     }
 
     private void LoadLevelSyanc(int levelIndex)
     {
-        print("Loading Lvel" + levelIndex);
+        MenuButtonControl.instance.SetLoadingScreenActive();
+        StartCoroutine(LoadLevelAsync(levelIndex));
     }
 
+
+    private IEnumerator LoadLevelAsync(int sceneIndex)
+    {
+        AsyncOperation operationInfo = SceneManager.LoadSceneAsync(sceneIndex);
+
+        while (!operationInfo.isDone)
+        {
+            float progress = Mathf.Clamp01(operationInfo.progress / 0.9f);
+            MenuButtonControl.instance.loadingBar.value = progress;
+            MenuButtonControl.instance.loadingTextTextMeshProGui.text = progress * 100 + "%";
+            yield return null;
+        }
+    }
 
 }
 

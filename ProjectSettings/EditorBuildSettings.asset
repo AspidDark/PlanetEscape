@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TechTree.unity
     guid: dcfb950dd74f42346a9b0c1af02558b3
+  - enabled: 1
+    path: Assets/LooseScene.unity
+    guid: 1ab6cd0d5ed078348b1b1362e8e98222
+  - enabled: 1
+    path: Assets/WinScene.unity
+    guid: 2147d9312babe58428fc6f90d12b0493

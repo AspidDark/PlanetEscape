@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.Experimental.UIElements;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class MenuButtonControl : MonoBehaviour
@@ -25,7 +25,13 @@ public class MenuButtonControl : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject soundOptionsMenu;
     public GameObject pannel;
-  
+    [Space]
+    public GameObject loadingScreen;
+    public Slider loadingBar;
+    public GameObject loadingText;
+    [HideInInspector]
+    public TextMeshProUGUI loadingTextTextMeshProGui;
+
     private void Awake()
     {
         instance = instance ?? this;
@@ -33,7 +39,9 @@ public class MenuButtonControl : MonoBehaviour
 
     private void Start()
     {
+
         instance = instance ?? this;
+        loadingTextTextMeshProGui = loadingText.GetComponent<TextMeshProUGUI>();
     }
 
     public void OnShopMenuEntered()
@@ -175,5 +183,10 @@ public class MenuButtonControl : MonoBehaviour
     private void SendMessageToInformer(string head, string body)
     {
         NodeInformer.instance.ShowMessage(head, body);
+    }
+
+    public void SetLoadingScreenActive()
+    {
+        loadingScreen.SetActive(true);
     }
 }
