@@ -31,9 +31,14 @@ public class MenuButtonControl : MonoBehaviour
     public GameObject loadingText;
     [HideInInspector]
     public TextMeshProUGUI loadingTextTextMeshProGui;
+    [Space]
+    public ImageAndTextScriptable[] imageAndTextScriptable;
+    public GameObject loadingScreenPicture;
+    private Image image;
 
     private void Awake()
     {
+        image = loadingScreenPicture.GetComponent<Image>();
         instance = instance ?? this;
     }
 
@@ -42,6 +47,7 @@ public class MenuButtonControl : MonoBehaviour
 
         instance = instance ?? this;
         loadingTextTextMeshProGui = loadingText.GetComponent<TextMeshProUGUI>();
+
     }
 
     public void OnShopMenuEntered()
@@ -188,5 +194,13 @@ public class MenuButtonControl : MonoBehaviour
     public void SetLoadingScreenActive()
     {
         loadingScreen.SetActive(true);
+    }
+
+    public void SetWinLoseScreen(int number)
+    {
+        if (number < imageAndTextScriptable.Length)
+        {
+            image.sprite = imageAndTextScriptable[number].sprite;
+        }
     }
 }

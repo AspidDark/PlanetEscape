@@ -70,8 +70,8 @@ public class TechTreeEngine : MonoBehaviour
     {
         foreach (var nodeControl in techNodeControlList)
         {
-           // int nodeState = PlayerPrefs.HasKey(nodeControl.techNodeStats.nodeName) ? PlayerPrefs.GetInt(nodeControl.techNodeStats.nodeName): nodeClosedPP;
             int nodeState = HelpSaveLoad.GetValue(nodeControl.techNodeStats.nodeName, 0);
+            print("nodeState" + nodeState);
             if ((nodeState != nodeDonePP) && (nodeControl.techNodeStats.nodeDependsOn == null || nodeControl.techNodeStats.nodeDependsOn.Length <=0))
             {
                 nodeState = nodeOpenPP;
@@ -146,7 +146,6 @@ public class TechTreeEngine : MonoBehaviour
     private void SaveNodeState(string nodeName, int value)
     {
         HelpSaveLoad.SetValue(nodeName, value);
-       // PlayerPrefs.SetInt(nodeName, value);
     }
 
     #endregion

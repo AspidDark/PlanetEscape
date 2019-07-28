@@ -123,7 +123,7 @@ public class RocketMovement : MonoBehaviour
 
     public void ResetVaues()
     {
-        additionalStagesCount = HelpSaveLoad.GetValue("rocketStagesValue", 0);
+        additionalStagesCount = HelpSaveLoad.GetValue(ConstsLibrary.rocketStagesValue, 0);
         canTakeDamage = canTakeDamageTimer;
         foreach (var item in allRocketSprites)
         {
@@ -453,7 +453,7 @@ public class RocketMovement : MonoBehaviour
 
     private void SaveRocketStagesValue(int value)
     {
-        HelpSaveLoad.SetValue("rocketStagesValue", value);
+        HelpSaveLoad.SetValue(ConstsLibrary.rocketStagesValue, value);
     }
 
 

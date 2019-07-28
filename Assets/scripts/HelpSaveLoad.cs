@@ -18,7 +18,6 @@ public static class HelpSaveLoad
         return PlayerPrefs.HasKey(key) ? PlayerPrefs.GetString(key) : value;
     }
 
-
     public static void SetValue(string key, int value)
     {
         PlayerPrefs.SetInt(key,value);
@@ -35,6 +34,22 @@ public static class HelpSaveLoad
     private static bool IfExists(string key)
     {
         return true;
+    }
+
+    public static void DeleteAllExeptSystem()
+    {
+        float soundEffectVolume = GetValue(ConstsLibrary.soundEffectVolumePrefs, 0f);
+        float musicVolume= GetValue(ConstsLibrary.musicVolumePrefs, 0f);
+        int muted = GetValue(ConstsLibrary.mutedPrefs, 0);
+        DeleteAll();
+        SetValue(ConstsLibrary.soundEffectVolumePrefs, soundEffectVolume);
+        SetValue(ConstsLibrary.musicVolumePrefs, musicVolume);
+        SetValue(ConstsLibrary.mutedPrefs, muted);
+    }
+
+    public static void DeleteAll()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
 }

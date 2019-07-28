@@ -69,31 +69,40 @@ public class MainMenu : MonoBehaviour {
     private IEnumerator LoadLevelAsync(int sceneIndex)
     {
         AsyncOperation operationInfo = SceneManager.LoadSceneAsync(whatLevelToLoad);
+        //new Experimental
+        operationInfo.allowSceneActivation = false;
 
         while (!operationInfo.isDone)
         {
             float progress = Mathf.Clamp01(operationInfo.progress / 0.9f);
             loadingBar.value = progress;
             loadingTextTextMeshProGui.text = progress*100+"%";
+            //new Experimental
+            if (operationInfo.progress >= 0.9f)
+            {
+                loadingTextTextMeshProGui.text = "Press any key to continue";
+                if (Input.anyKey)
+                {
+                    operationInfo.allowSceneActivation = true;
+                }
+            }
             yield return null;
         }
     }
 
     public void OnNewGameButtonClicked()
     {
-        PlayerPrefs.DeleteAll();
+        HelpSaveLoad.DeleteAllExeptSystem();
         HelpSaveLoad.SetValue(ConstsLibrary.newGameStarted, 1);
-        StartLevelOading();
-
-
+        StartLevelLoading();
     }
 
     public void OnLoadGameButtonClicked()
     {
-        StartLevelOading();
+        StartLevelLoading();
     }
 
-    private void StartLevelOading()
+    private void StartLevelLoading()
     {
         playPressedMenu.SetActive(false);
         headText.SetActive(false);

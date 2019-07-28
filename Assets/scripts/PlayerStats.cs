@@ -79,8 +79,8 @@ public class PlayerStats : MonoBehaviour
         }
         if (Input.GetKeyDown("o"))
         {
-            PlayerPrefs.DeleteAll();
-            print("DeleteAll");
+            HelpSaveLoad.DeleteAllExeptSystem();
+            print("DeleteAllExeptSystem");
         }
         if (Input.GetKeyDown("k"))
         {

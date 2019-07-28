@@ -30,9 +30,9 @@ public class SoundManager : MonoBehaviour {
         canChangeMusicNow = true;
         instance = instance ?? this;
         DontDestroyOnLoad(gameObject);
-        soundVolume = PlayerPrefs.GetFloat(ConstsLibrary.soundEffectVolumePrefs, 1);
-        musicVolume = PlayerPrefs.GetFloat(ConstsLibrary.musicVolumePrefs, 1);
-        allMuted = PlayerPrefs.GetInt(ConstsLibrary.mutedPrefs, 0);
+        soundVolume = HelpSaveLoad.GetValue(ConstsLibrary.soundEffectVolumePrefs, 1f);
+        musicVolume = HelpSaveLoad.GetValue(ConstsLibrary.musicVolumePrefs, 1f);
+        allMuted = HelpSaveLoad.GetValue(ConstsLibrary.mutedPrefs, 0);
 
         foreach (var item in soundSettings)
         {
@@ -78,9 +78,9 @@ public class SoundManager : MonoBehaviour {
               item.source.mute = muted;
         }
         if (muted)
-            PlayerPrefs.SetInt(ConstsLibrary.mutedPrefs, 1);
+            HelpSaveLoad.SetValue(ConstsLibrary.mutedPrefs, 1);
         else
-            PlayerPrefs.SetInt(ConstsLibrary.mutedPrefs, 0);
+            HelpSaveLoad.SetValue(ConstsLibrary.mutedPrefs, 0);
     }
 
 
@@ -136,7 +136,7 @@ public class SoundManager : MonoBehaviour {
         {
             item.source.volume = volume * item.volumeDecreaser;
         }
-        PlayerPrefs.SetFloat(ConstsLibrary.soundEffectVolumePrefs, volume);
+        HelpSaveLoad.SetValue(ConstsLibrary.soundEffectVolumePrefs, volume);
     }
     public void SetMisicVolume(float volume)
     {
@@ -148,7 +148,7 @@ public class SoundManager : MonoBehaviour {
         var s = Array.Find(musicSettings, musicSettings => musicSettings.sourseName == nowPlayingMisicName);
         if(s!=null)
         s.volume = volume* s.volumeDecreaser;
-        PlayerPrefs.SetFloat(ConstsLibrary.musicVolumePrefs, volume);
+        HelpSaveLoad.SetValue(ConstsLibrary.musicVolumePrefs, volume);
     }
     public void AllAudioOnOff(bool audioSwitcher)
     {

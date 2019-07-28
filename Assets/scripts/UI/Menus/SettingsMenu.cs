@@ -54,9 +54,9 @@ public class SettingsMenu : MonoBehaviour
         //music in Menu
         mainTheme = gameObject.AddComponent<AudioSource>();
         mainTheme.clip = menuTheme.audioClip;
-        mainTheme.volume= PlayerPrefs.GetFloat(ConstsLibrary.musicVolumePrefs, 1)* menuTheme.volumeDecreaser;
+        mainTheme.volume= HelpSaveLoad.GetValue(ConstsLibrary.musicVolumePrefs, 1f)* menuTheme.volumeDecreaser;
         mainTheme.loop = true;
-        mainTheme.mute = PlayerPrefs.GetInt(ConstsLibrary.mutedPrefs, 0) == 1;
+        mainTheme.mute = HelpSaveLoad.GetValue(ConstsLibrary.mutedPrefs, 0) == 1;
 
 
 
@@ -89,7 +89,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetSoundVolume(float volume)
     {
-        PlayerPrefs.SetFloat(ConstsLibrary.soundEffectVolumePrefs, volume);
+        HelpSaveLoad.SetValue(ConstsLibrary.soundEffectVolumePrefs, volume);
     }
 
 
@@ -97,7 +97,7 @@ public class SettingsMenu : MonoBehaviour
     {
         if(mainTheme!=null)
         mainTheme.volume = volume * menuTheme.volumeDecreaser;
-        PlayerPrefs.SetFloat(ConstsLibrary.musicVolumePrefs, volume);
+        HelpSaveLoad.SetValue(ConstsLibrary.musicVolumePrefs, volume);
 
     }
 
@@ -105,9 +105,9 @@ public class SettingsMenu : MonoBehaviour
     {
         mainTheme.mute = muted;
         if (muted)
-            PlayerPrefs.SetInt(ConstsLibrary.mutedPrefs, 1);
+            HelpSaveLoad.SetValue(ConstsLibrary.mutedPrefs, 1);
         else
-            PlayerPrefs.SetInt(ConstsLibrary.mutedPrefs, 0);
+            HelpSaveLoad.SetValue(ConstsLibrary.mutedPrefs, 0);
     }
 
     private void PlayFirstMusic()

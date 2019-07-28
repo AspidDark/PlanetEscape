@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class ConstsLibrary
+public class ConstsLibrary
 {
     public const float groundSpawnBorder = 50;
     public static readonly Color32 proColor = new Color32(255, 255, 255, 255);//Base color
@@ -81,14 +81,31 @@ public static class ConstsLibrary
     public const string cashPerMission = "cashPerMission";
     public const string rocketCrashCost = "rocketCrashCost";
     public const string hardnessPrefs = "hardness";
+    public const string rocketStagesValue = "rocketStagesValue";
+    //System Values
     public const string soundEffectVolumePrefs = "soundEffectVolume";
     public const string musicVolumePrefs = "musicVolume";
     public const string mutedPrefs = "muted";
     #endregion
 
-    public const int maxIterations=100;
+    public const int maxIterations = 100;
     public const float heightToreachToWin = 3000f;
     public const string newGameStarted = "NewGameStarted";
+
+    public readonly string[] PrefsToClear = new string[10]
+    {
+        openNodesCount,
+        iteration,
+        day,
+        playerCash,
+        cashPerSecond,
+        cashPerStart,
+        cashPerMission,
+        rocketCrashCost,
+        hardnessPrefs,
+         rocketStagesValue
+    };
+
 
 }
 
@@ -136,3 +153,4 @@ public enum AirObjectClass
     SpaceSheep,
     Cunsumable
 }
+

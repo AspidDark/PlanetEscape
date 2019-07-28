@@ -146,7 +146,7 @@ public class GameMaster : MonoBehaviour
 
         NodeInformer.instance.StartingSetup();
         InGameTimer.instance.ResetValues();
-        WeatherEngine.instance.StartingInitiation();
+       // WeatherEngine.instance.StartingInitiation();
         VisualEffectHelper.instance.SetBackGroundColor(ConstsLibrary.baseRed, ConstsLibrary.baseGreen, ConstsLibrary.baseBlue, ConstsLibrary.baseAlpha);
     }
 
@@ -166,20 +166,21 @@ public class GameMaster : MonoBehaviour
     {
         if (iteration > ConstsLibrary.maxIterations)
         {
-            //Lost Game
+            MenuButtonControl.instance.SetWinLoseScreen(1);
             LoadLevelSyanc(2);
         }
     }
 
     public void WonGame()
     {
-        //Win
+        MenuButtonControl.instance.SetWinLoseScreen(0);
         LoadLevelSyanc(3);
     }
 
     private void LoadLevelSyanc(int levelIndex)
     {
         MenuButtonControl.instance.SetLoadingScreenActive();
+        HelpSaveLoad.DeleteAllExeptSystem();
         StartCoroutine(LoadLevelAsync(levelIndex));
     }
 
@@ -187,7 +188,6 @@ public class GameMaster : MonoBehaviour
     private IEnumerator LoadLevelAsync(int sceneIndex)
     {
         AsyncOperation operationInfo = SceneManager.LoadSceneAsync(sceneIndex);
-
         while (!operationInfo.isDone)
         {
             float progress = Mathf.Clamp01(operationInfo.progress / 0.9f);
@@ -196,6 +196,5 @@ public class GameMaster : MonoBehaviour
             yield return null;
         }
     }
-
 }
 

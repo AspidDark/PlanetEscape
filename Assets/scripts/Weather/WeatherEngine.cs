@@ -25,7 +25,7 @@ public class WeatherEngine : MonoBehaviour
     void Start()
     {
         instance = instance ?? this;
-        StartingInitiation();
+      //  StartingInitiation();
     }
 
     // Update is called once per frame
