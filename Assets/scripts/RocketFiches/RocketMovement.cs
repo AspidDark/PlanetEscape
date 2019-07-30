@@ -234,8 +234,8 @@ public class RocketMovement : MonoBehaviour
         {
             //rb.AddForce(-transform.right * rotationEnginePower, ForceMode2D.Force);
             transform.Rotate(Vector3.forward * MainCount.instance.fixedDeltaTime * rotationEnginePower);
-            fuel -= MainCount.instance.fixedDeltaTime;
-            rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate) / ConstsLibrary.steeerEngineUseLessFuel;
+            fuel -= MainCount.instance.fixedDeltaTime / (ConstsLibrary.steeerEngineUseLessFuel * ConstsLibrary.fuelLossDelimeter);
+            rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate);
             rightSteer += MainCount.instance.deltaTime; //visual
         }
         else
@@ -248,8 +248,8 @@ public class RocketMovement : MonoBehaviour
         {
             // rb.AddForce(transform.right * rotationEnginePower, ForceMode2D.Force);
             transform.Rotate(Vector3.back * MainCount.instance.fixedDeltaTime * rotationEnginePower);
-            fuel -= MainCount.instance.fixedDeltaTime;
-            rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate) / ConstsLibrary.steeerEngineUseLessFuel;
+            fuel -= MainCount.instance.fixedDeltaTime / (ConstsLibrary.steeerEngineUseLessFuel * ConstsLibrary.fuelLossDelimeter);
+            rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate);
             leftSteer += MainCount.instance.deltaTime; //visual
         }
         else
@@ -265,12 +265,12 @@ public class RocketMovement : MonoBehaviour
         if (idelingEngine)
         {
             rb.AddForce(transform.up * mainEnginePower / ConstsLibrary.mainEnginePowerDelimeter);
-            fuel -= MainCount.instance.fixedDeltaTime;
+            fuel -= MainCount.instance.fixedDeltaTime/ConstsLibrary.fuelLossDelimeter;
             rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate);
         }
         else
         {
-            fuel -= MainCount.instance.deltaTime / ConstsLibrary.mainEngineUseLessFuelDelimeter;
+            fuel -= MainCount.instance.deltaTime / (ConstsLibrary.mainEngineUseLessFuelDelimeter* ConstsLibrary.fuelLossDelimeter);
             rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate) / ConstsLibrary.mainEngineUseLessFuelDelimeter;
         }
 

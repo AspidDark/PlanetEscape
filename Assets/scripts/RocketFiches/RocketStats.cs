@@ -23,11 +23,7 @@ public class RocketStats : MonoBehaviour
     }
     private const int nodeCount=4;
     //Starting Stats
-    private const float startingWeight = 4;
-    private const float startingFuelCapacity = 10;
-    private const float startingRotation = 0.5f;
-    private const float startingEngine = 80;
-    private const float startingHeatValue = 0;
+
 
     //Max Stats After Upgrade
     public float MaxWeight { get; private set; }
@@ -58,11 +54,11 @@ public class RocketStats : MonoBehaviour
     /// </summary>
     public void StartingInitiation()
     {
-        MaxWeight += startingWeight;
-        MaxFuelCapacity += startingFuelCapacity;
-        MaxRotation += startingRotation;
-        MaxEngine += startingEngine;
-        HeatValue += startingHeatValue;
+        MaxWeight += ConstsLibrary.startingWeight;
+        MaxFuelCapacity += ConstsLibrary.startingFuelCapacity;
+        MaxRotation += ConstsLibrary.startingRotation;
+        MaxEngine += ConstsLibrary.startingEngine;
+        HeatValue += ConstsLibrary.startingHeatValue;
         RocketMovement.instance.UpdateValues();
 
         ////Line Counters

@@ -1,9 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ConstsLibrary
 {
+    #region Rocket Base Stats
+    public const float startingWeight = 4;
+    public const float startingFuelCapacity = 15;//10
+    public const float startingRotation = 3f;//0.5f
+    public const float startingEngine = 80;
+    public const float startingHeatValue = 0;
+
+
+    public const float fuelLossDelimeter = 1f;
+    #endregion
+    public const int steeerEngineUseLessFuel = 4;
+    public const float mainEnginePowerDelimeter = 1.5f;
+
+    public const int mainEngineUseLessFuelDelimeter = 8;
+
+
+
     public const float groundSpawnBorder = 50;
     public static readonly Color32 proColor = new Color32(255, 255, 255, 255);//Base color
     public static readonly Color32 redFlashColor = new Color32(227, 15, 15, 255);//Red Flash Color
@@ -35,10 +50,7 @@ public class ConstsLibrary
 
 
 
-    public const int steeerEngineUseLessFuel = 4;
-    public const float mainEnginePowerDelimeter = 1.5f;
 
-    public const int mainEngineUseLessFuelDelimeter = 8;
 
 
     public const float startingPositionY = -1.40f;

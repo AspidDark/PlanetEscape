@@ -111,7 +111,6 @@ public class PlayerStats : MonoBehaviour
         //    RocketMovement.instance.DoDamage(-2);
         //    print("Heal" + 2.ToString());
         //}
-
         #endregion
         InGameWiever.instance.SetMoneyText(playerCash);
     }
