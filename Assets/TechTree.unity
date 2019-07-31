@@ -935,7 +935,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8a7af5f25ad5cf14e9e7b3520ed8f28b, type: 2}
     - {fileID: 11400000, guid: 99b47b0adb4c36547b58923b7491c807, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.4
+    timeBetweenHeightChecks: 0.1
     hardness: 0
   - poolName: Hardness 1
     airObjectList:
@@ -953,7 +953,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8656adac88f33064a945f30d1d10b73f, type: 2}
     - {fileID: 11400000, guid: 99b47b0adb4c36547b58923b7491c807, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.3
+    timeBetweenHeightChecks: 0.1
     hardness: 1
   - poolName: Hardness 2
     airObjectList:
@@ -2259,6 +2259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fadaa6daef46464fa1ac6da45868881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
   objectPoolList: {fileID: 928253665}
   nodeInformer: {fileID: 928253659}
   objectSpawnOffset: 2
@@ -3013,7 +3014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1327750988
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -16,6 +15,8 @@ public class AirObjectByType
 }
 
 public class AirObjectGenerator : MonoBehaviour {
+    public float offset;
+
 
     public static AirObjectGenerator instance;
     //Conncted With
@@ -116,8 +117,12 @@ public class AirObjectGenerator : MonoBehaviour {
             startingYposToSpawn *= -1;
         }
         string name = listOfObjectsOnThisHeight[numberOfObjectToSpawn].objectName;
-        Vector3 position = new Vector3(AllObjectData.instance.posX + objectXposition, AllObjectData.instance.posY+ startingYposToSpawn);
+        offset = AllObjectData.instance.gameobjectVelocity.x / ConstsLibrary.offsetDelimeterOnHighSpeed;
+        if (AllObjectData.instance.gameobjectVelocity.x * AllObjectData.instance.gameobjectVelocity.x > ConstsLibrary.speedSqquareAferSpawnObjectOnMinHeight)
+        {
+            startingYposToSpawn = higherFromPlayerToSpawnMin;
+        }
+        Vector3 position = new Vector3(AllObjectData.instance.posX + objectXposition+ offset, AllObjectData.instance.posY+ startingYposToSpawn);
         objectPoolList.GetPooledObject(name, position, Quaternion.identity, true); ///SpawningObject
     }
-
 }

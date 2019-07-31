@@ -5,7 +5,7 @@ public class ConstsLibrary
     #region Rocket Base Stats
     public const float startingWeight = 4;
     public const float startingFuelCapacity = 15;//10
-    public const float startingRotation = 3f;//0.5f
+    public const float startingRotation = 1f;//0.5f
     public const float startingEngine = 80;
     public const float startingHeatValue = 0;
 
@@ -47,7 +47,8 @@ public class ConstsLibrary
     public const int disableRocketHeatLevel = 99;
 
     // public const int maxRocketHealth = 15;
-
+    public const float speedSqquareAferSpawnObjectOnMinHeight = 50;
+    public const float offsetDelimeterOnHighSpeed = 10;
 
 
 
