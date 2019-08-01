@@ -67,7 +67,7 @@ public class AirObjectEngine : MonoBehaviour {
             case AirObjectClass.SpaceSheep:
                 SoundRandom.instance.ExecuteRandomSmallExpolsion();
                 break;
-            case AirObjectClass.Cunsumable:
+            case AirObjectClass.Consumable:
                 SoundManager.instance.PlaySound("gotItem");
                 break;
             default:

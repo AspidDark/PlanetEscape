@@ -166,6 +166,6 @@ public enum AirObjectClass
     Empty,
     SpaceTrash,
     SpaceSheep,
-    Cunsumable
+    Consumable
 }
 
