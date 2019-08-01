@@ -177,6 +177,7 @@ public class RocketMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        XSpeedLimiter();
         Stages();
         VisualEffects();
         RocketHeat();
@@ -259,6 +260,16 @@ public class RocketMovement : MonoBehaviour
         }
 
     }
+
+    private void XSpeedLimiter()
+    {
+        if (rb.velocity.magnitude > ConstsLibrary.maxXSpeed)
+        {
+            float multypuer = rb.velocity.x > 0 ? 1 : -1;
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+        }
+    }
+
 
     private void MoveForward(bool idelingEngine)
     {

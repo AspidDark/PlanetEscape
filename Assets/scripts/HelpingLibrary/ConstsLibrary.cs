@@ -17,7 +17,8 @@ public class ConstsLibrary
 
     public const int mainEngineUseLessFuelDelimeter = 8;
 
-
+    public const int maxXspeedSquare = 900;
+    public const float maxXSpeed=30;
 
     public const float groundSpawnBorder = 50;
     public static readonly Color32 proColor = new Color32(255, 255, 255, 255);//Base color
@@ -47,9 +48,10 @@ public class ConstsLibrary
     public const int disableRocketHeatLevel = 99;
 
     // public const int maxRocketHealth = 15;
-    public const float speedSqquareAferSpawnObjectOnMinHeight = 50;
-    public const float offsetDelimeterOnHighSpeed = 10;
+    public const float speedSquareAferSpawnObjectOnMinHeight = 50;
+    public const float offsetDelimeterOnHighSpeed = 2;
 
+    public const float heightToSpawnWhenXisHigh = 15;
 
 
 

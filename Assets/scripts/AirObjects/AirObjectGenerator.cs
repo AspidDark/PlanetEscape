@@ -15,8 +15,6 @@ public class AirObjectByType
 }
 
 public class AirObjectGenerator : MonoBehaviour {
-    public float offset;
-
 
     public static AirObjectGenerator instance;
     //Conncted With
@@ -112,17 +110,19 @@ public class AirObjectGenerator : MonoBehaviour {
         int numberOfObjectToSpawn= MainCount.instance.DifferentWeightRandom(airObjectWeights);//mainCount.IntegerRandom(0, listOfObjectsOnThisHeight.Count);
 
         float startingYposToSpawn = MainCount.instance.FloatRandom(higherFromPlayerToSpawnMin, higherFromPlayerToSpawnMax);
+
+        if ((AllObjectData.instance.gameobjectVelocity.x * AllObjectData.instance.gameobjectVelocity.x > ConstsLibrary.speedSquareAferSpawnObjectOnMinHeight))
+        {
+                startingYposToSpawn = MainCount.instance.FloatRandom(-ConstsLibrary.heightToSpawnWhenXisHigh, ConstsLibrary.heightToSpawnWhenXisHigh);
+       
+        }
         if (AllObjectData.instance.gameobjectVelocity.y < 0&& AllObjectData.instance.posY> higherFromPlayerToSpawnMax)
         {
             startingYposToSpawn *= -1;
         }
         string name = listOfObjectsOnThisHeight[numberOfObjectToSpawn].objectName;
-        offset = AllObjectData.instance.gameobjectVelocity.x / ConstsLibrary.offsetDelimeterOnHighSpeed;
-        if (AllObjectData.instance.gameobjectVelocity.x * AllObjectData.instance.gameobjectVelocity.x > ConstsLibrary.speedSqquareAferSpawnObjectOnMinHeight)
-        {
-            startingYposToSpawn = higherFromPlayerToSpawnMin;
-        }
-        Vector3 position = new Vector3(AllObjectData.instance.posX + objectXposition+ offset, AllObjectData.instance.posY+ startingYposToSpawn);
+
+        Vector3 position = new Vector3(AllObjectData.instance.posX + objectXposition + AllObjectData.instance.gameobjectVelocity.x, AllObjectData.instance.posY+ startingYposToSpawn+ AllObjectData.instance.gameobjectVelocity.y);
         objectPoolList.GetPooledObject(name, position, Quaternion.identity, true); ///SpawningObject
     }
 }
