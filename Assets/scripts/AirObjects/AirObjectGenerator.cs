@@ -83,7 +83,6 @@ public class AirObjectGenerator : MonoBehaviour {
             if (AllObjectData.instance.posY <= item.maxHeight 
                 && AllObjectData.instance.posY >= item.minHeight)
             {
-               
                 listOfObjectsOnThisHeight.Add(item);
             }
         }
@@ -121,8 +120,33 @@ public class AirObjectGenerator : MonoBehaviour {
             startingYposToSpawn *= -1;
         }
         string name = listOfObjectsOnThisHeight[numberOfObjectToSpawn].objectName;
+        float xPosition;
+        if (AllObjectData.instance.gameobjectVelocity.x >= 0)
+        {
+            if (objectXposition < 0)
+            {
+                xPosition = AllObjectData.instance.posX + objectXposition;
+            }
+            else
+            {
+                xPosition = AllObjectData.instance.posX + objectXposition + AllObjectData.instance.gameobjectVelocity.x;
+            }
+        }
+        else
+        {
+            if (objectXposition > 0)
+            {
+                xPosition = AllObjectData.instance.posX + objectXposition;
+            }
+            else
+            {
+                xPosition = AllObjectData.instance.posX + objectXposition + AllObjectData.instance.gameobjectVelocity.x;
+            }
+        }
 
-        Vector3 position = new Vector3(AllObjectData.instance.posX + objectXposition + AllObjectData.instance.gameobjectVelocity.x, AllObjectData.instance.posY+ startingYposToSpawn+ AllObjectData.instance.gameobjectVelocity.y);
+
+        Vector3 position = new Vector3(xPosition//AllObjectData.instance.posX + objectXposition + AllObjectData.instance.gameobjectVelocity.x
+            , AllObjectData.instance.posY+ startingYposToSpawn+ AllObjectData.instance.gameobjectVelocity.y);
         objectPoolList.GetPooledObject(name, position, Quaternion.identity, true); ///SpawningObject
     }
 }
