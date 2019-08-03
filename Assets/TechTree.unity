@@ -1249,7 +1249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &604734896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1288,6 +1288,19 @@ Transform:
   m_PrefabParentObject: {fileID: 4648638711157618, guid: cf2e06744409e1740b3617c632d6fdbc,
     type: 2}
   m_PrefabInternal: {fileID: 2095188568}
+--- !u!114 &616574084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616574082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e83f0c7a41b49b48a924d7c2d104d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cheatsEnabled: 1
+  tmpChash: 0
 --- !u!1001 &631577668
 Prefab:
   m_ObjectHideFlags: 0
@@ -2259,7 +2272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fadaa6daef46464fa1ac6da45868881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0
   objectPoolList: {fileID: 928253665}
   nodeInformer: {fileID: 928253659}
   objectSpawnOffset: 2
@@ -2475,7 +2487,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989696332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4065397, y: 3.6, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1644138859}

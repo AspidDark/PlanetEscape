@@ -71,21 +71,21 @@ public class PlayerStats : MonoBehaviour
                 }
             }
         }
-        #region//For Testing
-        if (Input.GetKeyDown("m"))
-        {
-            playerCash += tmpChash;
-            print("CashCame" + playerCash);
-        }
-        if (Input.GetKeyDown("o"))
-        {
-            HelpSaveLoad.DeleteAllExeptSystem();
-            print("DeleteAllExeptSystem");
-        }
-        if (Input.GetKeyDown("k"))
-        {
-            RocketMovement.instance.AddFuel(15);
-        }
+        //#region//For Testing
+        //if (Input.GetKeyDown("m"))
+        //{
+        //    playerCash += tmpChash;
+        //    print("CashCame" + playerCash);
+        //}
+        //if (Input.GetKeyDown("o"))
+        //{
+        //    HelpSaveLoad.DeleteAllExeptSystem();
+        //    print("DeleteAllExeptSystem");
+        //}
+        //if (Input.GetKeyDown("k"))
+        //{
+        //    RocketMovement.instance.AddFuel(15);
+        //}
 
         ////////////Ok
         //if (Input.GetKeyDown("u"))
@@ -111,7 +111,7 @@ public class PlayerStats : MonoBehaviour
         //    RocketMovement.instance.DoDamage(-2);
         //    print("Heal" + 2.ToString());
         //}
-        #endregion
+     //   #endregion
         InGameWiever.instance.SetMoneyText(playerCash);
     }
 

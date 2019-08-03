@@ -85,6 +85,15 @@ public class RocketMovement : MonoBehaviour
 
     private List<SpriteRenderer> allRocketSprites = new List<SpriteRenderer>();
 
+    #region MovementControls
+    [HideInInspector]
+    public bool moveForward;
+    [HideInInspector]
+    public bool moveLeft;
+    [HideInInspector]
+    public bool moveRight;
+    #endregion
+
     private void Awake()
     {
         instance = instance ?? this;
@@ -92,6 +101,8 @@ public class RocketMovement : MonoBehaviour
 
     public void UpdateValues()
     {
+        moveForward = moveLeft = moveRight = false;
+
         mainEnginePower = RocketStats.instance.MaxEngine;
         rotationEnginePower = RocketStats.instance.MaxRotation;
         fuel = RocketStats.instance.MaxFuelCapacity;
@@ -209,7 +220,8 @@ public class RocketMovement : MonoBehaviour
         }
         //disable event
 
-        if (Input.GetKey("w") && fuel > 0)
+        //if (Input.GetKey("w") && fuel > 0)
+        if (moveForward && fuel > 0)
         {
             MoveForward(AllObjectData.instance.gameobjectVelocity.y <= maxSpeed);
             InGameTimer.instance.StartTimer();  //visual Timer Start
@@ -231,7 +243,8 @@ public class RocketMovement : MonoBehaviour
         }
         //disable event
 
-        if (Input.GetKey("a") && fuel > 0 && !Input.GetKey("d"))
+        // if (Input.GetKey("a") && fuel > 0 && !Input.GetKey("d"))
+        if (moveLeft && fuel > 0 && !moveRight)
         {
             //rb.AddForce(-transform.right * rotationEnginePower, ForceMode2D.Force);
             transform.Rotate(Vector3.forward * MainCount.instance.fixedDeltaTime * rotationEnginePower);
@@ -241,11 +254,13 @@ public class RocketMovement : MonoBehaviour
         }
         else
         {
-            if (!Input.GetKey("d") || fuel < 0)
-                leftSteer = 0;//visual
+          //  if (!Input.GetKey("d") || fuel < 0)
+                if (!moveRight || fuel < 0)
+                    leftSteer = 0;//visual
         }
 
-        if (Input.GetKey("d") && fuel > 0 && !Input.GetKey("a"))
+        //if (Input.GetKey("d") && fuel > 0 && !Input.GetKey("a"))
+        if (moveRight && fuel > 0 && !moveLeft)
         {
             // rb.AddForce(transform.right * rotationEnginePower, ForceMode2D.Force);
             transform.Rotate(Vector3.back * MainCount.instance.fixedDeltaTime * rotationEnginePower);
@@ -255,7 +270,8 @@ public class RocketMovement : MonoBehaviour
         }
         else
         {
-            if (!Input.GetKey("a") || fuel < 0)
+           // if (!Input.GetKey("a") || fuel < 0)
+                if (!moveLeft || fuel < 0)
                 rightSteer = 0;//visual
         }
 
@@ -276,12 +292,12 @@ public class RocketMovement : MonoBehaviour
         if (idelingEngine)
         {
             rb.AddForce(transform.up * mainEnginePower / ConstsLibrary.mainEnginePowerDelimeter);
-            fuel -= MainCount.instance.fixedDeltaTime/ConstsLibrary.fuelLossDelimeter;
+            fuel -= MainCount.instance.fixedDeltaTime / ConstsLibrary.fuelLossDelimeter;
             rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate);
         }
         else
         {
-            fuel -= MainCount.instance.deltaTime / (ConstsLibrary.mainEngineUseLessFuelDelimeter* ConstsLibrary.fuelLossDelimeter);
+            fuel -= MainCount.instance.deltaTime / (ConstsLibrary.mainEngineUseLessFuelDelimeter * ConstsLibrary.fuelLossDelimeter);
             rocketHeat += MainCount.instance.fixedDeltaTime * (1 + rocketHeatRate) / ConstsLibrary.mainEngineUseLessFuelDelimeter;
         }
 
