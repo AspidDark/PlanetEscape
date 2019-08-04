@@ -24,11 +24,19 @@ public class AirObjectMove : MonoBehaviour {
 
     private void Start()
     {
+        if (this.transform.position.y < ConstsLibrary.minAirobjectHeight)
+        {
+            Destroy();
+        }
         StartingInitiation();
     }
 
     private void OnEnable()
     {
+        if (this.transform.position.y < ConstsLibrary.minAirobjectHeight)
+        {
+            Destroy();
+        }
         if (ClosestObject.instance == null)
         {
             return;

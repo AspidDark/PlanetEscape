@@ -2,6 +2,10 @@
 
 public class ConstsLibrary
 {
+    #region Air Objects
+    public const float minAirobjectHeight = 20;
+    #endregion
+
     #region Rocket Base Stats
     public const float startingWeight = 4;
     public const float startingFuelCapacity = 15;//10

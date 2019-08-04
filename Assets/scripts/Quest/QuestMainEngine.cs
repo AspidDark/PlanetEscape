@@ -86,7 +86,8 @@ public class QuestMainEngine : MonoBehaviour
         }
      print("<color=red>QUEST COMPLETED QUEST COMPLETED QUEST COMPLETED QUEST COMPLETED QUEST COMPLETED QUEST COMPLETED </color>");
         questCompletedSemaphore = true;
-        InGameWiever.instance.QuestCompletedInformer("Quest Comoleted, Earned : " + currentQuest.questBringMoneyIfCompleted.ToString());
+        InGameWiever.instance.QuestCompletedInformer("Quest Completed, Earned : " + currentQuest.questBringMoneyIfCompleted.ToString());
+        SoundManager.instance.PlaySound("successful");
         PlayerStats.instance.AddCash(currentQuest.questBringMoneyIfCompleted);
     }
 
