@@ -71,6 +71,7 @@ public class RocketDestroy : MonoBehaviour {
         RocketEngineParticles.instance.SetDefaults();//Анимация двигателей
         MenuButtonControl.instance.OnShopMenuEntered();
 
+        PlayerStats.instance.ResetInMissionEarnedCash();
         //QuestButtonREset
         QuestMainEngine.instance.questApplyedPressed = false;
     }

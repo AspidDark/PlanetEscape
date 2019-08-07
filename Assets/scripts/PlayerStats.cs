@@ -115,6 +115,11 @@ public class PlayerStats : MonoBehaviour
         InGameWiever.instance.SetMoneyText(playerCash);
     }
 
+    public void ResetInMissionEarnedCash()
+    {
+        inMissionEarnedCash = 0;
+    }
+
     public void SetDefaults()
     {
         LoadCurrent();

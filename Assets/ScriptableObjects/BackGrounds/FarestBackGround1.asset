@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isScrolling: 1
   isParralax: 1
-  parallaxSpeedX: 0.95
-  parallaxSpeedY: 0.95
+  parallaxSpeedX: 0.8
+  parallaxSpeedY: 0.8
   spriteXSize: 200
   sortingLayerName: BackGroundFarest
   sprites:
