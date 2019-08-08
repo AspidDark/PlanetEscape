@@ -787,6 +787,7 @@ MonoBehaviour:
   healthBar: {fileID: 1782245831}
   moneyAmount: 0
   moneyText: {fileID: 252712244}
+  moneyTextMeshProGui: {fileID: 0}
   dayText: {fileID: 1502609694}
   toSurfaceRangeCounter: {fileID: 2104576160}
   toSurfaceTextMeshProGui: {fileID: 141806245}
@@ -1300,7 +1301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cheatsEnabled: 1
-  tmpChash: 0
+  tmpChash: 9000
 --- !u!1001 &631577668
 Prefab:
   m_ObjectHideFlags: 0
@@ -1723,6 +1724,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 631577668}
   m_Script: {fileID: 11500000, guid: cd00aa3a109cc934e819a70406382b87, type: 3}
+--- !u!114 &790759541 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114081296393301364, guid: 547527b0ebba3f3408b8837e5462a105,
+    type: 2}
+  m_PrefabInternal: {fileID: 631577668}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &796533798 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114224905085155226, guid: 547527b0ebba3f3408b8837e5462a105,
@@ -1986,6 +1993,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inGamePannel: {fileID: 1268976061}
+  getMoneyButton: {fileID: 790759541}
+  toEconomucButton: {fileID: 1393944259}
   optionsButton: {fileID: 394932112}
   inMenusPanel: {fileID: 59891080}
   techPannel: {fileID: 1449982343}
@@ -3070,6 +3079,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1173688023621648, guid: 547527b0ebba3f3408b8837e5462a105,
     type: 2}
   m_PrefabInternal: {fileID: 631577668}
+--- !u!114 &1393944259 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114859545803593380, guid: 547527b0ebba3f3408b8837e5462a105,
+    type: 2}
+  m_PrefabInternal: {fileID: 631577668}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1395070863 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114654052193279654, guid: 547527b0ebba3f3408b8837e5462a105,

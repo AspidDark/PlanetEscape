@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,10 @@ public class MenuButtonControl : MonoBehaviour
     public GameObject inGamePannel;
     #endregion
 
+    [Space]
+    public Button getMoneyButton;
+    public Button toEconomucButton;
+
     public UnityEngine.UI.Button optionsButton;
 #region //In Menu Pannel
     public GameObject inMenusPanel;
@@ -18,6 +23,7 @@ public class MenuButtonControl : MonoBehaviour
 
     public GameObject mainShowingMenuPanel;
     public GameObject switchButton;
+    private bool isTechPanell;
     #endregion
 
     public GameObject mainCanvas;
@@ -44,7 +50,7 @@ public class MenuButtonControl : MonoBehaviour
 
     private void Start()
     {
-
+        isTechPanell = true;
         instance = instance ?? this;
         loadingTextTextMeshProGui = loadingText.GetComponent<TextMeshProUGUI>();
 
@@ -65,7 +71,8 @@ public class MenuButtonControl : MonoBehaviour
         mainShowingMenuPanel.SetActive(true);
         techPannel.SetActive(false);
 
-        switchButton.GetComponentInChildren<Text>().text = "To Thech";
+        switchButton.GetComponentInChildren<Text>().text = "To Tech";
+        isTechPanell = false;
     }
 
     private void ToTechMenuButtonClick()
@@ -75,6 +82,7 @@ public class MenuButtonControl : MonoBehaviour
         mainShowingMenuPanel.SetActive(true);
         economicPanel.SetActive(false);
         switchButton.GetComponentInChildren<Text>().text = "To Economic";
+        isTechPanell = true;
      }
 
     public void StartButtonClick()
@@ -82,6 +90,9 @@ public class MenuButtonControl : MonoBehaviour
         NodeInformer.instance.OnCancelQuestButtonClick();
         if (PlayerStats.instance.playerCash<0)
         {
+            InGameWiever.instance.ChangeTextFontSize(InGameWiever.instance.moneyTextMeshProGui,
+                ConstsLibrary.moneyTextBaseSize, ConstsLibrary.moneyTextEnlargeSize);
+            PaintButtonIfNegativeMoney();
             SendMessageToInformer(ConstsLibrary.negativeCashToGamePressedHead, ConstsLibrary.negativeCashToGamePressedBody);
             return;
         }
@@ -203,4 +214,45 @@ public class MenuButtonControl : MonoBehaviour
             image.sprite = imageAndTextScriptable[number].sprite;
         }
     }
+    public void PaintButtonIfNegativeMoney()
+    {
+        if (isTechPanell)
+        {
+            ButtonLightUp(toEconomucButton, ConstsLibrary.proColor, ConstsLibrary.redFlashColor);
+        }
+        else
+        {
+            ButtonLightUp(getMoneyButton, ConstsLibrary.proColor, ConstsLibrary.redFlashColor);
+        }
+    }
+
+
+
+    public void ButtonLightUp(Button btn, Color32 baseColor, Color32 toColor, float time=0.5f)
+    {
+        var colors = btn.colors;
+        colors.normalColor = baseColor;
+        btn.colors = colors;
+        StopCoroutine("PaintButton");
+        StartCoroutine(PaintButton(btn, baseColor, toColor, time));
+    }
+
+
+    IEnumerator PaintButton(Button btn, Color32 baseColor, Color32 toColor, float time)
+    {
+        var colors = btn.colors;
+        colors.normalColor = toColor;
+        btn.colors = colors;
+        while (time > 0)
+        {
+        yield return null;
+            time -= MainCount.instance.fixedDeltaTime;
+        }
+        colors.normalColor = baseColor;
+        btn.colors = colors;
+        yield return null;
+    }
+  
+
+
 }

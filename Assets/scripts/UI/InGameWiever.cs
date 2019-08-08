@@ -1,8 +1,10 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InGameWiever : MonoBehaviour {
+public class InGameWiever : MonoBehaviour
+{
 
     public static InGameWiever instance;
     //timer
@@ -24,7 +26,7 @@ public class InGameWiever : MonoBehaviour {
     //money
     public float moneyAmount;
     public GameObject moneyText;
-    TextMeshProUGUI moneyTextMeshProGui;
+    public TextMeshProUGUI moneyTextMeshProGui;
 
     //day
     public GameObject dayText;
@@ -54,7 +56,7 @@ public class InGameWiever : MonoBehaviour {
     {
         instance = instance ?? this;
         //fuel
-        uIFuelCounter.fuelMaxSize= RocketStats.instance.MaxFuelCapacity;
+        uIFuelCounter.fuelMaxSize = RocketStats.instance.MaxFuelCapacity;
 
     }
     public void SetTimerText(string timerText)
@@ -67,7 +69,7 @@ public class InGameWiever : MonoBehaviour {
     public void SetMoneyText(float amount)
     {
         moneyTextMeshProGui.text = amount.ToString("f1");
-       // moneyText.GetComponent<TextMeshProUGUI>().text = amount.ToString("f1");
+        // moneyText.GetComponent<TextMeshProUGUI>().text = amount.ToString("f1");
     }
 
     public void SetDayText(int day)
@@ -79,15 +81,15 @@ public class InGameWiever : MonoBehaviour {
     {
         //fuel
         uIFuelCounter.fuelMaxSize = maxFuel;
-        uIFuelCounter.FuelValue=fuelValue;
+        uIFuelCounter.FuelValue = fuelValue;
 
         //heat
-        heatImage.fillAmount= heatImageFiller/100;
+        heatImage.fillAmount = heatImageFiller / 100;
 
         //Height show
         HeightCheckerValue(AllObjectData.instance.posY);
     }
-#region HelthBar
+    #region HelthBar
     public void DamageViewer(int amount, int fullHealth)
     {
         healthBar.DecreaseBar(amount, fullHealth);
@@ -98,17 +100,17 @@ public class InGameWiever : MonoBehaviour {
         healthBar.ResetBar(amount);
     }
     #endregion
-#region HeigthWiever
+    #region HeigthWiever
     public void HeightCheckerActivation(bool result = true)
     {
-        if(PlayerStats.instance.openTechNodesCount>0)
-        toSurfaceRangeCounter.SetActive(result);
+        if (PlayerStats.instance.openTechNodesCount > 0)
+            toSurfaceRangeCounter.SetActive(result);
     }
 
     public void HeightCheckerValue(float height)
     {
-        
-        if (toSurfaceRangeCounter.active && toSurfaceRangeCounter!=null)
+
+        if (toSurfaceRangeCounter.active && toSurfaceRangeCounter != null)
         {
             toSurfaceTextMeshProGui.text = (height - ConstsLibrary.surfacelevel).ToString("f1");
         }
@@ -123,7 +125,7 @@ public class InGameWiever : MonoBehaviour {
             warningTemplateGameObject.SetActive(result);
             eventDescriptionGameObject.SetActive(result);
         }
-            
+
     }
     public const string warningTemplateText = "WARNING!!!";
     public void EventInformer(string message)
@@ -132,7 +134,7 @@ public class InGameWiever : MonoBehaviour {
         eventDescription.text = message;
         Invoke("EventInformerDisable", 3f);
     }
-   
+
     private void EventInformerDisable()
     {
         warningTemplate.text = string.Empty;
@@ -169,5 +171,31 @@ public class InGameWiever : MonoBehaviour {
     #endregion
 
 
-
+    public void ChangeTextFontSize(TextMeshProUGUI textToChange, float baseSize, float greaterSize, float timeOfEffect = 0.8f)
+    {
+        StopCoroutine("SizeChanger");
+        textToChange.fontSize = baseSize;
+        
+        StartCoroutine(SizeChanger(textToChange, baseSize, greaterSize, timeOfEffect));
+    }
+    IEnumerator SizeChanger(TextMeshProUGUI textToChange, float baseSize, float greaterSize, float timeOfEffect)
+    {
+        print("TimeDelta" + MainCount.instance.fixedDeltaTime);
+        float valuteToIncrease = (greaterSize - baseSize) / (timeOfEffect / 2);
+        float timer = timeOfEffect / 2;
+        while (timer > 0)
+        {
+            textToChange.fontSize += valuteToIncrease * MainCount.instance.fixedDeltaTime;
+            timer -= MainCount.instance.fixedDeltaTime;
+            yield return null;
+        }
+        timer = timeOfEffect / 2;
+        while (timer > 0)
+        {
+            textToChange.fontSize -= valuteToIncrease * MainCount.instance.fixedDeltaTime;
+            timer -= MainCount.instance.fixedDeltaTime;
+            yield return null;
+        }
+        textToChange.fontSize = baseSize;
+    }
 }

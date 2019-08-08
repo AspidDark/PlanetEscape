@@ -111,6 +111,15 @@ public class ConstsLibrary
     public const float heightToreachToWin = 3000f;
     public const string newGameStarted = "NewGameStarted";
 
+    #region
+    public const float moneyTextBaseSize = 28;
+    public const float moneyTextEnlargeSize = 36;
+    #endregion
+
+
+
+
+
     public readonly string[] PrefsToClear = new string[10]
     {
         openNodesCount,
