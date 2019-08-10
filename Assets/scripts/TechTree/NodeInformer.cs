@@ -31,6 +31,7 @@ public class NodeInformer : MonoBehaviour {
     public TextMeshProUGUI questDescription;
     public TextMeshProUGUI questCost;
     public TextMeshProUGUI applyedText;
+    public TextMeshProUGUI questBringMoney;
     public bool questSelected;
 
     [SerializeField]
@@ -137,6 +138,7 @@ public class NodeInformer : MonoBehaviour {
             questSelected = true;
             questDescription.text = currentSelectedQuest.currentQuestScriptable.questDescription;
             questCost.text = currentSelectedQuest.questCost.ToString();
+            questBringMoney.text = currentSelectedQuest.questBringMoneyIfCompleted.ToString();
             ISAllQuestConditionsMet(currentSelectedQuest.questCost);
         }
         questPnael.SetActive(true);
