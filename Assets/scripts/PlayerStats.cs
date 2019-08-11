@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
 
     #region //Economic Stats
     public float playerCash;
-    public float cashPerSecond;
+    public float cashPerSecond=1;
     public float cashPerStart;
     public float cashPerMission;
     public float rocketCrashCost;
@@ -36,6 +36,7 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         instance = instance ?? this;
+        cashPerSecond = cashPerSecond == 0 ? 1 : cashPerSecond;
     }
 
     void Start()
@@ -132,6 +133,7 @@ public class PlayerStats : MonoBehaviour
     public void AddCash(float cash)
     {
         playerCash += cash;
+        print("add Cash=>"+cash);
         //Remove if we can have... borrow?
         //if (playerCash < 0)
         //{

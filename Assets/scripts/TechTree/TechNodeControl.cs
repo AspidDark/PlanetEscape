@@ -21,8 +21,15 @@ public class TechNodeControl : MonoBehaviour
     //Sending Node description
     public void NodeButtonClick()
     {
-        NodeInformer.instance.ShowTechDescription(techNodeStats.nodeDisplayName, techNodeStats.nodeDescription, techNodeStats.nodeName, this);
+        NodeInformer.instance.
+            ShowTechDescription(techNodeStats, this);
     }
+
+    //public void NodeButtonClick()
+    //{
+    //    NodeInformer.instance.
+    //        ShowTechDescription(techNodeStats.nodeDisplayName, techNodeStats.nodeDescription, techNodeStats.nodeName, this);
+    //}
 
     public void ResearchButtonClicked(string nodeName)
     {

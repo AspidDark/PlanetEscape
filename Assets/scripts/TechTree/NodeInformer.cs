@@ -63,13 +63,22 @@ public class NodeInformer : MonoBehaviour {
     }
 
     //Tech node button pressed, Showing description
-    public void ShowTechDescription(string head, string fullText, string currentShowedNodeName, TechNodeControl techNodeControl)
+    public void ShowTechDescription(TechNodeStats techNodeStats, TechNodeControl techNodeControl)
     {
-        informerDescription.text = fullText;
-        informerHead.text = head;
-        _currentShowedNodeName = currentShowedNodeName;
+        informerDescription.text = techNodeStats.nodeDescription;
+        informerHead.text = techNodeStats.nodeDisplayName;
+        informerMessage.text = "Cost: "+techNodeStats.nodeCost.ToString();
+        _currentShowedNodeName = techNodeStats.nodeName;
         _techNodeControl = techNodeControl;
     }
+
+    //public void ShowTechDescription(string head, string fullText, string currentShowedNodeName, TechNodeControl techNodeControl)
+    //{
+    //    informerDescription.text = fullText;
+    //    informerHead.text = head;
+    //    _currentShowedNodeName = currentShowedNodeName;
+    //    _techNodeControl = techNodeControl;
+    //}
 
 
     //Apply Node Button Clicked

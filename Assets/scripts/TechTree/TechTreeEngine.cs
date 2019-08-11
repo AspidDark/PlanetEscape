@@ -57,12 +57,13 @@ public class TechTreeEngine : MonoBehaviour
             return someOfRequiredTechsNotResearched;
         }
         //Research Done
-        PlayerStats.instance.playerCash -= techNodeControlList[indexOfNode].techNodeStats.nodeCost;
+        PlayerStats.instance.AddCash(-techNodeControlList[indexOfNode].techNodeStats.nodeCost);
+        //PlayerStats.instance.playerCash -= techNodeControlList[indexOfNode].techNodeStats.nodeCost;
         techNodeControlList[indexOfNode].nodeCondition= nodeDonePP;
         techNodeControlList[indexOfNode].NodeResearched();//---
         SaveNodeState(nodeName, nodeDonePP);
         OpenDependedNodes(nodeName);
-        PlayerStats.instance.SaveCurrentAll(); //Esonomic
+        PlayerStats.instance.SaveCurrentAll(); //Economic
         return researchDone;
     }
     #region Private
