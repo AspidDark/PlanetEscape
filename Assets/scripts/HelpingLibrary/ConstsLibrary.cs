@@ -97,7 +97,7 @@ public class ConstsLibrary
     public const string playerCash = "playerCash";
     public const string cashPerSecond = "cashPerSecond";
     public const string cashPerStart = "cashPerStart";
-    public const string cashPerMission = "cashPerMission";
+    public const string cashPerMissionMultiplyer = "cashPerMissionMultiplyer";
     public const string rocketCrashCost = "rocketCrashCost";
     public const string hardnessPrefs = "hardness";
     public const string rocketStagesValue = "rocketStagesValue";
@@ -128,7 +128,7 @@ public class ConstsLibrary
         playerCash,
         cashPerSecond,
         cashPerStart,
-        cashPerMission,
+        cashPerMissionMultiplyer,
         rocketCrashCost,
         hardnessPrefs,
          rocketStagesValue

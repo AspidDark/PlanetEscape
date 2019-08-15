@@ -23,11 +23,11 @@ public class EconomicStats : MonoBehaviour
         PlayerStats.instance.AddEcconomicNode();
         switch (name)
         {
-            //barnch 1 tech 1 stage 1
+            //barnch 1 tech 1 stage 1 //ok
             case "MoneyPerSecond1":
                 MoneyPerSecond1();
                 break;
-            //barnch 1 tech 2 stage 1
+            //barnch 1 tech 2 stage 1 //ok
             case "Enshuranse":
                 Enshuranse();
                 break;
@@ -35,11 +35,11 @@ public class EconomicStats : MonoBehaviour
             case "MissionMutypyer":
                 MissionMutypyer();
                 break;
-            //barnch 2 tech 2 stage 1
+            //barnch 2 tech 2 stage 1 //ok?
             case "GovenmentProgram1":
                 GovenmentProgram1();
                 break;
-            //barnch 1 tech 1 stage 2
+            //barnch 1 tech 1 stage 2 //ok
             case "MoneyPerSecond2":
                 MoneyPerSecond2();
                 break;
@@ -84,14 +84,14 @@ public class EconomicStats : MonoBehaviour
     //barnch 2 tech 1 stage 1
     private void MissionMutypyer()
     {
-        PlayerStats.instance.ChangeCashPerMission(50);
+        PlayerStats.instance.ChangeCashPerMission(0.5f);
     }
 
     //barnch 2 tech 2 stage 1
     private void GovenmentProgram1()
     {
         PlayerStats.instance.ChangeCashPerSecond(1);
-        PlayerStats.instance.ChangeRocketCrashCost(15);
+        PlayerStats.instance.ChangeRocketCrashCost(10);
         PlayerStats.instance.ChangeCashPerStart(10);
     }
 
@@ -120,7 +120,7 @@ public class EconomicStats : MonoBehaviour
     //barnch 2 tech 1 stage 3
     private void Corporations()
     {
-        PlayerStats.instance.ChangeCashPerMission(150);
+        PlayerStats.instance.ChangeCashPerMission(0.5f);
         PlayerStats.instance.ChangeRocketCrashCost(10);
     }
 
@@ -136,7 +136,7 @@ public class EconomicStats : MonoBehaviour
     {
         PlayerStats.instance.ChangeCashPerSecond(3);
         PlayerStats.instance.ChangeRocketCrashCost(50);
-        PlayerStats.instance.ChangeCashPerMission(150);
+        PlayerStats.instance.ChangeCashPerMission(1);
     }
 
 

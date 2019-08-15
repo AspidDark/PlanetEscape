@@ -1884,15 +1884,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tmpChash: 3000
-  startingCashPerMission: 50
+  startingCashPerMission: 0
   startingRocketCrashCost: 5
-  startingCashPerStart: 20
+  startingCashPerStart: 0
   startingCashPerSecond: 1
   skipDayButtonClickedMoney: 20
+  missionCashMutipyerBase: 0
   playerCash: 0
   cashPerSecond: 0
   cashPerStart: 0
-  cashPerMission: 0
+  missionCashMultipyer: 0
   rocketCrashCost: 0
   inMissionEarnedCash: 0
   openTechNodesCount: 0

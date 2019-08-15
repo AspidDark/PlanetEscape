@@ -6,17 +6,20 @@ public class PlayerStats : MonoBehaviour
     public float tmpChash;
     public static PlayerStats instance;
 
-    public float startingCashPerMission = 50f;
+    public float startingCashPerMission = 0f;
     public float startingRocketCrashCost = 5;
-    public float startingCashPerStart = 20f;
+    public float startingCashPerStart = 0f;
     public float startingCashPerSecond = 1;
     public float skipDayButtonClickedMoney = 20;
+    public float missionCashMutipyerBase = 0;
 
     #region //Economic Stats
     public float playerCash;
     public float cashPerSecond=1;
     public float cashPerStart;
-    public float cashPerMission;
+    [Space]
+    public float missionCashMultipyer;
+    [Space]
     public float rocketCrashCost;
     #endregion
     //public float playerCash { get { return playerCash; } set { if (playerCash < 0) playerCash = 0; } }
@@ -153,13 +156,14 @@ public class PlayerStats : MonoBehaviour
     public void ChangeCashPerStart(float cash)
     {
         cashPerStart += cash;
+        print("ChangeCashPerStart cash" + cashPerStart);
         HelpSaveLoad.SetValue(ConstsLibrary.cashPerStart, cashPerStart);
     }
 
     public void ChangeCashPerMission(float cash)
     {
-        cashPerMission += cash;
-        HelpSaveLoad.SetValue(ConstsLibrary.cashPerMission, cashPerMission);
+        missionCashMultipyer += cash;
+        HelpSaveLoad.SetValue(ConstsLibrary.cashPerMissionMultiplyer, missionCashMultipyer);
     }
 
     public void ChangeRocketCrashCost(float cash)
@@ -174,7 +178,7 @@ public class PlayerStats : MonoBehaviour
         HelpSaveLoad.SetValue(ConstsLibrary.playerCash, playerCash);
         HelpSaveLoad.SetValue(ConstsLibrary.cashPerSecond, cashPerSecond);
         HelpSaveLoad.SetValue(ConstsLibrary.cashPerStart, cashPerStart);
-        HelpSaveLoad.SetValue(ConstsLibrary.cashPerMission, cashPerMission);
+        HelpSaveLoad.SetValue(ConstsLibrary.cashPerMissionMultiplyer, missionCashMultipyer);
         HelpSaveLoad.SetValue(ConstsLibrary.rocketCrashCost, rocketCrashCost);
     }
 
@@ -183,7 +187,7 @@ public class PlayerStats : MonoBehaviour
         playerCash = HelpSaveLoad.GetValue(ConstsLibrary.playerCash, 0f);
         cashPerSecond= HelpSaveLoad.GetValue(ConstsLibrary.cashPerSecond, startingCashPerSecond);
         cashPerStart = HelpSaveLoad.GetValue(ConstsLibrary.cashPerStart, startingCashPerStart);
-        cashPerMission = HelpSaveLoad.GetValue(ConstsLibrary.cashPerMission, startingCashPerMission);
+        missionCashMultipyer = HelpSaveLoad.GetValue(ConstsLibrary.cashPerMissionMultiplyer, missionCashMutipyerBase);
         rocketCrashCost = HelpSaveLoad.GetValue(ConstsLibrary.rocketCrashCost, startingRocketCrashCost);
     }
 
@@ -319,5 +323,11 @@ public class PlayerStats : MonoBehaviour
             return;
         }
         RocketMovement.instance.particleClorNumber = 0;
+    }
+
+    public void AddStartingMoney()
+    {
+        print("AddStartingMone");
+        AddCash(cashPerStart);
     }
 }

@@ -53,6 +53,8 @@ public class AllObjectData : MonoBehaviour {
         {
             startedRunOnceSent = true;
             GameMaster.instance.AddIteration();
+            //Add
+            PlayerStats.instance.AddStartingMoney();
         }
 
         gameObjectPosition = go.transform.position;
