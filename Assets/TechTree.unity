@@ -1228,7 +1228,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aec5c5b3dfca408418cf0754fb8364dd, type: 2}
   questApplyedPressed: 0
   questCostDecrease: 0
-  questAdditionalMoney: 0
   angleCrossed: 0
 --- !u!1 &579458071 stripped
 GameObject:
@@ -1885,7 +1884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tmpChash: 3000
   startingCashPerMission: 0
-  startingRocketCrashCost: 5
+  startingRocketCrashCost: 10
   startingCashPerStart: 0
   startingCashPerSecond: 1
   skipDayButtonClickedMoney: 20

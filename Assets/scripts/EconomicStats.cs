@@ -23,11 +23,11 @@ public class EconomicStats : MonoBehaviour
         PlayerStats.instance.AddEcconomicNode();
         switch (name)
         {
-            //barnch 1 tech 1 stage 1 //ok
+            //barnch 1 tech 1 stage 1 
             case "MoneyPerSecond1":
                 MoneyPerSecond1();
                 break;
-            //barnch 1 tech 2 stage 1 //ok
+            //barnch 1 tech 2 stage 1 
             case "Enshuranse":
                 Enshuranse();
                 break;
@@ -35,11 +35,11 @@ public class EconomicStats : MonoBehaviour
             case "MissionMutypyer":
                 MissionMutypyer();
                 break;
-            //barnch 2 tech 2 stage 1 //ok?
+            //barnch 2 tech 2 stage 1 
             case "GovenmentProgram1":
                 GovenmentProgram1();
                 break;
-            //barnch 1 tech 1 stage 2 //ok
+            //barnch 1 tech 1 stage 2
             case "MoneyPerSecond2":
                 MoneyPerSecond2();
                 break;
@@ -107,13 +107,13 @@ public class EconomicStats : MonoBehaviour
     {
         PlayerStats.instance.ChangeCashPerSecond(1);
         PlayerStats.instance.ChangeRocketCrashCost(10);
-        PlayerStats.instance.ChangeCashPerStart(20);
+        PlayerStats.instance.ChangeCashPerStart(5);
     }
 
     //barnch 1 tech 1 stage 3
     private void Enthusiasts()
     {
-        PlayerStats.instance.ChangeCashPerStart(30);
+        PlayerStats.instance.ChangeCashPerStart(20);
         PlayerStats.instance.ChangeRocketCrashCost(10);
     }
 

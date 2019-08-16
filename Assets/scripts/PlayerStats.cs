@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats instance;
 
     public float startingCashPerMission = 0f;
-    public float startingRocketCrashCost = 5;
+    public float startingRocketCrashCost = 10;
     public float startingCashPerStart = 0f;
     public float startingCashPerSecond = 1;
     public float skipDayButtonClickedMoney = 20;
@@ -17,9 +17,7 @@ public class PlayerStats : MonoBehaviour
     public float playerCash;
     public float cashPerSecond=1;
     public float cashPerStart;
-    [Space]
     public float missionCashMultipyer;
-    [Space]
     public float rocketCrashCost;
     #endregion
     //public float playerCash { get { return playerCash; } set { if (playerCash < 0) playerCash = 0; } }
@@ -38,6 +36,7 @@ public class PlayerStats : MonoBehaviour
     // Use this for initialization
     private void Awake()
     {
+        rocketCrashCost = startingRocketCrashCost;
         instance = instance ?? this;
         cashPerSecond = cashPerSecond == 0 ? 1 : cashPerSecond;
     }

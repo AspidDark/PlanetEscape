@@ -11,7 +11,6 @@ public class QuestMainEngine : MonoBehaviour
 
 
     public int questCostDecrease;
-    public int questAdditionalMoney;
 
     private CurrentSelectedQuest currentQuest = new CurrentSelectedQuest();
     private bool questCompletedSemaphore;
@@ -109,7 +108,6 @@ public class QuestMainEngine : MonoBehaviour
     }
     private void HoldTheLine()
     {
-        print("Checking  ____");
         float angle;
         if (AllObjectData.instance.angleZ * AllObjectData.instance.angleZ > ConstsLibrary.maxAngleSquare)
         {
@@ -190,10 +188,11 @@ public class QuestMainEngine : MonoBehaviour
         int questToSpawn = MainCount.instance.IntegerRandom(0, questList.Count);
         int questCost = MainCount.instance.IntegerRandom(questList[questToSpawn].costFrom, questList[questToSpawn].costTo) - questCostDecrease;
         int questBringMoney = MainCount.instance.
-            IntegerRandom(questList[questToSpawn].completeMoneyBonusFrom, questList[questToSpawn].completeMoneyBonusTo) + questAdditionalMoney;
+            IntegerRandom(questList[questToSpawn].completeMoneyBonusFrom, questList[questToSpawn].completeMoneyBonusTo);
+        float moneyForQuestAfterBonusCount = questBringMoney * (1 + PlayerStats.instance.missionCashMultipyer);
         currentQuest.result = true;
         currentQuest.questCost = questCost;
-        currentQuest.questBringMoneyIfCompleted = questBringMoney;
+        currentQuest.questBringMoneyIfCompleted = (int)moneyForQuestAfterBonusCount;
         currentQuest.currentQuestScriptable = questList[questToSpawn];
         return currentQuest;
     }
