@@ -190,7 +190,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4114137713323588, guid: e935c73eea1a39e4abdfc5985af5df8e, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 212276333401642272, guid: e935c73eea1a39e4abdfc5985af5df8e,
         type: 2}
@@ -539,7 +539,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4574563697606480, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4036376140982548, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1243,13 +1243,14 @@ GameObject:
   m_Component:
   - component: {fileID: 604734897}
   - component: {fileID: 604734896}
+  - component: {fileID: 604734898}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CameraWorkObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &604734896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,12 +1273,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604734895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 338.6413, y: 300.00327, z: -7.2836723}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &604734898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 604734895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8fd7bc69dfb65c4ab66afb27376e405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closestZoomValue: 8
+  farestZoomValue: 11
+  zoomSpeed: 3
+  vcam: {fileID: 2065090668}
+  speedZoomBorder: 15
 --- !u!1 &616574082 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1379270060922324, guid: cf2e06744409e1740b3617c632d6fdbc,
@@ -1483,7 +1500,7 @@ RectTransform:
   - {fileID: 1100429655}
   - {fileID: 394210868}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2390,7 +2407,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2412,12 +2429,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 989696332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87366825, y: 3.6000004, z: -10}
+  m_LocalPosition: {x: 0.7009346, y: 2.6000004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1644138859}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &989696338
 MonoBehaviour:
@@ -2782,7 +2799,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4574563697606480, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4036376140982548, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2844,7 +2861,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4574563697606480, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4036376140982548, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2917,7 +2934,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4574563697606480, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1256365549515944, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_IsActive
@@ -3134,7 +3151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4550057118112010, guid: b096280588b152b4583b15bd35cb1f54, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 212623233514364962, guid: b096280588b152b4583b15bd35cb1f54,
         type: 2}
@@ -3401,7 +3418,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4574563697606480, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4036376140982548, guid: 88167f5963366a14d9777f5ca49041d1, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3640,7 +3657,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1902085002 stripped
 MonoBehaviour:
@@ -3758,7 +3775,7 @@ MonoBehaviour:
   m_Follow: {fileID: 616574083}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 10
+    OrthographicSize: 8
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -3770,12 +3787,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2065090667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.87366825, y: 3.6000004, z: -10}
+  m_LocalPosition: {x: 0.7009346, y: 2.6000004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1450267591}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2095188568
 Prefab:
@@ -3814,7 +3831,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4648638711157618, guid: cf2e06744409e1740b3617c632d6fdbc, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114522321459066242, guid: cf2e06744409e1740b3617c632d6fdbc,
         type: 2}
