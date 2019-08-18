@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Name: H1Q0
   m_EditorClassIdentifier: 
   questName: H0Q0
-  questDescription: Reach Height 800
+  questDescription: Reach Height 600
   questType: 0
   hardness: 1
   completeMoneyBonusFrom: 40
   completeMoneyBonusTo: 50
   costFrom: 15
   costTo: 25
-  mainValue: 800
+  mainValue: 600
   secondaryValue: 0
   thirdValue: 0

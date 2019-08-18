@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: H7Q0
   m_EditorClassIdentifier: 
   questName: H0Q0
-  questDescription: Reach height 2300 Move from base to 250 points
+  questDescription: Reach height 1500 Move from base to 250 points
   questType: 4
   hardness: 7
   completeMoneyBonusFrom: 100
@@ -20,5 +20,5 @@ MonoBehaviour:
   costFrom: 35
   costTo: 40
   mainValue: 250
-  secondaryValue: 2300
+  secondaryValue: 1500
   thirdValue: 0

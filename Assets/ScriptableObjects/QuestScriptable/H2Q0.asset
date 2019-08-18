@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Name: H2Q0
   m_EditorClassIdentifier: 
   questName: H0Q0
-  questDescription: Reach Height 1000
+  questDescription: Reach Height 750
   questType: 0
   hardness: 2
   completeMoneyBonusFrom: 45
   completeMoneyBonusTo: 55
   costFrom: 25
   costTo: 35
-  mainValue: 1000
+  mainValue: 750
   secondaryValue: 0
   thirdValue: 0

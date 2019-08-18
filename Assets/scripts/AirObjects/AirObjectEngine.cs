@@ -42,6 +42,7 @@ public class AirObjectEngine : MonoBehaviour {
                     break;
                 case AirObjectType.Money:
                     PlayerStats.instance.AddCash(amount);
+                    PlayerStats.instance.inMissionEarnedCash += amount;
                     break;
                 default:
                     break;

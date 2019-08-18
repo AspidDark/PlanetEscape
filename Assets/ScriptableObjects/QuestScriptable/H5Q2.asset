@@ -19,6 +19,6 @@ MonoBehaviour:
   completeMoneyBonusTo: 65
   costFrom: 20
   costTo: 30
-  mainValue: 0
+  mainValue: 24
   secondaryValue: 0
   thirdValue: 0

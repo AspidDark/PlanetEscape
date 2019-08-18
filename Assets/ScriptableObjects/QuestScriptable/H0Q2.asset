@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Name: H0Q2
   m_EditorClassIdentifier: 
   questName: H0Q0
-  questDescription: Move to 30 points from starting Location
+  questDescription: Move to 20 points from starting Location
   questType: 1
   hardness: 0
   completeMoneyBonusFrom: 45
   completeMoneyBonusTo: 55
   costFrom: 15
   costTo: 25
-  mainValue: 30
+  mainValue: 20
   secondaryValue: 0
   thirdValue: 0

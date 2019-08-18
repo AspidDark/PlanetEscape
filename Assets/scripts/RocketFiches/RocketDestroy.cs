@@ -10,8 +10,11 @@ public class RocketDestroy : MonoBehaviour {
     public float maxSpeed;
     public string replacedObjectName;
 
+    private bool isLanded;
+
     void Start () {
         instance = instance ?? this;
+        isLanded = false;
     }
 	
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,6 +26,11 @@ public class RocketDestroy : MonoBehaviour {
     }
     public void Destroy(bool destroyed=true)
     {
+        if (isLanded)
+        {
+            return;
+        }
+        isLanded = true;
         RocketMovement.instance.diasbleAll = true;
         //sound
         SoundRandom.instance.ResetEngineSound();
@@ -40,6 +48,8 @@ public class RocketDestroy : MonoBehaviour {
         }
         else
         {
+
+
             AllObjectData.instance.isSafeLanded = true;
 
             //sound
@@ -62,12 +72,14 @@ public class RocketDestroy : MonoBehaviour {
         ////QuestButtonREset
         //QuestMainEngine.instance.questApplyedPressed = false;
         //save quest
+
         StartCoroutine(FinalWait());
     }
 
     IEnumerator FinalWait()
     {
         yield return new WaitForSeconds(ConstsLibrary.waitForSecondAfterEnd);
+        isLanded = false;
         RocketEngineParticles.instance.SetDefaults();//Анимация двигателей
         MenuButtonControl.instance.OnShopMenuEntered();
 
