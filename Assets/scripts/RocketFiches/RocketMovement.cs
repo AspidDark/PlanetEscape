@@ -197,6 +197,7 @@ public class RocketMovement : MonoBehaviour
         {
             DoDisable(1);
             DoHeat(-10);
+            DoDamage(1);
         }
 
         if (diasbleAll)

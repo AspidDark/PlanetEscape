@@ -1117,8 +1117,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 38afc0b84ee92574a87dd93534bf6308, type: 2}
     - {fileID: 11400000, guid: 29c02b973ee7b5548be5e31507d8c3f3, type: 2}
     - {fileID: 11400000, guid: a7683c382f45fa94ca34867fffab72f9, type: 2}
+    - {fileID: 11400000, guid: eb6130c6874d9924ea34be0c9f2b3014, type: 2}
     heightCheckTimer: 0
-    timeBetweenHeightChecks: 0.06
+    timeBetweenHeightChecks: 0.07
     hardness: 10
 --- !u!114 &511021380
 MonoBehaviour:
@@ -3852,7 +3853,7 @@ Prefab:
     - target: {fileID: 224707141946626032, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 115.75021
+      value: 108.25021
       objectReference: {fileID: 0}
     - target: {fileID: 224707141946626032, guid: 61e0f981d9c55f54d828cbe19bceb414,
         type: 2}

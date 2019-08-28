@@ -69,10 +69,6 @@ public class RocketDestroy : MonoBehaviour {
         AllObjectData.instance.rocketDestroyed = destroyed;
 
         #endregion
-        ////QuestButtonREset
-        //QuestMainEngine.instance.questApplyedPressed = false;
-        //save quest
-
         StartCoroutine(FinalWait());
     }
 
@@ -84,7 +80,6 @@ public class RocketDestroy : MonoBehaviour {
         MenuButtonControl.instance.OnShopMenuEntered();
 
         PlayerStats.instance.ResetInMissionEarnedCash();
-        //QuestButtonREset
         QuestMainEngine.instance.questApplyedPressed = false;
     }
 }

@@ -29,7 +29,6 @@ public class TechTreeEngine : MonoBehaviour
         }
         StartingNodeInitiation();
 	}
-
     public string TechTreeResearch(string nodeName)
     {
         string response = string.Empty;
@@ -58,7 +57,6 @@ public class TechTreeEngine : MonoBehaviour
         }
         //Research Done
         PlayerStats.instance.AddCash(-techNodeControlList[indexOfNode].techNodeStats.nodeCost);
-        //PlayerStats.instance.playerCash -= techNodeControlList[indexOfNode].techNodeStats.nodeCost;
         techNodeControlList[indexOfNode].nodeCondition= nodeDonePP;
         techNodeControlList[indexOfNode].NodeResearched();//---
         SaveNodeState(nodeName, nodeDonePP);
@@ -72,7 +70,6 @@ public class TechTreeEngine : MonoBehaviour
         foreach (var nodeControl in techNodeControlList)
         {
             int nodeState = HelpSaveLoad.GetValue(nodeControl.techNodeStats.nodeName, 0);
-            print("nodeState" + nodeState);
             if ((nodeState != nodeDonePP) && (nodeControl.techNodeStats.nodeDependsOn == null || nodeControl.techNodeStats.nodeDependsOn.Length <=0))
             {
                 nodeState = nodeOpenPP;

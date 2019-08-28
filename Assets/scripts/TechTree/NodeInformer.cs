@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class NodeInformer : MonoBehaviour {
@@ -51,9 +48,6 @@ public class NodeInformer : MonoBehaviour {
     private void Start()
     {
         instance = instance ?? this;
-       // informerMessage= informerObject.GetComponent<TextMeshProUGUI>();
-       // informerHead = informerHeadObject.GetComponent<TextMeshProUGUI>();
-      //  informerDescription= informerDescriptionObject.GetComponent<TextMeshProUGUI>();
         StartingSetup();
     }
     public void StartingSetup()
@@ -71,15 +65,6 @@ public class NodeInformer : MonoBehaviour {
         _currentShowedNodeName = techNodeStats.nodeName;
         _techNodeControl = techNodeControl;
     }
-
-    //public void ShowTechDescription(string head, string fullText, string currentShowedNodeName, TechNodeControl techNodeControl)
-    //{
-    //    informerDescription.text = fullText;
-    //    informerHead.text = head;
-    //    _currentShowedNodeName = currentShowedNodeName;
-    //    _techNodeControl = techNodeControl;
-    //}
-
 
     //Apply Node Button Clicked
     public void ApplyNodeButtonClicked()

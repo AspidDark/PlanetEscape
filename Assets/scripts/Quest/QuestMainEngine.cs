@@ -140,7 +140,7 @@ public class QuestMainEngine : MonoBehaviour
     }
     private void ReachX()
     {
-        if (AllObjectData.instance.posX * AllObjectData.instance.posX > currentQuest.currentQuestScriptable.mainValue * currentQuest.currentQuestScriptable.mainValue)
+        if (!AllObjectData.instance.IsNotFlyinig() && AllObjectData.instance.posX * AllObjectData.instance.posX > currentQuest.currentQuestScriptable.mainValue * currentQuest.currentQuestScriptable.mainValue)
         {
             QuestComoleted();
         }

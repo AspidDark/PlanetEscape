@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Name: H9Q2
   m_EditorClassIdentifier: 
   questName: H0Q0
-  questDescription: Reach Heigh 3000
+  questDescription: Reach Heigh 2100
   questType: 0
   hardness: 9
   completeMoneyBonusFrom: 350
   completeMoneyBonusTo: 400
   costFrom: 70
   costTo: 80
-  mainValue: 3000
+  mainValue: 2100
   secondaryValue: 0
   thirdValue: 0
