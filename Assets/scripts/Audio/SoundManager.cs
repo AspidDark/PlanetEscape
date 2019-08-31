@@ -89,7 +89,7 @@ public class SoundManager : MonoBehaviour {
         var s = Array.Find(soundSettings, soundSettings => soundSettings.sourseName == soundName);
         if (s == null)
         {
-            print("Sound" + soundName + "Not found");
+          //  print("Sound" + soundName + "Not found");
             return;
         }
         if (s.toPitch)
@@ -105,7 +105,7 @@ public class SoundManager : MonoBehaviour {
         var s = Array.Find(soundSettings, soundSettings => soundSettings.sourseName == soundName);
         if (s == null)
         {
-            print("Sound" + soundName + "Not found");
+            //print("Sound" + soundName + "Not found");
             return;
         }
         s.source.Stop();
@@ -125,7 +125,7 @@ public class SoundManager : MonoBehaviour {
         var s = Array.Find(musicSettings, musicSettings => musicSettings.sourseName == musicName);
         if (s == null)
         {
-            print("No music with name" + musicName);
+            //print("No music with name" + musicName);
             return;
         }
         StartCoroutine(CChangeMusic(musicName));

@@ -25,7 +25,8 @@ public class TechTreeEngine : MonoBehaviour
         instance = this;
         if (techNodeControlList == null || techNodeControlList.Length <= 0)
         {
-            Debug.Log("No techs attached");
+
+          //  Debug.Log("No techs attached");
         }
         StartingNodeInitiation();
 	}
@@ -48,6 +49,7 @@ public class TechTreeEngine : MonoBehaviour
         //Not enough Money
         if(techNodeControlList[indexOfNode].techNodeStats.nodeCost> PlayerStats.instance.playerCash)
         {
+            MenuButtonControl.instance.OnNotEnoughMoney();
             return notEnoughMoney;
         }
         //All "depended from" teches Researched?
@@ -129,7 +131,7 @@ public class TechTreeEngine : MonoBehaviour
             int index = FindNodeIndex(item);
             if (index < 0)
             {
-                Debug.Log("No tech named:"+ item+"In dependencies");
+               // Debug.Log("No tech named:"+ item+"In dependencies");
             }
             if (techNodeControlList[index].nodeCondition!= nodeDonePP)
             {

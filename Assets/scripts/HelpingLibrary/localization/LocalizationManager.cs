@@ -43,7 +43,7 @@ public class LocalizationManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Cannot find file!");
+          //  Debug.LogError("Cannot find file!");
         }
 
         isReady = true;

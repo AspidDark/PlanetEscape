@@ -135,7 +135,6 @@ public class PlayerStats : MonoBehaviour
     public void AddCash(float cash)
     {
         playerCash += cash;
-        print("add Cash=>"+cash);
         //Remove if we can have... borrow?
         //if (playerCash < 0)
         //{
@@ -155,7 +154,7 @@ public class PlayerStats : MonoBehaviour
     public void ChangeCashPerStart(float cash)
     {
         cashPerStart += cash;
-        print("ChangeCashPerStart cash" + cashPerStart);
+      //  print("ChangeCashPerStart cash" + cashPerStart);
         HelpSaveLoad.SetValue(ConstsLibrary.cashPerStart, cashPerStart);
     }
 
@@ -326,7 +325,6 @@ public class PlayerStats : MonoBehaviour
 
     public void AddStartingMoney()
     {
-        print("AddStartingMone");
         AddCash(cashPerStart);
     }
 }

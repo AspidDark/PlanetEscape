@@ -49,7 +49,7 @@ public class MainInputControl : MonoBehaviour {
             if (Input.GetKeyDown("m"))
             {
                 PlayerStats.instance.AddCash(tmpChash);
-                print("CashCame" + tmpChash);
+              print("CashCame" + tmpChash);
             }
             if (Input.GetKeyDown("k"))
             {

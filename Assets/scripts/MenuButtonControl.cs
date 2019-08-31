@@ -105,6 +105,12 @@ public class MenuButtonControl : MonoBehaviour
         Resume();
     }
 
+    public void OnNotEnoughMoney()
+    {
+        InGameWiever.instance.ChangeTextFontSize(InGameWiever.instance.moneyTextMeshProGui,
+                ConstsLibrary.moneyTextBaseSize, ConstsLibrary.moneyTextEnlargeSize);
+    }
+
     public void SwitcherButtonClick()
     {
         if (economicPanel.activeSelf)

@@ -44,6 +44,8 @@ public class InGameWiever : MonoBehaviour
     public GameObject eventDescriptionGameObject;
     public TextMeshProUGUI eventDescription;
 
+    private bool sizeChangePresed = false;
+
     private void Awake()
     {
         instance = instance ?? this;
@@ -171,16 +173,16 @@ public class InGameWiever : MonoBehaviour
     #endregion
 
 
-    public void ChangeTextFontSize(TextMeshProUGUI textToChange, float baseSize, float greaterSize, float timeOfEffect = 0.8f)
+    public void ChangeTextFontSize(TextMeshProUGUI textToChange, float baseSize, float greaterSize, float timeOfEffect = 0.5f)
     {
         StopCoroutine("SizeChanger");
         textToChange.fontSize = baseSize;
-        
+        if(!sizeChangePresed)
         StartCoroutine(SizeChanger(textToChange, baseSize, greaterSize, timeOfEffect));
     }
     IEnumerator SizeChanger(TextMeshProUGUI textToChange, float baseSize, float greaterSize, float timeOfEffect)
     {
-        print("TimeDelta" + MainCount.instance.fixedDeltaTime);
+        sizeChangePresed = true;
         float valuteToIncrease = (greaterSize - baseSize) / (timeOfEffect / 2);
         float timer = timeOfEffect / 2;
         while (timer > 0)
@@ -196,6 +198,7 @@ public class InGameWiever : MonoBehaviour
             timer -= MainCount.instance.fixedDeltaTime;
             yield return null;
         }
+        sizeChangePresed = false;
         textToChange.fontSize = baseSize;
     }
 }

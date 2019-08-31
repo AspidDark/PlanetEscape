@@ -65,10 +65,10 @@ public class WeatherSetuper : MonoBehaviour {
         SetBackGroud(heightsAndColors);
     }
 
-
+    //TO DO weather... again
     private void SetWeatherToSpawn(string weatherName)
     {
-        WeatherEngine.instance.ActivateWeather(weatherName);
+        //WeatherEngine.instance.ActivateWeather(weatherName);
     }
 
     private void SetBackGroud(HeightsAndColors[] heightsAndColorsNew)
