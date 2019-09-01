@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Name: Engine1
   m_EditorClassIdentifier: 
   nodeName: Engine1
-  nodeDisplayName: CRE
-  nodeDescription: Chemical rocket engine. Produces more power, using the same amount
-    of fuel.
+  nodeDisplayName: Chemical Rocket Enjine
+  nodeDescription: Produces more power + 20, using the same amount of fuel.
   nodeCost: 100
   nodeDependsOn: []
   iconNodeNotUpgraded: {fileID: 21300000, guid: dc82b7f92eee0024a82855bcb0a208f8,
@@ -28,3 +27,4 @@ MonoBehaviour:
     heatNodeChange: 0.5
     nodeLine: 0
     isFinalNode: 0
+  economicNode: 0

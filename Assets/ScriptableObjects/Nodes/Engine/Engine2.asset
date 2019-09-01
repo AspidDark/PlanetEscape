@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Engine2
   m_EditorClassIdentifier: 
   nodeName: Engine2
-  nodeDisplayName: DCRE
+  nodeDisplayName: Acid Engine
   nodeDescription: Dual chemical rocket engine. Produces more power than CRE, using
     the same amount of fuel. Slightly increases weight.
   nodeCost: 200
@@ -29,3 +29,4 @@ MonoBehaviour:
     heatNodeChange: 0.5
     nodeLine: 1
     isFinalNode: 0
+  economicNode: 0

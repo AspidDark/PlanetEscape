@@ -19,7 +19,7 @@ public class GameMaster : MonoBehaviour
     {
         instance = instance ?? this;
         SetStartingValues();
-        DontDestroyOnLoad(this.gameObject);
+       // DontDestroyOnLoad(this.gameObject);
     }
     // Use this for initialization
     void Start()
@@ -179,8 +179,8 @@ public class GameMaster : MonoBehaviour
 
     private void LoadLevelSyanc(int levelIndex)
     {
-        MenuButtonControl.instance.SetLoadingScreenActive();
         HelpSaveLoad.DeleteAllExeptSystem();
+        MenuButtonControl.instance.SetLoadingScreenActive();
         StartCoroutine(LoadLevelAsync(levelIndex));
     }
 
@@ -191,8 +191,10 @@ public class GameMaster : MonoBehaviour
         while (!operationInfo.isDone)
         {
             float progress = Mathf.Clamp01(operationInfo.progress / 0.9f);
+            if(MenuButtonControl.instance.loadingBar!=null)
             MenuButtonControl.instance.loadingBar.value = progress;
-            MenuButtonControl.instance.loadingTextTextMeshProGui.text = progress * 100 + "%";
+            if (MenuButtonControl.instance != null)
+                MenuButtonControl.instance.loadingTextTextMeshProGui.text = progress * 100 + "%";
             yield return null;
         }
     }

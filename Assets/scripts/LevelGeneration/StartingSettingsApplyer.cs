@@ -7,7 +7,7 @@ public class StartingSettingsApplyer : MonoBehaviour {
     private void Awake()
     {
         instance = instance ?? this;
-        DontDestroyOnLoad(gameObject);
+      //  DontDestroyOnLoad(gameObject);
     }
     void Start () {
         instance = instance ?? this;
