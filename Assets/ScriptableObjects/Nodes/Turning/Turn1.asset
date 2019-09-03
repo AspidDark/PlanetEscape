@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Turn1
   m_EditorClassIdentifier: 
   nodeName: Turn1
-  nodeDisplayName: Proto Rotation Engine
-  nodeDescription: Proto Rotation Engine
+  nodeDisplayName: Fizzy water rotation tecnology.
+  nodeDescription: Rotation power + 2, Weight +0.2, Heat +0.2.
   nodeCost: 100
   nodeDependsOn: []
   iconNodeNotUpgraded: {fileID: 21300000, guid: 3e68963e42b62d74d9bd1adb0ab402da,
@@ -27,3 +27,4 @@ MonoBehaviour:
     heatNodeChange: 0.2
     nodeLine: 0
     isFinalNode: 0
+  economicNode: 0

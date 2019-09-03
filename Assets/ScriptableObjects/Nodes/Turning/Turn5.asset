@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Turn5
   m_EditorClassIdentifier: 
   nodeName: Turn5
-  nodeDisplayName: K-Type Rotation Engines
-  nodeDescription: K-Type Rotation Engines
+  nodeDisplayName: Fire extinguisher tecnology.
+  nodeDescription: Rotation power + 5, Weight +0.2.
   nodeCost: 2000
   nodeDependsOn:
   - Turn4
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 0
     nodeLine: 4
     isFinalNode: 0
+  economicNode: 0

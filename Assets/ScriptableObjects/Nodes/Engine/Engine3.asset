@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Engine3
   m_EditorClassIdentifier: 
   nodeName: Engine3
-  nodeDisplayName: ERE
-  nodeDescription: Electric rocket engine.
+  nodeDisplayName: Electric engine, heavy but economic.
+  nodeDescription: Produces more power + 30, Weight +0.9, Fuel+2.
   nodeCost: 500
   nodeDependsOn:
   - Engine2
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 0
     nodeLine: 2
     isFinalNode: 0
+  economicNode: 0

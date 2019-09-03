@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Weight3
   m_EditorClassIdentifier: 
   nodeName: Weight3
-  nodeDisplayName: Titanium Alloy
-  nodeDescription: Titanium Alloy
+  nodeDisplayName: Rocket body made of different trash Alloys.
+  nodeDescription: Weight  -0.4, Heat -0.5.
   nodeCost: 500
   nodeDependsOn:
   - Weight2
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: -0.5
     nodeLine: 2
     isFinalNode: 0
+  economicNode: 0

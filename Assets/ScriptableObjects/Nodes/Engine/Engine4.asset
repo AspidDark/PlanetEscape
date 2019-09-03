@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Engine4
   m_EditorClassIdentifier: 
   nodeName: Engine4
-  nodeDisplayName: NRE
-  nodeDescription: Nuclear rocket engine.
+  nodeDisplayName: Nuclear engine, flying on a small nuclear bomb.
+  nodeDescription: Produces more power + 30, Weight +0.4, Heat+3, Fuel+3.
   nodeCost: 1000
   nodeDependsOn:
   - Engine3
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 3
     nodeLine: 3
     isFinalNode: 0
+  economicNode: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Fuel2
   m_EditorClassIdentifier: 
   nodeName: Fuel2
-  nodeDisplayName: Extended Fuel Tank
-  nodeDescription: Extended Fuel Tank
+  nodeDisplayName: Additional canister.
+  nodeDescription: Fuel+8, Weight +0.3.
   nodeCost: 200
   nodeDependsOn:
   - Fuel1
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 0
     nodeLine: 1
     isFinalNode: 0
+  economicNode: 0

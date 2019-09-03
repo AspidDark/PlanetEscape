@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Fuel3
   m_EditorClassIdentifier: 
   nodeName: Fuel3
-  nodeDisplayName: XL Fuel Tank
-  nodeDescription: XL Fuel Tank
+  nodeDisplayName: Barrel of gasoline.
+  nodeDescription: Fuel+6, Weight +0.3.
   nodeCost: 500
   nodeDependsOn:
   - Fuel2
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 0
     nodeLine: 2
     isFinalNode: 0
+  economicNode: 0

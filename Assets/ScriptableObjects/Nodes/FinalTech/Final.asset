@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Final
   m_EditorClassIdentifier: 
   nodeName: Final
-  nodeDisplayName: Moon Base
-  nodeDescription: Moon Base
+  nodeDisplayName: Space Elevator
+  nodeDescription: Now we can elevate away from this planet!!!
   nodeCost: 10000
   nodeDependsOn:
   - Engine5
@@ -31,3 +31,4 @@ MonoBehaviour:
     heatNodeChange: 0
     nodeLine: 4
     isFinalNode: 1
+  economicNode: 0

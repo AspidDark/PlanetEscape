@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Turn4
   m_EditorClassIdentifier: 
   nodeName: Turn4
-  nodeDisplayName: Impulse rotation engines
-  nodeDescription: Impulse rotation engines
+  nodeDisplayName: Impulse rotation engine.
+  nodeDescription: Rotation power + 3, Weight +0.3, Heat +0.3.
   nodeCost: 1000
   nodeDependsOn:
   - Turn3
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 0.3
     nodeLine: 3
     isFinalNode: 0
+  economicNode: 0

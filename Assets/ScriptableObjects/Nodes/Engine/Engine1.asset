@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Engine1
   m_EditorClassIdentifier: 
   nodeName: Engine1
-  nodeDisplayName: Chemical Rocket Enjine
-  nodeDescription: Produces more power + 20, using the same amount of fuel.
+  nodeDisplayName: Chemical engine made of old batteries.
+  nodeDescription: Produces more power + 20, Weight +0.4, Heat +0.5.
   nodeCost: 100
   nodeDependsOn: []
   iconNodeNotUpgraded: {fileID: 21300000, guid: dc82b7f92eee0024a82855bcb0a208f8,

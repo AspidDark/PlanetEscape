@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Fuel4
   m_EditorClassIdentifier: 
   nodeName: Fuel4
-  nodeDisplayName: Lightweight Tank
-  nodeDescription: Lightweight Tank
+  nodeDisplayName: Radioactive isotope bag.
+  nodeDescription: Fuel+7, Weight +0.2, Heat+1.
   nodeCost: 1000
   nodeDependsOn:
   - Fuel3
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 1
     nodeLine: 3
     isFinalNode: 0
+  economicNode: 0

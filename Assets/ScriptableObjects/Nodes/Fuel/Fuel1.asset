@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Fuel1
   m_EditorClassIdentifier: 
   nodeName: Fuel1
-  nodeDisplayName: Experimental Fuel Tank
-  nodeDescription: Experimental Fuel Tank
+  nodeDisplayName: Additional can of fuel
+  nodeDescription: Fuel+6, Weight +0.3.
   nodeCost: 100
   nodeDependsOn: []
   iconNodeNotUpgraded: {fileID: 21300000, guid: e0ceab744a6c48b40b9d971d0a18693b,
@@ -27,3 +27,4 @@ MonoBehaviour:
     heatNodeChange: 0
     nodeLine: 0
     isFinalNode: 0
+  economicNode: 0

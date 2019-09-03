@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Fuel5
   m_EditorClassIdentifier: 
   nodeName: Fuel5
-  nodeDisplayName: Combined Fuel Tank
-  nodeDescription: Combined Fuel Tank
+  nodeDisplayName: Carriage of photons.
+  nodeDescription: Fuel+14, Weight +0.3, Heat-0.7.
   nodeCost: 2000
   nodeDependsOn:
   - Fuel4
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: -0.7
     nodeLine: 4
     isFinalNode: 0
+  economicNode: 0

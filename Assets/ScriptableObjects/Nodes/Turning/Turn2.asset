@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Turn2
   m_EditorClassIdentifier: 
   nodeName: Turn2
-  nodeDisplayName: S-F RRE
-  nodeDescription: SOLID-FUEL ROCKET Rotation ENGINES
+  nodeDisplayName: Sparkling wine rotation tecnology.
+  nodeDescription: Rotation power + 2, Weight +0.3, Heat +0.2.
   nodeCost: 200
   nodeDependsOn:
   - Turn1
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 0.2
     nodeLine: 1
     isFinalNode: 0
+  economicNode: 0

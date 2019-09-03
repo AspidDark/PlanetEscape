@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Name: Engine2
   m_EditorClassIdentifier: 
   nodeName: Engine2
-  nodeDisplayName: Acid Engine
-  nodeDescription: Dual chemical rocket engine. Produces more power than CRE, using
-    the same amount of fuel. Slightly increases weight.
+  nodeDisplayName: Acid engine made of old militaty accumulators
+  nodeDescription: Produces more power + 20, Weight +0.6, Heat +0.5.
   nodeCost: 200
   nodeDependsOn:
   - Engine1

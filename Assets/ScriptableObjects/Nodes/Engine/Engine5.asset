@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Engine5
   m_EditorClassIdentifier: 
   nodeName: Engine5
-  nodeDisplayName: CPRE
-  nodeDescription: Combined Photonic rocket engines
+  nodeDisplayName: Combined photonic engines, with speed of light!!!
+  nodeDescription: Produces more power + 40, Weight +0.3, Heat-2.
   nodeCost: 2000
   nodeDependsOn:
   - Engine4
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: -2
     nodeLine: 4
     isFinalNode: 0
+  economicNode: 0

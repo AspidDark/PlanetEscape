@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Turn3
   m_EditorClassIdentifier: 
   nodeName: Turn3
-  nodeDisplayName: High Angled rotation Engines
-  nodeDescription: High Angled rotation Engines
+  nodeDisplayName: Reactive rotation engines.
+  nodeDescription: Rotation power + 2,  Fuel-1.
   nodeCost: 500
   nodeDependsOn:
   - Turn2
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: 0
     nodeLine: 2
     isFinalNode: 0
+  economicNode: 0

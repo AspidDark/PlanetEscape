@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Weight1
   m_EditorClassIdentifier: 
   nodeName: Weight1
-  nodeDisplayName: Aluminum
-  nodeDescription: Aluminum
+  nodeDisplayName: Rocket body made of old aluminum spoons.
+  nodeDescription: Weight -0.2.
   nodeCost: 100
   nodeDependsOn: []
   iconNodeNotUpgraded: {fileID: 21300000, guid: a9ebaa8b6339c7745b3953107fa55272,
@@ -27,3 +27,4 @@ MonoBehaviour:
     heatNodeChange: 0
     nodeLine: 0
     isFinalNode: 0
+  economicNode: 0

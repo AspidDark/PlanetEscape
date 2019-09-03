@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Weight4
   m_EditorClassIdentifier: 
   nodeName: Weight4
-  nodeDisplayName: Proto Composits
-  nodeDescription: Proto Composits
+  nodeDisplayName: Rocket body made of used beer cans.
+  nodeDescription: Weight  -0.6, Heat -0.5.
   nodeCost: 1000
   nodeDependsOn:
   - Weight3
@@ -28,3 +28,4 @@ MonoBehaviour:
     heatNodeChange: -0.5
     nodeLine: 3
     isFinalNode: 0
+  economicNode: 0
