@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: SpaceMania
   m_EditorClassIdentifier: 
   nodeName: SpaceMania
-  nodeDisplayName: SpaceMania
-  nodeDescription: SpaceMania
+  nodeDisplayName: Project "Esc" Part 3.
+  nodeDescription: Money/second +0.3, crash cost +50, mission income multiplier 3x.
   nodeCost: 3000
   nodeDependsOn:
   - SpaceCulture

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: MoneyPerSecond2
   m_EditorClassIdentifier: 
   nodeName: MoneyPerSecond2
-  nodeDisplayName: MoneyPerSecond2
-  nodeDescription: MoneyPerSecond2
+  nodeDisplayName: Money out of thin air II.
+  nodeDescription: Money/second +0.2, crash cost +15.
   nodeCost: 500
   nodeDependsOn:
   - MoneyPerSecond1

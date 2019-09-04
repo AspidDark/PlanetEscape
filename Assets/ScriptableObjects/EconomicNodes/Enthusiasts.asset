@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Enthusiasts
   m_EditorClassIdentifier: 
   nodeName: Enthusiasts
-  nodeDisplayName: Enthusiasts
-  nodeDescription: Enthusiasts
+  nodeDisplayName: Reusable spacesheep parts.
+  nodeDescription: Crash cost +10, successful start +20.
   nodeCost: 1000
   nodeDependsOn:
   - MoneyPerSecond2

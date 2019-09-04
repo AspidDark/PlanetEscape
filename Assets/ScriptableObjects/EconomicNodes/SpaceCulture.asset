@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: SpaceCulture
   m_EditorClassIdentifier: 
   nodeName: SpaceCulture
-  nodeDisplayName: SpaceCulture
-  nodeDescription: SpaceCulture
+  nodeDisplayName: Money out of thin air III.
+  nodeDescription: Money/second +0.2, crash cost +10.
   nodeCost: 2000
   nodeDependsOn:
   - Enthusiasts

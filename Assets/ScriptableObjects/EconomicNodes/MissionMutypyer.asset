@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: MissionMutypyer
   m_EditorClassIdentifier: 
   nodeName: MissionMutypyer
-  nodeDisplayName: MissionMutypyer
-  nodeDescription: MissionMutypyer
+  nodeDisplayName: Mission multiplier I.
+  nodeDescription: Mission income multiplier 1.5x.
   nodeCost: 200
   nodeDependsOn: []
   iconNodeNotUpgraded: {fileID: 21300000, guid: 543f3e21e95a4da4aab3c3f6a7200e64,

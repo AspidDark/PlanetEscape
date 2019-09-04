@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Enshuranse
   m_EditorClassIdentifier: 
   nodeName: Enshuranse
-  nodeDisplayName: Enshuranse
-  nodeDescription: Enshuranse
+  nodeDisplayName: Insurance.
+  nodeDescription: Crash cost -10.
   nodeCost: 200
   nodeDependsOn: []
   iconNodeNotUpgraded: {fileID: 21300000, guid: ca0a4f4e3cf06014d9f3b4f07506e119,

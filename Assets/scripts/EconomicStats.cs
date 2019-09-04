@@ -91,7 +91,7 @@ public class EconomicStats : MonoBehaviour
     private void GovenmentProgram1()
     {
         PlayerStats.instance.ChangeCashPerSecond(1);
-        PlayerStats.instance.ChangeRocketCrashCost(10);
+        PlayerStats.instance.ChangeRocketCrashCost(15);
         PlayerStats.instance.ChangeCashPerStart(10);
     }
 

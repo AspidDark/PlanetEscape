@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: GovenmentProgram2
   m_EditorClassIdentifier: 
   nodeName: GovenmentProgram2
-  nodeDisplayName: GovenmentProgram2
-  nodeDescription: GovenmentProgram2
+  nodeDisplayName: Project "Esc" Part 2.
+  nodeDescription: Money/second +0.1, crash cost +10, successful start +5.
   nodeCost: 500
   nodeDependsOn:
   - MissionMutypyer

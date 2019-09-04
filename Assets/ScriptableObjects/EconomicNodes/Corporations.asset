@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Corporations
   m_EditorClassIdentifier: 
   nodeName: Corporations
-  nodeDisplayName: Corporations
-  nodeDescription: Corporations
+  nodeDisplayName: Mission multiplier II.
+  nodeDescription: Mission income multiplier 2x, Crash cost +10.
   nodeCost: 1000
   nodeDependsOn:
   - GovenmentProgram2

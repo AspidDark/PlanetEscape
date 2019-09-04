@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: GovenmentProgram1
   m_EditorClassIdentifier: 
   nodeName: GovenmentProgram1
-  nodeDisplayName: GovenmentProgram1
-  nodeDescription: GovenmentProgram1
+  nodeDisplayName: Project "Esc" Part 1.
+  nodeDescription: Money/second +0.1, crash cost +15, successful start +10.
   nodeCost: 200
   nodeDependsOn: []
   iconNodeNotUpgraded: {fileID: 21300000, guid: 56dd37d8d9727934db97b8d00ad40122,
