@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e0b0312f5a24a4ba35d8725afe56ef, type: 3}
   m_Name: H7Q2
   m_EditorClassIdentifier: 
-  questName: H0Q0
-  questDescription: Land Safely
+  questName: H7Q2
+  questDescription: Reach Angle 5'
   questType: 7
   hardness: 7
   completeMoneyBonusFrom: 120

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e0b0312f5a24a4ba35d8725afe56ef, type: 3}
   m_Name: H7Q1
   m_EditorClassIdentifier: 
-  questName: H0Q0
+  questName: H7Q1
   questDescription: Land Safely
   questType: 5
   hardness: 7

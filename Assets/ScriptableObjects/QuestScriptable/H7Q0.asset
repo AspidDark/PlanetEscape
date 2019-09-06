@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e0b0312f5a24a4ba35d8725afe56ef, type: 3}
   m_Name: H7Q0
   m_EditorClassIdentifier: 
-  questName: H0Q0
+  questName: H7Q0
   questDescription: Reach height 1500 Move from base to 250 points
   questType: 4
   hardness: 7

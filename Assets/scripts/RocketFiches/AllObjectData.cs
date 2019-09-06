@@ -14,6 +14,7 @@ public class AllObjectData : MonoBehaviour {
     public Vector3 gameObjectPosition;
     public Vector2 gameobjectVelocity;
     public float angleZ;
+    public float questZ;
 
     public bool isStarted;
     /// <summary>
@@ -63,6 +64,7 @@ public class AllObjectData : MonoBehaviour {
         posY = go.transform.position.y;
         posX = go.transform.position.x;
         angleZ = go.transform.rotation.eulerAngles.z;
+        questZ = angleZ < 180 ? angleZ : angleZ - 360;
 
         if (posY > ConstsLibrary.heightStartedFrom)
         {

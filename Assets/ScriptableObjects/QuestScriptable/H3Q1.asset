@@ -11,14 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e0b0312f5a24a4ba35d8725afe56ef, type: 3}
   m_Name: H3Q1
   m_EditorClassIdentifier: 
-  questName: H0Q0
-  questDescription: Reach Angle 2.5'
+  questName: H3Q1
+  questDescription: Reach Angle 3'
   questType: 7
   hardness: 3
   completeMoneyBonusFrom: 55
   completeMoneyBonusTo: 65
   costFrom: 30
   costTo: 38
-  mainValue: 2.5
+  mainValue: 3
   secondaryValue: 0
   thirdValue: 0

@@ -130,11 +130,7 @@ public class QuestMainEngine : MonoBehaviour
     }
     private void ReachAngle()
     {
-        if (AllObjectData.instance.angleZ * AllObjectData.instance.angleZ > 50)
-        {
-            return;
-        }
-        if (AllObjectData.instance.angleZ * AllObjectData.instance.angleZ > currentQuest.currentQuestScriptable.mainValue * currentQuest.currentQuestScriptable.mainValue)
+        if (AllObjectData.instance.questZ * AllObjectData.instance.questZ > currentQuest.currentQuestScriptable.mainValue * currentQuest.currentQuestScriptable.mainValue)
         {
             QuestComoleted();
         }
