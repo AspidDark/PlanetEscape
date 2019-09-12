@@ -137,6 +137,7 @@ public class GameMaster : MonoBehaviour
         AllObjectData.instance.go.SetActive(true);
         //Paint o white
         GameMaterReset();
+        //BackGroundEngine.instance.GenerateBackGrounds(hardness / 2);
         RocketMovement.instance.PostResetValues();
         GameMaster.instance.ActivationClick();///Сюда цифры передавать
         PlayerStats.instance.SetDefaults();
