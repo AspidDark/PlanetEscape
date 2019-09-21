@@ -269,7 +269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backGroundScriptable:
   - {fileID: 11400000, guid: 7c6f2e2d65be76247bd02da81e6629b1, type: 2}
-  - {fileID: 11400000, guid: 373b3a82d7725ab4c83b17b2c149bccf, type: 2}
   playerTransform: {fileID: 616574083}
   backGroundToSpawn: 0
 --- !u!114 &108360359 stripped
@@ -2653,6 +2652,7 @@ MonoBehaviour:
   gameObjectPosition: {x: 0, y: 0, z: 0}
   gameobjectVelocity: {x: 0, y: 0}
   angleZ: 0
+  questZ: 0
   isStarted: 0
   rocketDestroyed: 0
   rocketLanded: 0
@@ -2926,7 +2926,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backGroundScriptable:
   - {fileID: 11400000, guid: 39a8c33f58157ce498c8be951e41c6bf, type: 2}
-  - {fileID: 11400000, guid: 0cf4a14a7da9b694395c2aecbdd6a582, type: 2}
   playerTransform: {fileID: 616574083}
   backGroundToSpawn: 0
 --- !u!1001 &1019091998

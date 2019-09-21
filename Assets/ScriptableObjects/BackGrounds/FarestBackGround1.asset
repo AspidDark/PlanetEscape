@@ -11,13 +11,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0057368fd74994a4abe1823abbdb9cc6, type: 3}
   m_Name: FarestBackGround1
   m_EditorClassIdentifier: 
-  isScrolling: 1
+  isScrollingX: 1
+  spriteXSize: 101.76
+  isScrollingY: 1
+  spriteYSize: 200
   isParralax: 1
   parallaxSpeedX: 0.8
   parallaxSpeedY: 0.8
-  spriteXSize: 200
   sortingLayerName: BackGroundFarest
   sprites:
-  - {fileID: 21300000, guid: 09e6f6d0cffb1974bbe5b82458170716, type: 3}
-  - {fileID: 21300000, guid: 09e6f6d0cffb1974bbe5b82458170716, type: 3}
-  - {fileID: 21300000, guid: 09e6f6d0cffb1974bbe5b82458170716, type: 3}
+  - spriteLevels:
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
+  - spriteLevels:
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
+  - spriteLevels:
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
+    - {fileID: 21300000, guid: 4bb5b1d79a67f8840a309a7df167350f, type: 3}
