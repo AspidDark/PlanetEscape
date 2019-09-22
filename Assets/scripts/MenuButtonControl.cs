@@ -42,6 +42,9 @@ public class MenuButtonControl : MonoBehaviour
     public GameObject loadingScreenPicture;
     private Image image;
 
+    public Sprite spriteEconomic;
+    public Sprite spriteToTech;
+
     private void Awake()
     {
         image = loadingScreenPicture.GetComponent<Image>();
@@ -71,7 +74,8 @@ public class MenuButtonControl : MonoBehaviour
         mainShowingMenuPanel.SetActive(true);
         techPannel.SetActive(false);
 
-        switchButton.GetComponentInChildren<Text>().text = "To Tech";
+        //switchButton.GetComponentInChildren<Text>().text = "To Tech";
+        switchButton.GetComponentInChildren<Image>().sprite = spriteToTech;
         isTechPanell = false;
     }
 
@@ -81,7 +85,8 @@ public class MenuButtonControl : MonoBehaviour
         techPannel.SetActive(true);
         mainShowingMenuPanel.SetActive(true);
         economicPanel.SetActive(false);
-        switchButton.GetComponentInChildren<Text>().text = "To Economic";
+        //switchButton.GetComponentInChildren<Text>().text = "To Economic";
+        switchButton.GetComponentInChildren<Image>().sprite = spriteEconomic;
         isTechPanell = true;
      }
 

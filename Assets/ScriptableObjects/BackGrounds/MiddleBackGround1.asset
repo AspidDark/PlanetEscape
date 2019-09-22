@@ -14,7 +14,7 @@ MonoBehaviour:
   isScrollingX: 1
   spriteXSize: 108
   isScrollingY: 1
-  spriteYSize: 100
+  spriteYSize: 108
   isParralax: 1
   parallaxSpeedX: 0.7
   parallaxSpeedY: 0.7

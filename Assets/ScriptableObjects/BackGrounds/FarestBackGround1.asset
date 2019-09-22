@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: FarestBackGround1
   m_EditorClassIdentifier: 
   isScrollingX: 1
-  spriteXSize: 101.76
+  spriteXSize: 101.7
   isScrollingY: 1
-  spriteYSize: 200
+  spriteYSize: 297.3
   isParralax: 1
   parallaxSpeedX: 0.8
   parallaxSpeedY: 0.8
