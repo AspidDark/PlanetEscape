@@ -2736,7 +2736,7 @@ MonoBehaviour:
   groundBlockMover: {fileID: 928253670}
   heightToSpawnGround: 20
   spawnBorder: 30
-  baseSpawnY: -6.75
+  baseSpawnY: -4.75
   groundObjectMax: 5
 --- !u!114 &928253670
 MonoBehaviour:
@@ -2753,7 +2753,7 @@ MonoBehaviour:
   allObjectData: {fileID: 928253668}
   spawnBorder: 30
   heightToSpawnGround: 10
-  yPosition: -6.75
+  yPosition: -4.75
 --- !u!114 &928253671
 MonoBehaviour:
   m_ObjectHideFlags: 0
