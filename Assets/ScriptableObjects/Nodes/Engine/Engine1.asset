@@ -16,9 +16,9 @@ MonoBehaviour:
   nodeDescription: Produces more power + 20, Weight +0.4, Heat +0.5.
   nodeCost: 100
   nodeDependsOn: []
-  iconNodeNotUpgraded: {fileID: 21300000, guid: dc82b7f92eee0024a82855bcb0a208f8,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: b12498bb6cbfde24285330fe8d349d8b,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: 3c569f78b03365b4ab696f3efcab1f98, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: fef0baa560bf0ae4ab45d65759f632b8, type: 3}
   nodeStatsDto:
     weightNodeChange: 0.4
     fuelNodeChange: 0

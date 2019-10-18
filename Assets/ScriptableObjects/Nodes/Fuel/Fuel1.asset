@@ -16,9 +16,9 @@ MonoBehaviour:
   nodeDescription: Fuel+6, Weight +0.3.
   nodeCost: 100
   nodeDependsOn: []
-  iconNodeNotUpgraded: {fileID: 21300000, guid: e0ceab744a6c48b40b9d971d0a18693b,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: 0b6a6755495a4ec45892b3c94247cc97,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: a13eff4ee6ed4cd4f9b683fc1b8d4dd4, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 79fc16bef40ef604988a506adc86aa6c, type: 3}
   nodeStatsDto:
     weightNodeChange: 0.3
     fuelNodeChange: 6
