@@ -16,9 +16,9 @@ MonoBehaviour:
   nodeDescription: Rotation power + 2, Weight +0.2, Heat +0.2.
   nodeCost: 100
   nodeDependsOn: []
-  iconNodeNotUpgraded: {fileID: 21300000, guid: 3e68963e42b62d74d9bd1adb0ab402da,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: 69437df95252a434b8f63bc78960f015,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: 7ea86a693f81c85499ced593d0b084bb, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: dd05042e328f7bc4e954ad744d8e51ea, type: 3}
   nodeStatsDto:
     weightNodeChange: 0.2
     fuelNodeChange: 0
