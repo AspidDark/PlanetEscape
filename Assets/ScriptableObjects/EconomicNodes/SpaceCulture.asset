@@ -18,9 +18,9 @@ MonoBehaviour:
   nodeDependsOn:
   - Enthusiasts
   - Corporations
-  iconNodeNotUpgraded: {fileID: 21300000, guid: 9c22cadb3e8d38542997767860fc0224,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: e6ccab24c60078c4c9d3e6fe627ea083,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: 7c5819e23fcbcf445b8693bb0da9ef7d, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 1683c53df9bce7e43a464350e9ec3572, type: 3}
   nodeStatsDto:
     weightNodeChange: 0
     fuelNodeChange: 0

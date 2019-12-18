@@ -18,9 +18,9 @@ MonoBehaviour:
   nodeDependsOn:
   - MoneyPerSecond1
   - Enshuranse
-  iconNodeNotUpgraded: {fileID: 21300000, guid: afb14413409df01429be23d6ef362caf,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: f2c8292417c9368458cdd33056adf9b5,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: eef2896370deab4419a858fce08b82f7, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 3881845dbf07e424090505c2de65a900, type: 3}
   nodeStatsDto:
     weightNodeChange: 0
     fuelNodeChange: 0

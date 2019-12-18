@@ -17,9 +17,9 @@ MonoBehaviour:
   nodeCost: 3000
   nodeDependsOn:
   - SpaceCulture
-  iconNodeNotUpgraded: {fileID: 21300000, guid: 9c22cadb3e8d38542997767860fc0224,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: c4c236080e3dc25439255b7ccb4916ed,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: 7c5819e23fcbcf445b8693bb0da9ef7d, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 59da842502a53584b9714c5c3d7642b7, type: 3}
   nodeStatsDto:
     weightNodeChange: 0
     fuelNodeChange: 0

@@ -20,9 +20,9 @@ MonoBehaviour:
   - Fuel5
   - Turn5
   - Weight5
-  iconNodeNotUpgraded: {fileID: 21300000, guid: fff4533828289a54ca55a56fd33fbdbb,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: 89751dcc5dcd94241b3b6ce9dba3b591,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: a33f78b89f69a144f83c19e4c6d22b57, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 457f40398c2ee864199af970aae28477, type: 3}
   nodeStatsDto:
     weightNodeChange: 0
     fuelNodeChange: 0

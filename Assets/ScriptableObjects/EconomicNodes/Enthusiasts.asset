@@ -17,9 +17,9 @@ MonoBehaviour:
   nodeCost: 1000
   nodeDependsOn:
   - MoneyPerSecond2
-  iconNodeNotUpgraded: {fileID: 21300000, guid: 05ef2391067f3c64eb92b9832a421b3c,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: 8c9e3fa7e0680b8458e54a7d6b1e1d57,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: 07f5a6d0e465d854195cbfbd738eacb8, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 06fdff0a4e4a99a42994acedd9c81537, type: 3}
   nodeStatsDto:
     weightNodeChange: 0
     fuelNodeChange: 0

@@ -16,9 +16,9 @@ MonoBehaviour:
   nodeDescription: Money/second +0.1, crash cost +15, successful start +10.
   nodeCost: 200
   nodeDependsOn: []
-  iconNodeNotUpgraded: {fileID: 21300000, guid: 56dd37d8d9727934db97b8d00ad40122,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: ce2a510225306d54cbdc95feac8a513b,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: 0a1f8e88b4f6d6f45a4c60fe2f8f13d5, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 69796b0f6ecc4c34c86e7e617a830eb0, type: 3}
   nodeStatsDto:
     weightNodeChange: 0
     fuelNodeChange: 0

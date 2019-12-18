@@ -168,17 +168,17 @@ public class GameMaster : MonoBehaviour
         if (iteration > ConstsLibrary.maxIterations)
         {
             MenuButtonControl.instance.SetWinLoseScreen(1);
-            LoadLevelSyanc(2);
+            LoadLevelSync(2);
         }
     }
 
     public void WonGame()
     {
         MenuButtonControl.instance.SetWinLoseScreen(0);
-        LoadLevelSyanc(3);
+        LoadLevelSync(3);
     }
 
-    private void LoadLevelSyanc(int levelIndex)
+    private void LoadLevelSync(int levelIndex)
     {
         HelpSaveLoad.DeleteAllExeptSystem();
         MenuButtonControl.instance.SetLoadingScreenActive();
@@ -194,7 +194,7 @@ public class GameMaster : MonoBehaviour
             float progress = Mathf.Clamp01(operationInfo.progress / 0.9f);
             if(MenuButtonControl.instance.loadingBar!=null)
             MenuButtonControl.instance.loadingBar.value = progress;
-            if (MenuButtonControl.instance != null)
+            if (MenuButtonControl.instance != null&& MenuButtonControl.instance.loadingTextTextMeshProGui!=null)
                 MenuButtonControl.instance.loadingTextTextMeshProGui.text = progress * 100 + "%";
             yield return null;
         }

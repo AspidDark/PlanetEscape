@@ -16,9 +16,9 @@ MonoBehaviour:
   nodeDescription: Mission income multiplier 1.5x.
   nodeCost: 200
   nodeDependsOn: []
-  iconNodeNotUpgraded: {fileID: 21300000, guid: 543f3e21e95a4da4aab3c3f6a7200e64,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: dae1e8a845e39f249aa32fb59c939765,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: d2c53cf9cdce82648b56fe23d0430184, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: 680909974f898f04c8910a5601442ec5, type: 3}
   nodeStatsDto:
     weightNodeChange: 0
     fuelNodeChange: 0

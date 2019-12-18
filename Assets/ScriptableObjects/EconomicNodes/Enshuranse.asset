@@ -16,9 +16,9 @@ MonoBehaviour:
   nodeDescription: Crash cost -10.
   nodeCost: 200
   nodeDependsOn: []
-  iconNodeNotUpgraded: {fileID: 21300000, guid: ca0a4f4e3cf06014d9f3b4f07506e119,
+  iconNodeNotUpgraded: {fileID: 21300000, guid: 02b28045929dc2e488355ab653fde3d2,
     type: 3}
-  iconNodeUpgrded: {fileID: 21300000, guid: a955102ec870f514b90faa20e7aff753, type: 3}
+  iconNodeUpgrded: {fileID: 21300000, guid: a6e3f5d2f484068418fb99dfece0ef69, type: 3}
   nodeStatsDto:
     weightNodeChange: 0
     fuelNodeChange: 0
